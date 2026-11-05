@@ -1,0 +1,4 @@
+interface:
+  display_name: "治愈动画工作室"
+  short_description: "从画面想法到治愈动画成片，支持直接 API、已有生成工具及可选 ComfyUI"
+  default_prompt: "使用 $cozy-animation-studio，把我描述的画面扩写成宫崎骏／吉卜力式二维手绘治愈短片，使用我选定的图片、视频和音频服务完成制作。"

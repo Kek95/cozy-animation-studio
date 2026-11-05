@@ -1,0 +1,28 @@
+{
+  "prompt": {
+    "node": "1",
+    "input": "prompt",
+    "class_type": "OpenAIGPTImage1"
+  },
+  "filename_prefix": {
+    "node": "2",
+    "input": "filename_prefix"
+  },
+  "seed": {
+    "node": "1",
+    "input": "seed"
+  },
+  "size": {
+    "node": "1",
+    "input": "size"
+  },
+  "quality": {
+    "node": "1",
+    "input": "quality"
+  },
+  "image": {
+    "node": "3",
+    "input": "image",
+    "class_type": "LoadImage"
+  }
+}

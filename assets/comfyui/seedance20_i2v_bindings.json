@@ -1,0 +1,57 @@
+{
+  "prompt": {
+    "node": "9",
+    "input": "model.prompt",
+    "class_type": "ByteDance2FirstLastFrameNode"
+  },
+  "resolution": {
+    "node": "9",
+    "input": "model.resolution",
+    "class_type": "ByteDance2FirstLastFrameNode",
+    "choices": [
+      "480p",
+      "720p",
+      "1080p",
+      "4k"
+    ]
+  },
+  "ratio": {
+    "node": "9",
+    "input": "model.ratio",
+    "class_type": "ByteDance2FirstLastFrameNode",
+    "choices": [
+      "16:9",
+      "4:3",
+      "1:1",
+      "3:4",
+      "9:16",
+      "21:9",
+      "adaptive"
+    ]
+  },
+  "duration": {
+    "node": "9",
+    "input": "model.duration",
+    "class_type": "ByteDance2FirstLastFrameNode",
+    "min": 4,
+    "max": 15
+  },
+  "generate_audio": {
+    "node": "9",
+    "input": "model.generate_audio",
+    "class_type": "ByteDance2FirstLastFrameNode"
+  },
+  "image": {
+    "node": "1",
+    "input": "image",
+    "class_type": "LoadImage"
+  },
+  "seed": {
+    "node": "9",
+    "input": "seed"
+  },
+  "filename_prefix": {
+    "node": "2",
+    "input": "filename_prefix"
+  }
+}

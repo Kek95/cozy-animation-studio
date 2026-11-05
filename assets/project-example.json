@@ -1,0 +1,169 @@
+{
+  "version": 2,
+  "title": "雨天的一顿热饭",
+  "idea": "女孩在下雨的小屋里做早餐，猫在旁边睡觉",
+  "duration": 30,
+  "aspect_ratio": "16:9",
+  "style": "宫崎骏／吉卜力式二维手绘田园动画",
+  "style_version": 1,
+  "style_anchor": null,
+  "style_review": null,
+  "themes": [
+    "雨天的庇护",
+    "食物的温度",
+    "安静的陪伴"
+  ],
+  "script": "雨水落在花园中，女孩在明亮的小厨房里准备面包和热汤。她把早餐端到窗边，尝一口汤，放松下来。旁边的橘白猫睡着了，雨声继续。",
+  "characters": [
+    {
+      "id": "C01",
+      "description": "成年女孩，栗棕短发、芥末黄长袖、苔绿围裙，比例自然。"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "L01",
+      "description": "奶油白小屋和绿色花园，窗框为鼠尾草绿。"
+    },
+    {
+      "id": "L02",
+      "description": "明亮木质厨房，炉灶与台面位置在参考图中固定。"
+    },
+    {
+      "id": "L03",
+      "description": "同一小屋的窗边餐桌，橘白猫睡在旁边椅垫。"
+    }
+  ],
+  "shots": [
+    {
+      "id": "S01",
+      "duration": 4,
+      "generation_duration": 5,
+      "action": "雨落在花园叶片上，小屋窗内透出暖光",
+      "character_ids": [],
+      "scene_id": "L01",
+      "reference_files": [
+        "references/style-v1.png",
+        "references/L01-v1.png"
+      ],
+      "image_file": "images/S01-v1.png",
+      "image_prompt": "宫崎骏／吉卜力式二维手绘动画电影画风，通透明亮、绿色鲜活而有层次，干净动画线条、赛璐璐人物阴影、精细手绘背景。雨落在花园叶片上，小屋窗内透出暖光。使用项目已检查的角色、场景和风格参考，构图留出动作空间。",
+      "video_prompt": "单个连续镜头，保留输入图片的宫崎骏／吉卜力式二维手绘画风和主体外观。雨落在花园叶片上，小屋窗内透出暖光。动作轻缓，形状稳定，末尾停留方便剪辑。环境音，无对白、无背景音乐。",
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S02",
+      "duration": 5,
+      "generation_duration": 5,
+      "action": "女孩在厨房把面包放上盘子",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L02",
+      "reference_files": [
+        "references/style-v1.png",
+        "references/L02-v1.png",
+        "references/C01-v1.png"
+      ],
+      "image_file": "images/S02-v1.png",
+      "image_prompt": "宫崎骏／吉卜力式二维手绘动画电影画风，通透明亮、绿色鲜活而有层次，干净动画线条、赛璐璐人物阴影、精细手绘背景。女孩在厨房把面包放上盘子。使用项目已检查的角色、场景和风格参考，构图留出动作空间。",
+      "video_prompt": "单个连续镜头，保留输入图片的宫崎骏／吉卜力式二维手绘画风和主体外观。女孩在厨房把面包放上盘子。动作轻缓，形状稳定，末尾停留方便剪辑。环境音，无对白、无背景音乐。",
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S03",
+      "duration": 5,
+      "generation_duration": 5,
+      "action": "女孩缓慢搅拌热汤，蒸汽升起",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L02",
+      "reference_files": [
+        "references/style-v1.png",
+        "references/L02-v1.png",
+        "references/C01-v1.png"
+      ],
+      "image_file": "images/S03-v1.png",
+      "image_prompt": "宫崎骏／吉卜力式二维手绘动画电影画风，通透明亮、绿色鲜活而有层次，干净动画线条、赛璐璐人物阴影、精细手绘背景。女孩缓慢搅拌热汤，蒸汽升起。使用项目已检查的角色、场景和风格参考，构图留出动作空间。",
+      "video_prompt": "单个连续镜头，保留输入图片的宫崎骏／吉卜力式二维手绘画风和主体外观。女孩缓慢搅拌热汤，蒸汽升起。动作轻缓，形状稳定，末尾停留方便剪辑。环境音，无对白、无背景音乐。",
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S04",
+      "duration": 5,
+      "generation_duration": 5,
+      "action": "手将汤碗轻放在托盘上",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L02",
+      "reference_files": [
+        "references/style-v1.png",
+        "references/L02-v1.png",
+        "references/C01-v1.png"
+      ],
+      "image_file": "images/S04-v1.png",
+      "image_prompt": "宫崎骏／吉卜力式二维手绘动画电影画风，通透明亮、绿色鲜活而有层次，干净动画线条、赛璐璐人物阴影、精细手绘背景。手将汤碗轻放在托盘上。使用项目已检查的角色、场景和风格参考，构图留出动作空间。",
+      "video_prompt": "单个连续镜头，保留输入图片的宫崎骏／吉卜力式二维手绘画风和主体外观。手将汤碗轻放在托盘上。动作轻缓，形状稳定，末尾停留方便剪辑。环境音，无对白、无背景音乐。",
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S05",
+      "duration": 6,
+      "generation_duration": 6,
+      "action": "女孩坐到窗边尝一口汤，神情满足",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L03",
+      "reference_files": [
+        "references/style-v1.png",
+        "references/L03-v1.png",
+        "references/C01-v1.png"
+      ],
+      "image_file": "images/S05-v1.png",
+      "image_prompt": "宫崎骏／吉卜力式二维手绘动画电影画风，通透明亮、绿色鲜活而有层次，干净动画线条、赛璐璐人物阴影、精细手绘背景。女孩坐到窗边尝一口汤，神情满足。使用项目已检查的角色、场景和风格参考，构图留出动作空间。",
+      "video_prompt": "单个连续镜头，保留输入图片的宫崎骏／吉卜力式二维手绘画风和主体外观。女孩坐到窗边尝一口汤，神情满足。动作轻缓，形状稳定，末尾停留方便剪辑。环境音，无对白、无背景音乐。",
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S06",
+      "duration": 5,
+      "generation_duration": 5,
+      "action": "橘白猫在椅垫熟睡，镜头缓慢拉远",
+      "character_ids": [],
+      "scene_id": "L03",
+      "reference_files": [
+        "references/style-v1.png",
+        "references/L03-v1.png"
+      ],
+      "image_file": "images/S06-v1.png",
+      "image_prompt": "宫崎骏／吉卜力式二维手绘动画电影画风，通透明亮、绿色鲜活而有层次，干净动画线条、赛璐璐人物阴影、精细手绘背景。橘白猫在椅垫熟睡，镜头缓慢拉远。使用项目已检查的角色、场景和风格参考，构图留出动作空间。",
+      "video_prompt": "单个连续镜头，保留输入图片的宫崎骏／吉卜力式二维手绘画风和主体外观。橘白猫在椅垫熟睡，镜头缓慢拉远。动作轻缓，形状稳定，末尾停留方便剪辑。环境音，无对白、无背景音乐。",
+      "candidates": [],
+      "selected_candidate": null
+    }
+  ],
+  "limits": {
+    "max_candidates_per_shot": 2,
+    "budget": null
+  },
+  "audio": {
+    "voiceover": null,
+    "music": null,
+    "native_audio": true
+  },
+  "state": "planning_example_no_assets_generated",
+  "generation": {
+    "image": null,
+    "video": null,
+    "speech": null,
+    "music": null
+  }
+}

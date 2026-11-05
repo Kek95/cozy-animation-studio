@@ -1,0 +1,24 @@
+{
+  "1": {
+    "class_type": "OpenAIGPTImage1",
+    "inputs": {
+      "prompt": "",
+      "model": "gpt-image-2",
+      "quality": "medium",
+      "background": "opaque",
+      "size": "2048x1152",
+      "n": 1,
+      "seed": 0
+    }
+  },
+  "2": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ],
+      "filename_prefix": "cozy_animation/reference"
+    }
+  }
+}

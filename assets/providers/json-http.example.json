@@ -1,0 +1,16 @@
+{
+  "name": "my-video-api",
+  "kind": "json-http",
+  "base_url": "https://your-provider.example.invalid",
+  "headers_from_env": {
+    "Authorization": {"env": "VIDEO_API_KEY", "prefix": "Bearer "}
+  },
+  "submit": {"path": "/tasks", "task_id_pointer": "/id"},
+  "poll": {
+    "path": "/tasks/{task_id}",
+    "state_pointer": "/status",
+    "states": {"queued": "pending", "processing": "running", "completed": "success", "failed": "error", "cancelled": "cancelled"},
+    "output_urls_pointer": "/output/url",
+    "output_extension": ".mp4"
+  }
+}
