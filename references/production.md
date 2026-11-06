@@ -28,6 +28,13 @@ python3 "$SKILL_DIR/scripts/studio.py" init work/film01 \
   "image_file": "images/S01-v1.png",
   "image_prompt": "实际写入完整镜头图提示词",
   "video_prompt": "实际写入动作、运镜和声音提示词",
+  "motion_plan": {
+    "start_state": "女孩在画面左侧，面向番茄架",
+    "beats": ["0–1秒迈步起势", "1–4秒走近番茄架，落脚后停稳", "4–5秒目光转向成熟果实"],
+    "secondary_motion": "裙摆跟随步伐摆动，停步后自然回落",
+    "camera": "固定中景",
+    "cut_cue": "视线落到番茄后切果实细节"
+  },
   "candidates": [],
   "selected_candidate": null
 }
@@ -65,7 +72,7 @@ python3 "$SKILL_DIR/scripts/edit.py" frames work/film01/clips/S01/v1-00.mp4 \
   --out work/film01/review/S01-v1 --count 12
 ```
 
-实际看图/播放，填写可核实的理由；不要把“抽帧成功”写成“画风检查通过”。身体运动、液体、手部和物体接触需更密集取样。音频需播放或使用音频理解能力检查；仅有音轨不能证明对白正确或没有杂音。
+实际看图/播放，填写可核实的理由；不要把“抽帧成功”写成“画风检查通过”。动作镜头需正常速度检查完整过程，密集取样用于定位身体运动、液体、手部和物体接触问题，不能替代动态观感验收。音频需播放或使用音频理解能力检查；仅有音轨不能证明有背景音乐、对白正确或没有杂音。无法连续观看/听取时保留对应待检状态，见 [动作与声音](motion-and-sound.md)。
 
 ```bash
 python3 "$SKILL_DIR/scripts/studio.py" review work/film01 \
@@ -77,6 +84,23 @@ python3 "$SKILL_DIR/scripts/studio.py" review work/film01 \
 
 ## 剪辑和配音
 
+新项目默认需要背景音乐。取得音乐文件后登记项目相对路径和来源，例如：
+
+```json
+{
+  "audio": {
+    "music_required": true,
+    "music": "audio/music-v1.wav",
+    "music_brief": "30秒原创无歌词器乐，开头进入、生活动作中推进、结尾自然收束",
+    "music_source": {"kind": "user_supplied", "note": "填写真实来源与使用依据"},
+    "voiceover": null,
+    "native_audio": true
+  }
+}
+```
+
+路径只在真实文件就绪后填写。`music_required=true` 且没有音乐时，最终合成会拒绝继续；规划阶段允许路径为 null。用户明确选择无配乐时设为 false，并清空音乐路径。旧项目未声明该字段时保持原兼容行为，代理应按用户本次要求补齐。
+
 ```bash
 python3 "$SKILL_DIR/scripts/edit.py" compose work/film01 \
   --out outputs/film01.mp4 --width 1280 --height 720 --fps 24
@@ -84,7 +108,7 @@ python3 "$SKILL_DIR/scripts/edit.py" compose work/film01 \
 
 脚本按 storyboard 顺序使用已通过的候选，从 `trim_in` 裁取 `duration`；拒绝不足的源视频，不通过静帧延长掩盖缺素材。默认中心裁切到目标比例，必要时使用 `--fit pad`，或按主体位置另行编写剪辑。选择与实际素材匹配的输出规格；放大像素不是提升真实清晰度。
 
-配音由用户选择的 TTS API、工具或可选节点流程生成，音乐由用户素材或已授权生成服务取得，记录来源。脚本只负责混入音轨，不内置 TTS 或音乐模型。需要配音时调用当前环境相应技能/工具，先测真实时长：
+配音由用户选择的 TTS API、工具或可选节点流程生成，音乐由用户素材或已授权生成服务取得，记录来源。脚本只负责混入音轨，不内置 TTS 或音乐模型。自动读取 `audio.music` 和 `audio.voiceover` 的项目相对路径，CLI `--music` / `--voice` 优先且相对当前工作目录。`audio.native_audio=false` 或 `--mute-native` 静音片段原声。需要配音时调用当前环境相应技能/工具，先测真实时长：
 
 ```bash
 python3 "$SKILL_DIR/scripts/edit.py" compose work/film01 \
@@ -94,7 +118,7 @@ python3 "$SKILL_DIR/scripts/edit.py" compose work/film01 \
 
 旁白从 0 秒开始；需要逐句错位时先用 FFmpeg 生成已经对齐的旁白轨，再混入。音乐短于成片时默认报错，仅在确实适合循环时使用 `--loop-music`。这里给出的音量是命令示例，要按实测响度和实际听感调整。
 
-剪辑输出附带技术报告：时长、分辨率、音轨、完整解码。最后仍需检查最终画面的接缝、声音和叙事节奏。以宿主可显示的视频方式呈现本地 MP4。
+剪辑输出附带技术报告：时长、分辨率、音轨、完整解码以及实际混入的音频路径、增益和循环标记。报告中的听检默认仍是 pending，不会因有音轨就自动通过。最后分别记录 `quality_review.motion` 与 `quality_review.final_audio` 的检查证据，检查最终画面的接缝、声音和叙事节奏。以宿主可显示的视频方式呈现本地 MP4。
 
 ## 批量与继续项目
 

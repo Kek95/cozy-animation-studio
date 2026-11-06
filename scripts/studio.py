@@ -37,6 +37,16 @@ def finite_positive(value):
 
 def validate(doc):
     errors = []
+    audio = doc.get('audio', {})
+    if not isinstance(audio, dict):
+        errors.append('audio must be an object.')
+    else:
+        for flag in ['music_required', 'native_audio']:
+            if flag in audio and not isinstance(audio[flag], bool):
+                errors.append(f'audio.{flag} must be a boolean.')
+        for field in ['music', 'voiceover']:
+            if audio.get(field) is not None and (not isinstance(audio[field], str) or not audio[field].strip()):
+                errors.append(f'audio.{field} must be a nonempty path or null.')
     if not finite_positive(doc.get('duration')):
         errors.append('Project duration must be positive.')
     shots = doc.get('shots', [])
@@ -85,7 +95,9 @@ def init(args):
            'themes': [], 'script': '', 'characters': [], 'scenes': [], 'shots': [],
            'generation': {'image': None, 'video': None, 'speech': None, 'music': None},
            'limits': {'max_candidates_per_shot': 2, 'budget': None},
-           'audio': {'voiceover': None, 'music': None, 'native_audio': True}, 'created_at': now()}
+           'audio': {'voiceover': None, 'music': None, 'music_required': True,
+                     'music_brief': '', 'music_source': None, 'native_audio': True},
+           'quality_review': {'motion': 'pending', 'final_audio': 'pending'}, 'created_at': now()}
     save(root / 'project.json', doc)
     return {'project': str(root), 'state': 'ready_for_script_and_storyboard'}
 

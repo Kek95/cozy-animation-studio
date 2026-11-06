@@ -72,6 +72,55 @@ class MediaTests(unittest.TestCase):
             edit.compose(self.args)
         self.assertFalse(Path(self.args.out).exists())
 
+    def test_required_music_missing_blocks_final_output(self):
+        self.doc['audio'] = {'music_required': True, 'music': None}
+        studio.save(self.root / 'project.json', self.doc)
+        with self.assertRaisesRegex(ValueError, 'Background music is required'):
+            edit.compose(self.args)
+        self.assertFalse(Path(self.args.out).exists())
+
+    def test_project_relative_audio_is_mixed_and_can_duck(self):
+        self.doc['audio'] = {'music_required': True, 'music': 'long-voice.wav',
+                             'voiceover': 'voice.wav', 'native_audio': False}
+        studio.save(self.root / 'project.json', self.doc)
+        self.args.duck_music = True
+        result = edit.compose(self.args)
+        self.assertEqual(result['full_decode'], 'passed')
+        self.assertTrue(result['audio_mix']['native_muted'])
+        self.assertEqual([s['file'] for s in result['audio_mix']['sources']],
+                         [str((self.root / 'voice.wav').resolve()), str((self.root / 'long-voice.wav').resolve())])
+        # The second shot has no native audio and voice ends at 1s: music must remain.
+        import array
+        samples = array.array('f', subprocess.check_output(
+            ['ffmpeg', '-v', 'error', '-ss', '1.2', '-i', self.args.out,
+             '-t', '0.3', '-vn', '-f', 'f32le', '-ac', '1', '-']))
+        self.assertGreater(max(abs(v) for v in samples), 0.001)
+
+    def test_cli_music_overrides_project_path(self):
+        self.doc['audio'] = {'music_required': True, 'music': 'does-not-exist.wav',
+                             'music_source': {'note': 'belongs to the overridden asset'}}
+        studio.save(self.root / 'project.json', self.doc)
+        self.args.music = str(self.root / 'long-voice.wav')
+        result = edit.compose(self.args)
+        self.assertEqual(result['audio_mix']['sources'][0]['file'], str(Path(self.args.music).resolve()))
+        self.assertIsNone(result['audio_mix']['music_source'])
+
+    def test_missing_project_music_asset_blocks_final_output(self):
+        self.doc['audio'] = {'music_required': True, 'music': 'missing.wav'}
+        studio.save(self.root / 'project.json', self.doc)
+        with self.assertRaisesRegex(ValueError, 'music file does not exist'):
+            edit.compose(self.args)
+        self.assertFalse(Path(self.args.out).exists())
+
+    def test_intentionally_music_free_project_can_mute_native(self):
+        self.doc['audio'] = {'music_required': False, 'music': None, 'native_audio': False}
+        studio.save(self.root / 'project.json', self.doc)
+        edit.compose(self.args)
+        import array
+        samples = array.array('f', subprocess.check_output(
+            ['ffmpeg', '-v', 'error', '-i', self.args.out, '-vn', '-f', 'f32le', '-ac', '1', '-']))
+        self.assertLess(max(abs(v) for v in samples), 0.000001)
+
     def test_insufficient_video_rejected_without_freeze(self):
         self.doc['shots'][0]['trim_in'] = 1
         studio.save(self.root / 'project.json', self.doc)

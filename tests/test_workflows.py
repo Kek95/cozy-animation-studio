@@ -79,6 +79,22 @@ class ProjectTests(unittest.TestCase):
         self.assertTrue(any('shorter' in e for e in errors))
         self.assertTrue(any('total' in e for e in errors))
 
+    def test_new_project_requires_music_but_allows_planning_before_assets(self):
+        target = self.root / 'new-film'
+        studio.init(Namespace(project=target, title='test', idea='a quiet meal', duration=30, ratio='16:9'))
+        doc = studio.load(target)[1]
+        self.assertIs(doc['audio']['music_required'], True)
+        self.assertIsNone(doc['audio']['music'])
+        doc['shots'] = example()['shots']
+        self.assertEqual(studio.validate(doc), [])
+
+    def test_audio_settings_reject_ambiguous_types(self):
+        for audio in [None, {'music_required': 'false'}, {'native_audio': 0},
+                      {'music': {'path': 'music.wav'}}, {'voiceover': ''}]:
+            with self.subTest(audio=audio):
+                self.doc['audio'] = audio
+                self.assertTrue(any('audio' in error for error in studio.validate(self.doc)))
+
     def test_invalid_ids_are_reported(self):
         for value in ['../../escape', None, '']:
             self.doc['shots'][0]['id'] = value

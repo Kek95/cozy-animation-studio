@@ -50,6 +50,21 @@ def compose(args):
     errors = validate(doc)
     if errors:
         raise ValueError('; '.join(errors))
+    audio = doc.get('audio', {})
+    # CLI paths are relative to the caller; saved paths are relative to the project.
+    def audio_file(cli_value, field):
+        if cli_value:
+            return Path(cli_value).resolve()
+        value = audio.get(field)
+        return (root / value).resolve() if value else None
+    voice = audio_file(args.voice, 'voiceover')
+    music = audio_file(args.music, 'music')
+    if audio.get('music_required', False) and music is None:
+        raise ValueError('Background music is required. Supply --music or audio.music before final composition. Set audio.music_required=false only for an intentionally music-free project.')
+    for kind, file in [('voice', voice), ('music', music)]:
+        if file is not None and not file.is_file():
+            raise ValueError(f'{kind} file does not exist: {file}')
+    mute_native = args.mute_native or not audio.get('native_audio', True)
     if args.width <= 0 or args.height <= 0 or args.width % 2 or args.height % 2 or args.fps <= 0:
         raise ValueError('Dimensions must be positive and even; fps must be positive.')
     for value in [args.native_db, args.voice_db, args.music_db]:
@@ -82,7 +97,7 @@ def compose(args):
         cmd += ['-i', str(file)]
         scale = f'scale={args.width}:{args.height}:force_original_aspect_ratio=increase,crop={args.width}:{args.height}' if args.fit == 'crop' else f'scale={args.width}:{args.height}:force_original_aspect_ratio=decrease,pad={args.width}:{args.height}:(ow-iw)/2:(oh-ih)/2'
         filters.append(f'[{i}:v]trim=start={offset}:duration={length},setpts=PTS-STARTPTS,{scale},setsar=1,fps={args.fps},format=yuv420p[v{i}]')
-        if any(s['codec_type'] == 'audio' for s in streams) and not args.mute_native:
+        if any(s['codec_type'] == 'audio' for s in streams) and not mute_native:
             filters.append(f'[{i}:a]atrim=start={offset}:duration={length},asetpts=PTS-STARTPTS,aresample=48000,aformat=channel_layouts=stereo,apad,atrim=duration={length},volume={args.native_db}dB,afade=t=in:d=0.06,afade=t=out:st={max(0,length-0.06)}:d=0.06[a{i}]')
         else:
             filters.append(f'anullsrc=r=48000:cl=stereo,atrim=duration={length},asetpts=PTS-STARTPTS[a{i}]')
@@ -92,7 +107,8 @@ def compose(args):
     tracks = ['[native]']
     input_index = len(pairs)
     total = float(doc['duration'])
-    for kind, name, gain in [('voice', args.voice, args.voice_db), ('music', args.music, args.music_db)]:
+    audio_sources = []
+    for kind, name, gain in [('voice', voice, args.voice_db), ('music', music, args.music_db)]:
         if not name:
             continue
         file = Path(name).resolve()
@@ -110,8 +126,10 @@ def compose(args):
         fade = f',afade=t=in:d=0.4,afade=t=out:st={max(0,total-0.8)}:d=0.8' if kind == 'music' else ''
         filters.append(f'[{input_index}:a]aresample=48000,aformat=channel_layouts=stereo,asetpts=PTS-STARTPTS,apad,atrim=duration={total},volume={gain}dB{fade}[{kind}]')
         tracks.append(f'[{kind}]'); input_index += 1
+        audio_sources.append({'kind': kind, 'file': str(file), 'gain_db': gain,
+                              'looped': kind == 'music' and args.loop_music})
     if args.duck_music:
-        if not args.voice or not args.music:
+        if not voice or not music:
             raise ValueError('--duck-music requires both voice and music.')
         filters += ['[voice]asplit=2[voice_mix][voice_control]', '[music][voice_control]sidechaincompress=threshold=0.03:ratio=6:attack=20:release=300[music_ducked]']
         tracks = ['[native]', '[voice_mix]', '[music_ducked]']
@@ -124,6 +142,10 @@ def compose(args):
     if abs(result['duration'] - total) > max(0.05, 1 / args.fps):
         raise ValueError('Unexpected final duration; inspect the output before delivery.')
     result['sources'] = source_info
+    result['audio_mix'] = {'music_required': audio.get('music_required', False),
+                           'native_muted': mute_native, 'sources': audio_sources,
+                           'music_source': audio.get('music_source') if not args.music else None,
+                           'review': 'pending_listening; an audio stream does not prove music quality or audibility'}
     result['visual_review'] = 'Selected candidates were explicitly accepted; final playback still required.'
     save(dest.with_suffix('.report.json'), result)
     return result
