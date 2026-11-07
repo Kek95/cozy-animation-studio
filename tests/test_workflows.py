@@ -1,6 +1,7 @@
 import copy
 import io
 import json
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -87,6 +88,18 @@ class ProjectTests(unittest.TestCase):
         self.assertIsNone(doc['audio']['music'])
         doc['shots'] = example()['shots']
         self.assertEqual(studio.validate(doc), [])
+
+    def test_default_cli_project_accepts_full_length_cozy_plan(self):
+        target = self.root / 'default-film'
+        subprocess.run([sys.executable, str(ROOT / 'scripts/studio.py'), 'init', str(target),
+                        '--idea', '整理阅读角，与猫一起喝茶'], check=True, capture_output=True, text=True)
+        doc = studio.load(target)[1]
+        plan = json.loads((ROOT / 'assets/cozy-episode-project.example.json').read_text())
+        self.assertEqual(doc['duration'], 105)
+        doc['shots'] = plan['shots']
+        self.assertEqual(studio.validate(doc), [])
+        self.assertIsNone(doc['audio']['music'])
+        self.assertIsNone(doc['generation']['video'])
 
     def test_audio_settings_reject_ambiguous_types(self):
         for audio in [None, {'music_required': 'false'}, {'native_audio': 0},

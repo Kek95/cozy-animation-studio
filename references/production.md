@@ -8,11 +8,13 @@
 
 ```bash
 python3 "$SKILL_DIR/scripts/studio.py" init work/film01 \
-  --idea '夏天傍晚，女孩在花园里摘番茄，为奶奶做一顿晚饭' \
-  --title '傍晚的一篮番茄' --duration 30 --ratio 16:9
+  --idea '傍晚整理窗边阅读角，泡一壶茶，和猫一起安顿下来' \
+  --title '把傍晚留在窗边' --ratio 16:9
 ```
 
-初始化后由 Codex 编写 `project.json` 的 `script`、`themes`、`characters`、`scenes` 和 `shots`，并给用户提供易读的剧本/分镜 Markdown。空项目不代表剧本已完成。参考 `assets/project-example.json`，但必须按用户本次想法重写。
+初始化后由 Codex 编写 `project.json` 的 `script`、`themes`、`characters`、`scenes` 和 `shots`，并给用户提供易读的剧本/分镜 Markdown。空项目不代表剧本已完成。默认参考 [cozy-episode-project.example.json](../assets/cozy-episode-project.example.json)，按用户本次想法重写。`assets/project-example.json`保留为显式30秒小样示例。
+
+默认正式短片90–120秒，CLI初始化默认105秒；`--duration`可显式覆盖，短样需写明如`--duration 30`。剧本、整集预演、连续性和声音时间由代理维护，现有CLI不自动完成这些创作或审美步骤。见[系列流程](series-production.md)。
 
 每镜最少：
 
@@ -39,6 +41,8 @@ python3 "$SKILL_DIR/scripts/studio.py" init work/film01 \
   "selected_candidate": null
 }
 ```
+
+每个项目应维护`story`（愿望、相关行动、变化/互动与结果）、`visual_bible`（已通过视觉基准及版本）、`continuity`（各镜起止状态）和`quality_review`（故事、风格、动作与听检证据）。这些扩展字段供代理实际编写和审查，结构校验不会自动判断其审美质量。
 
 这些路径是项目内的规划示例；文件真正生成并检查后再登记为可用资产。`style_anchor` 保存实际文件路径，`style_review` 保存对照用户参考的结论。单条电影的所有 `duration` 之和应与项目目标一致，`generation_duration` 至少覆盖本镜剪辑长度。
 
@@ -125,3 +129,13 @@ python3 "$SKILL_DIR/scripts/edit.py" compose work/film01 \
 同系列多个主题各用一个项目 JSON。共用角色和场景参考，可通过绝对路径或复制文件引用并记录来源。先完成一条代表性短片，确认风格方向后复用到系列；如用户已经认可当前视觉设定，直接继续，不重复请求确认。
 
 再次打开任务时，读项目文件和候选状态，按每个候选的 provider 分别收集现有任务，继续未完成阶段。Skill 由 Codex 执行；持续无人值守运行需另配常驻调度程序，本包不声称提供后台服务。
+
+## 镜头契约预检
+
+按 [shot-contracts.md](shot-contracts.md) 填写 `motion_plan.speed_mode/active_seconds`、`interaction` 和 `continuity`。完成剧本后、视频请求提交前运行：
+
+```bash
+python3 "$SKILL_DIR/scripts/studio.py" preflight work/film01
+```
+
+旧项目和旧的30秒/农村题材示例仍可用原 `validate` 读取，不自动改写历史。要进入新一轮视频制作，先补齐镜头契约再预检。预检不发出API请求、不修改项目，也不验证画面或提示词是否被模型服从。代理必须将本镜相关契约落实到最终实际发送的 `video_prompt`，保留请求文本，并另行审看生成结果。

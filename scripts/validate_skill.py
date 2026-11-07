@@ -6,6 +6,7 @@ import re
 from pathlib import Path
 
 from studio import validate
+from quality import preflight
 from workflow import patch, reject_secrets
 from providers import load_provider
 
@@ -49,9 +50,13 @@ def check(root):
         bindings = json.loads(bindings_file.read_text(encoding='utf-8'))
         values = {name: graph[str(b['node'])]['inputs'][b['input']] for name, b in bindings.items()}
         patch(graph, bindings, values)
-    errors = validate(json.loads((root / 'assets/project-example.json').read_text(encoding='utf-8')))
-    if errors:
-        raise ValueError('; '.join(errors))
+    for example in [root / 'assets/project-example.json', *sorted((root / 'assets').glob('*-project.example.json'))]:
+        errors = validate(json.loads(example.read_text(encoding='utf-8')))
+        if errors:
+            raise ValueError(example.name + ': ' + '; '.join(errors))
+    plan = json.loads((root / 'assets/cozy-episode-project.example.json').read_text())
+    errors = preflight(plan)
+    if errors: raise ValueError('cozy preflight: ' + '; '.join(errors))
     scripts = sorted((root / 'scripts').glob('*.py'))
     for file in scripts:
         ast.parse(file.read_text(encoding='utf-8'), filename=file.name, feature_version=(3, 10))

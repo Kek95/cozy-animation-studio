@@ -9,6 +9,7 @@ import shutil
 from datetime import datetime, timezone
 from pathlib import Path
 from providers import MEDIA, download, load_provider, task_id_checked
+from quality import preflight
 
 def now():
     return datetime.now(timezone.utc).isoformat()
@@ -85,12 +86,15 @@ def init(args):
     root = Path(args.project).resolve()
     if (root / 'project.json').exists():
         raise ValueError('Project already exists; refusing to overwrite.')
-    if not finite_positive(args.duration):
+    duration = 105 if args.duration is None else args.duration
+    if not finite_positive(duration):
         raise ValueError('Duration must be positive.')
     for name in ['references', 'images', 'clips', 'requests', 'review', 'audio', 'final']:
         (root / name).mkdir(parents=True, exist_ok=True)
-    doc = {'version': 2, 'title': args.title, 'idea': args.idea, 'duration': args.duration,
-           'aspect_ratio': args.ratio, 'style': '宫崎骏／吉卜力式二维手绘田园动画',
+    doc = {'version': 2, 'title': args.title, 'idea': args.idea, 'duration': duration,
+           'duration_range': [90, 120] if args.duration is None else [duration, duration],
+           'aspect_ratio': args.ratio, 'style': '宫崎骏／吉卜力式二维手绘治愈动画',
+           'creative_mode': 'cozy_relaxation',
            'style_version': 1, 'style_anchor': None, 'style_review': None,
            'themes': [], 'script': '', 'characters': [], 'scenes': [], 'shots': [],
            'generation': {'image': None, 'video': None, 'speech': None, 'music': None},
@@ -286,8 +290,9 @@ def status(args):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     sub = p.add_subparsers(dest='command', required=True)
-    a = sub.add_parser('init'); a.add_argument('project'); a.add_argument('--idea', required=True); a.add_argument('--title', default='治愈短片'); a.add_argument('--duration', type=float, default=30); a.add_argument('--ratio', default='16:9')
+    a = sub.add_parser('init'); a.add_argument('project'); a.add_argument('--idea', required=True); a.add_argument('--title', default='治愈短片'); a.add_argument('--duration', type=float, default=None); a.add_argument('--ratio', default='16:9')
     a = sub.add_parser('validate'); a.add_argument('project')
+    a = sub.add_parser('preflight'); a.add_argument('project')
     a = sub.add_parser('status'); a.add_argument('project')
     a = sub.add_parser('register'); a.add_argument('project'); a.add_argument('--shot', required=True); a.add_argument('--candidate', required=True); a.add_argument('--task-id', '--prompt-id', dest='task_id', required=True); a.add_argument('--output-node'); a.add_argument('--request', '--workflow', dest='request'); a.add_argument('--seconds', type=float); a.add_argument('--provider'); a.add_argument('--server'); a.add_argument('--recover', action='store_true')
     a = sub.add_parser('collect'); a.add_argument('project'); a.add_argument('--provider'); a.add_argument('--server')
@@ -296,12 +301,15 @@ def main():
     a = sub.add_parser('review'); a.add_argument('project'); a.add_argument('--shot', required=True); a.add_argument('--candidate', required=True); a.add_argument('--verdict', choices=['accept', 'reject'], required=True); a.add_argument('--note', required=True); a.add_argument('--asset', type=int, default=0); a.add_argument('--trim-in', type=float, default=0)
     args = p.parse_args()
     try:
-        if args.command == 'validate':
-            errors = validate(load(args.project)[1]); result = {'valid': not errors, 'errors': errors}
+        if args.command in {'validate', 'preflight'}:
+            doc = load(args.project)[1]
+            errors = validate(doc)
+            if args.command == 'preflight': errors += preflight(doc)
+            result = {'valid': not errors, 'errors': errors}
         else:
             result = {'init': init, 'register': register, 'submit': submit, 'collect': collect, 'import': import_asset, 'review': select, 'status': status}[args.command](args)
         print(json.dumps(result, ensure_ascii=False, indent=2))
-        if args.command == 'validate' and errors:
+        if args.command in {'validate', 'preflight'} and errors:
             raise SystemExit(1)
     except (ValueError, KeyError, StopIteration, OSError, RuntimeError) as exc:
         print(json.dumps({'error': type(exc).__name__, 'message': str(exc)}, ensure_ascii=False))

@@ -44,6 +44,7 @@ python3 "$SKILL_DIR/scripts/workflow.py" patch \
 - UI 在本机 Comfy Desktop 中操作时，使用支持的 UI 自动化工具；按最新页面状态定位，不使用任意浏览器内部对象修改图。
 - Hosted Partner 节点依赖已登录的 ComfyUI 账户及 prepaid credits。优先经已登录 UI 提交；不从浏览器存储提取认证令牌。只有用户已经配置的正式 API 认证方式存在时，才使用 API 提交。
 - 提交前保存项目/镜头版本与提示词。提交后立即取得 `prompt_id`、终端保存节点 ID 并登记。只提交一次；超时先查询同一个任务。
+- Hosted视频镜头默认使用独立任务记录与独立API图。一个并行图中某节点失败可能中止其他节点，导致其他云端请求已提交却没有本地产物；未经验证，不把所有付费镜头塞进同一张图。批次中止后逐节点核对，不能把没有文件当成未提交。无法取得供应商ID的请求记为结果不确定并计入请求用量；不要承诺可无损恢复或自动重跑整批。
 - 服务契约：`GET /system_stats`、`GET /object_info`、`GET /queue`、`GET /history/{prompt_id}`、`GET /view?filename=...&subfolder=...&type=...`；正式任务提交为 `POST /prompt`，上传为 `POST /upload/image`（multipart）。实际执行前通过当前服务或官方资料核对提交/上传字段。
 - 用户指定 ComfyUI 时，优先在 ComfyUI 完成图片与视频生成。若必需的图片编辑节点缺失，可使用用户授权的其他图片工具；明确说明路由变化，不能偷偷退回纯文生视频并宣称完成参考条件生成。
 - 不将密钥、隐藏认证字段或完整用户队列写进交付文件。只导出本项目的 API 图、提示词和参数。

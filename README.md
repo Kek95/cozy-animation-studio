@@ -1,6 +1,6 @@
 # Cozy Animation Studio · 治愈动画工作室
 
-一个**独立于生成平台**的动画制作 Skill：将一句画面想法扩写为剧本，经参考图、镜头生成、审片与剪辑交付短片。可直接连接图片/视频 API，也可使用现有生成工具或 ComfyUI。
+一个**独立于生成平台**的动画制作 Skill：将一句画面想法或生活经历扩写为剧本，经参考图、镜头生成、审片与剪辑交付短片。支持每集一个故事的系列策划与连续性记录；可直接连接图片/视频 API，也可使用现有生成工具或 ComfyUI。
 
 **不需要安装或运行 ComfyUI。**它只是可选适配器之一；图片、视频、配音和音乐可以分别选择不同服务。
 
@@ -14,15 +14,15 @@
              直接 API   现有工具/SDK   ComfyUI
 ```
 
-默认提供宫崎骏／吉卜力式二维手绘田园动画风格预设，也可以替换。项目与上述创作者、工作室及模型供应商无隶属关系。
+默认制作**每条90–120秒的治愈解压生活短片**，提供宫崎骏／吉卜力式二维手绘动画风格预设，也可以替换。项目与上述创作者、工作室及模型供应商无隶属关系。
 
-默认制作带连续背景音乐和环境音的短片，无旁白；可按要求改为纯环境音或静音。动作提示词描述完整过程、速度变化与跟随运动，剪辑长度随动作调整。新项目缺少必需配乐时会阻止最终合成；配乐需由可用服务生成或提供真实素材。
+默认加入连续轻配乐和环境/动作音，无解说旁白，必要对白少量使用；可按要求改为纯环境音或静音。重点是**动作连贯、风格统一、故事丰满**：动作有起势、接触与结果，前后镜继承实际状态；共享已通过的角色/场景与风格锚点；用相连的生活过程、细微互动和满足的收尾展开情绪。新项目缺少必需配乐时会阻止最终合成；配乐需由可用服务生成或提供真实素材。
 
 ## 示例用法
 
 安装后在 Codex 中输入：
 
-> 使用 $cozy-animation-studio：夏日傍晚，女孩在花园摘番茄，给奶奶做晚饭。做成 30 秒、16:9 的治愈动画。视频直接调用我的 Seedance API，不使用 ComfyUI；先按我提供的接口文档配置接入。
+> 使用 $cozy-animation-studio：傍晚整理窗边阅读角，泡一壶茶，猫醒来后为它铺一块软布。做成90–120秒、16:9的治愈解压手绘动画，动作自然连贯、画风统一，生活过程和情绪完整。视频直接调用我的Seedance API；先按真实接口文档配置接入。
 
 也可以选 ComfyUI 或混合使用：
 
@@ -31,6 +31,16 @@
 修改已有项目：
 
 > 继续上次项目，只重做 S03：女孩搅汤的手部不自然。保留已通过的角色、场景和其他镜头。
+
+开发治愈生活系列：
+
+> 使用 $cozy-animation-studio：围绕窗边阅读、雨天烘焙、整理花草和宠物陪伴，每集90–120秒。先列主题清单和故事卡，再写第一集的完整剧本、分镜及声音方案；暂不生成素材。
+
+默认每集90–120秒，目标105秒，30秒仅作显式短片或动作小样。故事可以轻，以愿望、准备、执行、细微互动和可见结果积累情绪，不强加冲突，也不靠重复镜头或慢放填时长。内附[系列示例](assets/series-example.json)、[105秒治愈生活制作计划](assets/cozy-episode-project.example.json)和[系列指南](references/series-production.md)。示例均未生成素材，规划路径为空，不代表已有成片。
+
+中国农村记忆保留为用户可主动选择的扩展题材，见[农村系列示例](assets/rural-series-example.json)和[农村单集示例](assets/rural-episode-project.example.json)，不会自动注入新的治愈项目。
+
+系列、故事与审美检查由Codex实际维护；现有CLI管理单集项目与素材，不包含自动验剧本、自动风格评分、跨集调度或唇形同步系统。
 
 ## 核心与适配器
 
@@ -85,7 +95,7 @@ python3 scripts/install.py --replace
 ```bash
 # 初始化项目，再由 Codex 写好 project.json 的剧本和分镜
 python3 scripts/studio.py init work/film01 \
-  --idea '女孩在雨天的小屋里做早餐' --duration 30 --ratio 16:9
+  --idea '傍晚窗边泡茶，与猫一起阅读' --ratio 16:9
 python3 scripts/studio.py validate work/film01
 
 # 默认仅预览，不联网、不提交
@@ -118,9 +128,23 @@ ComfyUI 提交使用已配置的 UI/正式 API，随后登记真实任务 ID。�
 - [Skill 入口](SKILL.md)：完整制作流程与服务选择。
 - [美术指导](references/art-direction.md)：风格、角色、场景和镜头提示词。
 - [动作与声音](references/motion-and-sound.md)：动作编排、流畅度检查、连续配乐与最终听检。
+- [单元故事系列](references/series-production.md)：系列设定、分集故事卡、叙事检查与归档。
+- [2000年代中国农村设定](references/rural-china-2000s.md)：地域、年代、原创补写与资料边界。
 - [制作指南](references/production.md)：项目记录、审片、重做与剪辑。
 - [服务接入](references/providers.md)：直接 API、外部工具与适配器约定。
 - [ComfyUI 可选接入](references/comfyui.md)：节点工作流路线。
+
+## 细节与连续性检查
+
+本版默认90–120秒（CLI目标105秒）。为水龙头、杯/壶、手指、桌面落点等接触动作扩写前置状态、左右手分工、几何净空、先后顺序和释放条件。动作采用正常生活速度，按真实动作估时，保留自然反应并裁掉多余等待。每个固定空间绑定布局版本，逐镜传递门窗、灯、道具位置与液位。
+
+完整规则和水龙头示例见 [镜头契约](references/shot-contracts.md)。视频生成前执行：
+
+```bash
+python3 scripts/studio.py preflight /path/to/project
+```
+
+检查覆盖动作时间预算、布局版本、相邻镜道具状态交接与允许变化；需要先为镜头补齐契约。它不识别实际画面碰撞，也不承诺任何模型不出错。真实产物仍须按正常速度、密集帧和精确切点检查，失败时仅重做受影响镜头。
 
 ## 验证状态与限制
 
@@ -145,6 +169,10 @@ FFmpeg 未安装时媒体测试会跳过，其他测试照常运行。GitHub Act
 ```text
 SKILL.md                  独立制作流程
 assets/project-example.json
+assets/series-example.json 治愈生活系列与故事卡示例
+assets/cozy-episode-project.example.json  105秒生活过程与连续性计划
+assets/rural-series-example.json  可选农村题材系列
+assets/rural-episode-project.example.json  旧版180秒示例，仅显式选择长片时使用
 assets/providers/         直接 API / ComfyUI 配置示例
 assets/comfyui/            可选节点工作流与绑定表
 references/               美术、制作与服务接入指南
