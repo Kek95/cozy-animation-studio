@@ -36,12 +36,16 @@ class PromptContractTests(unittest.TestCase):
         self.assertTrue(any('layout_version' in e for e in quality.preflight(d)))
 
     def test_rejects_window_reset_and_undeclared_prop_change(self):
-        d = plan(); c = d['shots'][3]['continuity']; c['prop_states_in']['window'] = 'closed'
+        d = plan()
+        c = next(s['continuity'] for s in d['shots'][1:]
+                 if not s['continuity'].get('time_ellipsis')
+                 and s['continuity']['prop_states_in'].get('window') != 'closed')
+        c['prop_states_in']['window'] = 'closed'
         self.assertTrue(any('resets prior' in e for e in quality.preflight(d)))
         self.assertTrue(any('allowed_state_changes' in e for e in quality.preflight(d)))
 
     def test_transition_requires_a_reason_and_tracks_new_state(self):
-        d = plan(); d['shots'][7]['continuity']['transition_reason'] = ''
+        d = plan(); next(s for s in d['shots'] if s['continuity'].get('time_ellipsis'))['continuity']['transition_reason'] = ''
         self.assertTrue(any('transition_reason' in e for e in quality.preflight(d)))
 
     def test_missing_contact_chain_and_invalid_range(self):
@@ -66,3 +70,6 @@ class PromptContractTests(unittest.TestCase):
             d = studio.load(td)[1]
             self.assertEqual(d['duration'], 30)
             self.assertEqual(d['duration_range'], [30, 30])
+            self.assertIsNone(d['production_preferences']['shot_count_guidance'])
+            self.assertEqual(d['shots'], [])
+            self.assertIsNone(d['generation']['video'])

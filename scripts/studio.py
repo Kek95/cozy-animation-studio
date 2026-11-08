@@ -95,6 +95,13 @@ def init(args):
            'duration_range': [90, 120] if args.duration is None else [duration, duration],
            'aspect_ratio': args.ratio, 'style': '宫崎骏／吉卜力式二维手绘治愈动画',
            'creative_mode': 'cozy_relaxation',
+           'production_preferences': {
+               'pacing_profile': 'varied_coverage_normal_speed',
+               'shot_count_guidance': [26, 36] if 90 <= duration <= 120 else None,
+               'typical_edit_seconds': [2, 4],
+               'trim_idle_handles': True, 'world_profile': 'lived_in_neighborhood',
+               'secondary_buildings_guidance': [2, 4],
+               'supporting_characters_guidance': [1, 3]},
            'style_version': 1, 'style_anchor': None, 'style_review': None,
            'themes': [], 'script': '', 'characters': [], 'scenes': [], 'shots': [],
            'generation': {'image': None, 'video': None, 'speech': None, 'music': None},

@@ -3,43 +3,79 @@
   "series_id": "quiet-moments",
   "title": "把日子放轻一点",
   "status": "planning_example_no_generated_assets",
-  "concept": "每集一个有完整过程的生活片刻，通过手绘空间、自然动作、材质与陪伴放松下来。",
+  "concept": "每集一个有完整过程的生活片刻，在连通的房屋、街巷和邻里日常里积累放松感。",
   "creative_mode": "cozy_relaxation",
   "season": 1,
   "episode_duration_seconds": 105,
   "motion_sample_duration_seconds": null,
   "world": {
-    "setting": "原创日常空间，窗边起居室、小茶水角和小露台可相连",
+    "setting": "原创可步行生活圈：A家、同巷B邻家门廊、C背景屋和可按单集扩展的街角小店；房屋和道路位置固定。",
     "historical_period": null,
     "region": null,
-    "continuity": "先固定空间格局与角色版本；每集记录季节、天气、光照和使用的器物"
+    "continuity": "固定生活圈总览、角色外观、建筑ID和可见人数；每集记录季节/天气、光向、人物出入及物件归属。"
   },
   "characters": [
     {
       "id": "C01",
-      "description": "原创成年女性，约25岁，165cm，自然约7头身；栗棕齐下巴短发、左侧小红发夹；浅蜂蜜色长袖、鼠尾草绿围裙、奶油白长裙。",
+      "description": "原创成年女性约25岁、165cm、约7头身；栗棕短发、左侧红发夹、浅黄色卷袖衬衣、鼠尾草绿围裙裙与棕色平底鞋。",
       "design_version": "C01-v1-planned",
       "reference_file": null
     },
     {
       "id": "C02",
-      "description": "同一只成年橘白短毛猫，橘色背部与头顶、白色胸腹与四爪，尾巴橘色，正常猫体型。",
+      "description": "邻居约65岁、158cm、正常成人比例；灰发低髻、奶油衬衣、灰蓝开衫、深蓝长裙，住B屋。",
       "design_version": "C02-v1-planned",
+      "reference_file": null
+    },
+    {
+      "id": "C03",
+      "description": "约45岁路人、172cm；棕帽、砖红衬衣、米色长裤，推同一辆黑色自行车，车篮有一只纸袋。",
+      "design_version": "C03-v1-planned",
+      "reference_file": null
+    },
+    {
+      "id": "C04",
+      "description": "成年橘白猫，肩高约28cm，橘色背尾、白色胸腹和四爪；正常猫体型，在A屋门廊和室内活动。",
+      "design_version": "C04-v1-planned",
       "reference_file": null
     }
   ],
   "locations": [
     {
       "id": "L01",
-      "description": "原创木质起居室与相连小茶水角。北侧一扇鼠尾草绿框窗、薄白窗帘；窗下阅读桌，旁边一把备用椅；东侧台面与小炉；西侧入口与猫原来的坐垫。统一平面图后选择不同机位。",
+      "description": "A屋室内：北窗朝巷子，可望见东北B屋和西北C屋；北窗下阅读桌和45cm高木椅，桌上水玻璃杯，西北入口内有伞钩和玄关台；门槛通向L02。",
       "layout_version": "L01-v1-planned",
+      "reference_file": null,
       "scale_anchors": {
+        "adult_cm": 165,
         "door_cm": 205,
-        "counter_cm": 85,
         "chair_seat_cm": 45,
-        "adult_height_cm": 165
-      },
-      "reference_file": null
+        "porch_step_cm": 17.5
+      }
+    },
+    {
+      "id": "L02",
+      "description": "同一条东西向小巷和A门廊：A在巷南x=0、B在巷北偏东约8m、C在巷北偏西约10m，巷宽约3m。A北向门在同面北窗左侧，两级门廊台阶；B南向门廊，C蓝窗；路人向东推车，女主去B向东、回A向西。",
+      "layout_version": "L02-v1-planned",
+      "reference_file": null,
+      "scale_anchors": {
+        "adult_cm": 165,
+        "door_cm": 205,
+        "chair_seat_cm": 45,
+        "porch_step_cm": 17.5
+      }
+    },
+    {
+      "id": "L03",
+      "description": "B屋向南门廊，属于L02总览的同一建筑：左侧浅木门和门内伞钩，右侧小桌与花盆，桌上浇水壶、小玻璃杯的两枝预先剪好的薄荷和一张包装纸。朝南看见巷对面A，不凭换机位重排建筑。",
+      "layout_version": "L03-v1-planned",
+      "reference_file": null,
+      "scale_anchors": {
+        "adult_cm": 165,
+        "door_cm": 205,
+        "chair_seat_cm": 45,
+        "porch_step_cm": 17.5
+      }
     }
   ],
   "visual_direction": {
@@ -65,17 +101,36 @@
     "audio_route": null,
     "root": null,
     "folder_pattern": "YYYY-MM-DD_HH-mm-ss_S01E##_片名_105s",
-    "generation_authorized_for_this_plan": false
+    "generation_authorized_for_this_plan": false,
+    "pacing_profile": "varied_coverage_normal_speed",
+    "shot_count_guidance": [
+      26,
+      36
+    ],
+    "typical_edit_seconds": [
+      2,
+      4
+    ],
+    "trim_idle_handles": true,
+    "world_profile": "lived_in_neighborhood",
+    "secondary_buildings_guidance": [
+      2,
+      4
+    ],
+    "supporting_characters_guidance": [
+      1,
+      3
+    ]
   },
   "episodes": [
     {
       "id": "S01E01",
-      "title": "把傍晚留在窗边",
+      "title": "把伞送回晴天里",
       "duration": 105,
-      "core_process": "整理阅读角、洗杯、烧水泡茶、读书",
-      "change_or_interaction": "猫醒来靠近，为它铺原有软布",
-      "visible_result": "人和猫在灯光下各自安顿",
-      "sound_motif": "水壶、茶具和纸页",
+      "core_process": "擦干借伞、穿过小巷、归还、带回两枝薄荷、插入窗下水杯",
+      "change_or_interaction": "让路给推车路人，邻居用两枝薄荷回应归还",
+      "visible_result": "伞留在邻家，薄荷和猫陪着主角安顿",
+      "sound_motif": "伞布、车轮、水流、脚步与微风",
       "story_review": "pending",
       "status": "story_card_draft",
       "project_dir": null,
@@ -84,11 +139,11 @@
     },
     {
       "id": "S01E02",
-      "title": "雨停之前的书页",
+      "title": "雨停后的书店门口",
       "duration": 105,
-      "core_process": "整理落灰书架、擦净旧封面、夹好书签、读几页",
-      "change_or_interaction": "发现上次留下的书签，停下来重读那一页",
-      "visible_result": "雨声渐小，整理好的书留在身边",
+      "core_process": "路过有住户的小街、还书、借一本书、回窗边翻开",
+      "change_or_interaction": "店主收好门口书架，为主角留出挑书的位置",
+      "visible_result": "屋外生活继续，屋内有一页想读的书",
       "sound_motif": "刷毛、抹布、纸页与雨滴",
       "story_review": "pending",
       "status": "story_card_draft",
@@ -101,8 +156,8 @@
       "title": "阳台上的一小片绿",
       "duration": 105,
       "core_process": "松土、移栽一株植物、压实、浇水、清理台面",
-      "change_or_interaction": "为朝向光的枝叶调整花盆位置",
-      "visible_result": "植株站稳，收拾后的阳台留出坐下的位置",
+      "change_or_interaction": "邻居从相连阳台递来两段已剪枝条，楼下有人路过",
+      "visible_result": "新枝栽稳，窗外仍见同一排有人生活的房屋",
       "sound_motif": "土粒、陶盆与浇水",
       "story_review": "pending",
       "status": "story_card_draft",

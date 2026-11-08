@@ -18,11 +18,20 @@
 
 默认加入连续轻配乐和环境/动作音，无解说旁白，必要对白少量使用；可按要求改为纯环境音或静音。重点是**动作连贯、风格统一、故事丰满**：动作有起势、接触与结果，前后镜继承实际状态；共享已通过的角色/场景与风格锚点；用相连的生活过程、细微互动和满足的收尾展开情绪。新项目缺少必需配乐时会阻止最终合成；配乐需由可用服务生成或提供真实素材。
 
+## 后续视频的默认制作标准
+
+- **更多有效画面**：90–120秒约26–36个独立构图，105秒从30镜左右起稿；环境、行动、接触细节和人物反应交替，不用同一图反复推近充镜数。
+- **正常动作、利落剪辑**：多数剪辑段约2–4秒；从实际源片剪掉起手等待、无意义尾停与重复执行，保留接触和释放。动作/反应切为主，连续音乐与环境声连接画面。
+- **有人居住的生活圈**：主空间周边有其他房屋、邻居或路人自然做事；先锁定建筑关系、配角身份和比例，少量真实互动体现惬意。明确的独处/室内要求覆盖此预设。
+- **完整生活故事**：每集仍有一个愿望、相连行动和满足收尾，不以密集碎片或无关街景代替叙事。
+
+这些是创作与审片默认值，沿用用户已选择的服务、模型和限制；不启动任何付费生成，也不自动重制既有成片。详见[动作与剪辑](references/motion-and-sound.md)、[生活圈美术](references/art-direction.md)及[故事与32镜示例](references/series-production.md)。
+
 ## 示例用法
 
 安装后在 Codex 中输入：
 
-> 使用 $cozy-animation-studio：傍晚整理窗边阅读角，泡一壶茶，猫醒来后为它铺一块软布。做成90–120秒、16:9的治愈解压手绘动画，动作自然连贯、画风统一，生活过程和情绪完整。视频直接调用我的Seedance API；先按真实接口文档配置接入。
+> 使用 $cozy-animation-studio：雨停后把借来的伞送还邻居，路过有人推车的小巷，带回两枝薄荷放在窗边。做成90–120秒、16:9的治愈解压手绘动画，构图丰富、切镜利落、正常动作速度，其他房屋和配角与主线自然相连。视频直接调用我的Seedance API；先按真实接口文档配置接入。
 
 也可以选 ComfyUI 或混合使用：
 
@@ -36,7 +45,7 @@
 
 > 使用 $cozy-animation-studio：围绕窗边阅读、雨天烘焙、整理花草和宠物陪伴，每集90–120秒。先列主题清单和故事卡，再写第一集的完整剧本、分镜及声音方案；暂不生成素材。
 
-默认每集90–120秒，目标105秒，30秒仅作显式短片或动作小样。故事可以轻，以愿望、准备、执行、细微互动和可见结果积累情绪，不强加冲突，也不靠重复镜头或慢放填时长。内附[系列示例](assets/series-example.json)、[105秒治愈生活制作计划](assets/cozy-episode-project.example.json)和[系列指南](references/series-production.md)。示例均未生成素材，规划路径为空，不代表已有成片。
+默认每集90–120秒，目标105秒，30秒仅作显式短片或动作小样。故事可以轻，以愿望、准备、执行、细微互动和可见结果积累情绪，不强加冲突，也不靠重复镜头或慢放填时长。内附[系列示例](assets/series-example.json)、[105秒32镜邻里生活制作计划](assets/cozy-episode-project.example.json)和[系列指南](references/series-production.md)。示例均未生成素材，规划路径为空，不代表已有成片。
 
 中国农村记忆保留为用户可主动选择的扩展题材，见[农村系列示例](assets/rural-series-example.json)和[农村单集示例](assets/rural-episode-project.example.json)，不会自动注入新的治愈项目。
 
@@ -170,7 +179,7 @@ FFmpeg 未安装时媒体测试会跳过，其他测试照常运行。GitHub Act
 SKILL.md                  独立制作流程
 assets/project-example.json
 assets/series-example.json 治愈生活系列与故事卡示例
-assets/cozy-episode-project.example.json  105秒生活过程与连续性计划
+assets/cozy-episode-project.example.json  105秒32镜邻里生活与连续性计划
 assets/rural-series-example.json  可选农村题材系列
 assets/rural-episode-project.example.json  旧版180秒示例，仅显式选择长片时使用
 assets/providers/         直接 API / ComfyUI 配置示例
