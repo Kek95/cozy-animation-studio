@@ -1,141 +1,106 @@
-# 项目格式与执行
+# 项目格式与执行命令
 
-脚本使用 Python 3 标准库；视频检查、抽帧和剪辑另需 `ffmpeg`、`ffprobe`。项目放在当前可写工作区，素材工作文件与最终交付目录按宿主约定组织。不要在 Skill 安装目录生成用户项目。
+先读 [自动执行手册](autonomous-production.md)。脚本使用Python3.10+标准库，媒体处理需要FFmpeg/ffprobe。`SKILL_DIR`替换为实际安装目录、`PROJECT`替换为项目目录；不在Skill源码内生成用户素材。
 
-服务配置与路由见 [providers.md](providers.md)；只有选择 ComfyUI 时才需要节点/工作流。
-
-## 初始化与创作
+## 初始化与计划
 
 ```bash
-python3 "$SKILL_DIR/scripts/studio.py" init work/film01 \
-  --idea '傍晚整理窗边阅读角，泡一壶茶，和猫一起安顿下来' \
-  --title '把傍晚留在窗边' --ratio 16:9
+python3 "$SKILL_DIR/scripts/studio.py" init PROJECT --idea '雨后逛店、回家画画，窗边喝饮料休息' --title '把日子放轻一点'
 ```
 
-初始化后由 Codex 编写 `project.json` 的 `script`、`themes`、`characters`、`scenes` 和 `shots`，并给用户提供易读的剧本/分镜 Markdown。空项目不代表剧本已完成。默认参考 [cozy-episode-project.example.json](../assets/cozy-episode-project.example.json)，按用户本次想法重写。`assets/project-example.json`保留为显式30秒小样示例。
+默认105秒、16:9、`daily_montage`；显式短片加 `--duration 30`，完整单一过程可加 `--story-mode single_process`。初始化创建空计划和目录，不会自动写剧本或发请求。Codex维护 `script/themes/story/characters/scenes/shots`、易读剧本/分镜与声音表。
 
-默认正式短片90–120秒，CLI初始化默认105秒；`--duration`可显式覆盖，短样需写明如`--duration 30`。剧本、整集预演、连续性和声音时间由代理维护，现有CLI不自动完成这些创作或审美步骤。见[系列流程](series-production.md)。
+从 [105秒计划](../assets/cozy-episode-project.example.json)或 [30秒计划](../assets/daily-montage-30s-project.example.json)学习格式；重写内容，不照抄完成状态。`duration`是编辑用时，`generation_duration`是模型请求用时；总编辑时长准确，生成秒数另行预算。每镜契约字段见 [shot-contracts.md](shot-contracts.md)。
 
-每镜最少：
+```bash
+python3 "$SKILL_DIR/scripts/studio.py" validate PROJECT
+python3 "$SKILL_DIR/scripts/studio.py" preflight PROJECT
+python3 "$SKILL_DIR/scripts/production.py" PROJECT --stage plan
+```
+
+`validate`检查基础结构/时长；`preflight`检查提示词、正常速度、动作顺序、布局版本、道具状态变化/省略。它们不检查像素。新项目启用 `production_policy`，引用/试片记录格式和阶段命令见自动执行手册；旧项目兼容读取，继续新制作时应补齐门槛。
+
+## 提交、登记与恢复
+
+直接JSON HTTP接口按 [providers.md](providers.md)配置。请求格式必须来自当前服务文档。预演不POST，正式提交加 `--execute`：
+
+```bash
+python3 "$SKILL_DIR/scripts/studio.py" submit PROJECT --provider PROVIDER_JSON --shot S08 --candidate v1 --request REQUEST_JSON --stage video
+python3 "$SKILL_DIR/scripts/studio.py" submit PROJECT --provider PROVIDER_JSON --shot S08 --candidate v1 --request REQUEST_JSON --stage video --execute
+```
+
+嵌套模型字段加 `--model-pointer /实际/字段`，或配置 `model_pointer`。正式视频提交在POST前核对计划、参考/首帧哈希、试片与模型允许清单。图片/音乐/配音任务可在独立资产项目登记，使用对应 `--stage image|music|speech`，不误用正式视频门槛。
+
+其他工具/SDK/UI已经提交后，只登记真实任务：
+
+```bash
+python3 "$SKILL_DIR/scripts/studio.py" register PROJECT --provider PROVIDER_JSON --shot S01 --candidate v1 --task-id ACTUAL_TASK_ID --request REQUEST_JSON --seconds 4
+python3 "$SKILL_DIR/scripts/studio.py" collect PROJECT --provider PROVIDER_JSON
+python3 "$SKILL_DIR/scripts/studio.py" status PROJECT
+```
+
+ComfyUI另需真实 `--output-node SAVE_NODE_ID`。ACTUAL值来自真实响应，不能照抄占位符。`register/collect`不补交任务。`unknown/submission_unknown`先查原任务，不能当失败重新POST；内置提交先记待提交候选，结果不确定需核实后用 `register --recover`绑定真实任务ID。
+
+候选默认上限2，登记已发生任务不会抹掉超额事实；并发多写者需要外部串行化，本工具不提供跨进程锁。项目有多个provider时按候选服务分别收集，恢复先读原状态。
+
+## 审片与选段
+
+```bash
+python3 "$SKILL_DIR/scripts/edit.py" inspect PROJECT/clips/S08/v1-00.mp4 --decode
+python3 "$SKILL_DIR/scripts/edit.py" frames PROJECT/clips/S08/v1-00.mp4 --out PROJECT/review/S08-v1 --count 18
+```
+
+实际看图和正常速度播放，观察风格/身份/比例/接触/运动；抽帧只是定位证据。视频有音轨不能证明配乐存在或听感合格。无法连续播放/听取的检查保留pending。
+
+```bash
+python3 "$SKILL_DIR/scripts/studio.py" review PROJECT --shot S08 --candidate v1 --verdict accept --trim-in 0.875 --note '填写实际观察、所选区间与理由'
+```
+
+只接受真实收集/导入的候选。拒绝记具体秒数和缺陷，新版候选保留旧记录；首帧错先修图，运动错修视频，按依赖更新后镜状态。
+
+## 音乐、环境与混音
+
+取得真实素材后设置项目内路径和来源，尚未生成时为null：
 
 ```json
-{
-  "id": "S01",
-  "duration": 4,
-  "generation_duration": 5,
-  "action": "花园外景，女孩走近番茄架，建立环境",
-  "character_ids": ["C01"],
-  "scene_id": "L01",
-  "reference_files": ["references/style-v1.png", "references/C01-v1.png"],
-  "image_file": "images/S01-v1.png",
-  "image_prompt": "实际写入完整镜头图提示词",
-  "video_prompt": "实际写入动作、运镜和声音提示词",
-  "motion_plan": {
-    "start_state": "女孩在画面左侧，面向番茄架",
-    "beats": ["0–1秒迈步起势", "1–4秒走近番茄架，落脚后停稳", "4–5秒目光转向成熟果实"],
-    "secondary_motion": "裙摆跟随步伐摆动，停步后自然回落",
-    "camera": "固定中景",
-    "cut_cue": "视线落到番茄后切果实细节"
-  },
-  "candidates": [],
-  "selected_candidate": null
-}
+{"audio": {
+  "music_required": true, "music": "audio/music-v1.wav", "music_offset": 0,
+  "music_source": {"kind": "generated", "note": "实际服务、模型、提示词与任务记录位置"},
+  "ambience_required": true, "ambience": "audio/ambience-bed.wav", "ambience_offset": 0,
+  "voiceover": null, "native_audio": true
+}}
 ```
 
-每个项目应维护`story`（愿望、相关行动、变化/互动与结果）、`visual_bible`（已通过视觉基准及版本）、`continuity`（各镜起止状态）和`quality_review`（故事、风格、动作与听检证据）。这些扩展字段供代理实际编写和审查，结构校验不会自动判断其审美质量。
-
-这些路径是项目内的规划示例；文件真正生成并检查后再登记为可用资产。`style_anchor` 保存实际文件路径，`style_review` 保存对照用户参考的结论。单条电影的所有 `duration` 之和应与项目目标一致，`generation_duration` 至少覆盖本镜剪辑长度。
+环境底声可由服务生成、用户素材或已授权素材在外部编辑成空间衔接的一条轨道；不能让市集喧闹贯穿安静室内。需要对白时先生成与测量，制作一条已经逐句对齐的整片语音轨。脚本不是语音/音乐模型。
 
 ```bash
-python3 "$SKILL_DIR/scripts/studio.py" validate work/film01
+python3 "$SKILL_DIR/scripts/edit.py" compose PROJECT
 ```
 
-图片也可用单独的参考素材项目登记和收集；`collect` 支持图片/音频/视频结果。`edit.py compose` 只接受视频，不会自动把静态图片冒充动画。
+默认输出 `PROJECT/final/film.mp4`，1280×720、24fps、正常1x，自动读取项目音频。需其他规格显式给 `--width/--height/--fps` 并更新项目 `delivery`。默认中心裁切，可 `--fit pad`；需要选取画面局部时每镜 `edit_crop=[x,y,width,height]`，必须在源分辨率内且不能据此把重复镜头当新覆盖。镜头时长须落在输出整帧，trim入点按输出帧网格对齐并记录请求值/实际值。源片不够会报错，不冻结延长。
 
-## 一次生成对应一个候选记录
-
-内置直接 API 提交会自动登记候选。通过其他客户端提交后，登记真实服务与任务 ID：
+CLI音频路径相对当前目录且优先于项目路径；例：
 
 ```bash
-python3 "$SKILL_DIR/scripts/studio.py" register work/film01 \
-  --shot S01 --candidate v1 --task-id ACTUAL_TASK_ID \
-  --provider work/video-provider.json --request requests/S01-v1.json --seconds 5
-python3 "$SKILL_DIR/scripts/studio.py" collect work/film01 --provider work/video-provider.json
-python3 "$SKILL_DIR/scripts/studio.py" status work/film01
+python3 "$SKILL_DIR/scripts/edit.py" compose PROJECT --out PROJECT/final/film-v2.mp4 --voice PROJECT/audio/dialogue.wav --music PROJECT/audio/music-v1.wav --ambience PROJECT/audio/bed.wav --music-db -2 --duck-music
 ```
 
-命令中的 ACTUAL_* 必须来自真实提交；不是可直接执行的示例值。`register` 和 `collect` 不提交或重复生成。`unknown` 表示服务状态未知或任务查询未找到，应先调查；`submission_unknown` 表示提交结果不确定，不能据此重跑。状态中记录的生成秒数是任务用量估计，不是供应商账单。
+默认实测源响度后分层增益（原生约−29、音乐−23、语音−20、环境−35 LUFS，另有峰值保护），再两遍整片处理至约−18 LUFS、−2dBTP、48kHz立体声。`--music-db`等是归一化基础上的额外相对调整，默认0；不是旧版的固定绝对衰减。`--no-normalize-audio`可显式关闭自动响度处理。技术目标是起点，最终以听感调整。`--duck-music`需语音和音乐，保留环境轨。
 
-登记功能如实记录已经提交的任务，即使已经超过建议候选数；它会报告 `limit_exceeded`，不会删掉已发生的生成。**额度与重试上限由代理在提交之前检查**。内置 `submit --execute` 会在提交前检查候选上限。若多实例同时修改同一项目，需要外部串行化；当前脚本不提供跨进程任务调度或多写者锁。
+可用 `--music-offset/--ambience-offset`选素材起点。音乐或环境不足默认拒绝，只有明确适合循环才加 `--loop-music/--loop-ambience`并记来源；不默认循环填满。可用服务无法一次生全长时，代理生成同主题段落并编辑衔接。用户明确无配乐/无环境可关闭相应required字段，不能为了绕过缺素材而偷偷关闭。静音片需显式声明。
 
-## 审片与局部重做
+合成生成媒体报告、素材SHA/实际区间/裁切/增益/循环记录、`edit/timeline.json`，并登记 `final_file`。输出不覆盖旧文件，重新合成重置最终审核状态。
+
+## 真正的切口和技术检测
 
 ```bash
-python3 "$SKILL_DIR/scripts/edit.py" inspect work/film01/clips/S01/v1-00.mp4 --decode
-python3 "$SKILL_DIR/scripts/edit.py" frames work/film01/clips/S01/v1-00.mp4 \
-  --out work/film01/review/S01-v1 --count 12
+python3 "$SKILL_DIR/scripts/edit.py" cuts PROJECT --handles 3
+python3 "$SKILL_DIR/scripts/edit.py" check PROJECT
+python3 "$SKILL_DIR/scripts/production.py" PROJECT --stage final
 ```
 
-实际看图/播放，填写可核实的理由；不要把“抽帧成功”写成“画风检查通过”。动作镜头需正常速度检查完整过程，密集取样用于定位身体运动、液体、手部和物体接触问题，不能替代动态观感验收。音频需播放或使用音频理解能力检查；仅有音轨不能证明有背景音乐、对白正确或没有杂音。无法连续观看/听取时保留对应待检状态，见 [动作与声音](motion-and-sound.md)。
+`cuts`根据合成报告对**已编码成片**逐切口取前后各3帧，输出每切一行JPEG、每页5行联系图及帧索引映射；左侧为前镜真实出点，右侧为后镜真实入点。报告SHA/时间线变更会拒绝旧证据。提取成功不会自动标为已看。
 
-```bash
-python3 "$SKILL_DIR/scripts/studio.py" review work/film01 \
-  --shot S01 --candidate v1 --verdict accept --trim-in 0.5 \
-  --note '已查看动作过程，人物与参考一致；选择从0.5秒起的4秒。'
-```
+`check`执行严格全片解码、时长/尺寸/fps、音频48kHz立体声与覆盖、响度/峰值、黑场、解码帧数和完全重复帧检测。重复帧只是需要检查的警告，不自动断言动作卡顿；预期黑场需 `delivery.allow_black_intervals=true`且实际复核。输出技术报告并绑定成片SHA，不声称完成主观播放/听检。
 
-拒绝时用 `--verdict reject` 并记录具体问题。用同一套已通过参考图、调整一个主要变量，生成 v2。只有动作坏了就重做视频；构图或身份从首帧就错了，先修镜头图。不要反复添加相互矛盾的形容词。
-
-## 剪辑和配音
-
-新项目默认需要背景音乐。取得音乐文件后登记项目相对路径和来源，例如：
-
-```json
-{
-  "audio": {
-    "music_required": true,
-    "music": "audio/music-v1.wav",
-    "music_brief": "30秒原创无歌词器乐，开头进入、生活动作中推进、结尾自然收束",
-    "music_source": {"kind": "user_supplied", "note": "填写真实来源与使用依据"},
-    "voiceover": null,
-    "native_audio": true
-  }
-}
-```
-
-路径只在真实文件就绪后填写。`music_required=true` 且没有音乐时，最终合成会拒绝继续；规划阶段允许路径为 null。用户明确选择无配乐时设为 false，并清空音乐路径。旧项目未声明该字段时保持原兼容行为，代理应按用户本次要求补齐。
-
-```bash
-python3 "$SKILL_DIR/scripts/edit.py" compose work/film01 \
-  --out outputs/film01.mp4 --width 1280 --height 720 --fps 24
-```
-
-脚本按 storyboard 顺序使用已通过的候选，从 `trim_in` 裁取 `duration`；拒绝不足的源视频，不通过静帧延长掩盖缺素材。默认中心裁切到目标比例，必要时使用 `--fit pad`，或按主体位置另行编写剪辑。选择与实际素材匹配的输出规格；放大像素不是提升真实清晰度。
-
-配音由用户选择的 TTS API、工具或可选节点流程生成，音乐由用户素材或已授权生成服务取得，记录来源。脚本只负责混入音轨，不内置 TTS 或音乐模型。自动读取 `audio.music` 和 `audio.voiceover` 的项目相对路径，CLI `--music` / `--voice` 优先且相对当前工作目录。`audio.native_audio=false` 或 `--mute-native` 静音片段原声。需要配音时调用当前环境相应技能/工具，先测真实时长：
-
-```bash
-python3 "$SKILL_DIR/scripts/edit.py" compose work/film01 \
-  --out outputs/film01-vo.mp4 --voice work/film01/audio/narration.wav \
-  --music work/film01/audio/music.wav --music-db -16 --native-db -4 --duck-music
-```
-
-旁白从 0 秒开始；需要逐句错位时先用 FFmpeg 生成已经对齐的旁白轨，再混入。音乐短于成片时默认报错，仅在确实适合循环时使用 `--loop-music`。这里给出的音量是命令示例，要按实测响度和实际听感调整。
-
-剪辑输出附带技术报告：时长、分辨率、音轨、完整解码以及实际混入的音频路径、增益和循环标记。报告中的听检默认仍是 pending，不会因有音轨就自动通过。最后分别记录 `quality_review.motion` 与 `quality_review.final_audio` 的检查证据，检查最终画面的接缝、声音和叙事节奏。以宿主可显示的视频方式呈现本地 MP4。
-
-## 批量与继续项目
-
-同系列多个主题各用一个项目 JSON。共用角色和场景参考，可通过绝对路径或复制文件引用并记录来源。先完成一条代表性短片，确认风格方向后复用到系列；如用户已经认可当前视觉设定，直接继续，不重复请求确认。
-
-再次打开任务时，读项目文件和候选状态，按每个候选的 provider 分别收集现有任务，继续未完成阶段。Skill 由 Codex 执行；持续无人值守运行需另配常驻调度程序，本包不声称提供后台服务。
-
-## 镜头契约预检
-
-按 [shot-contracts.md](shot-contracts.md) 填写 `motion_plan.speed_mode/active_seconds`、`interaction` 和 `continuity`。完成剧本后、视频请求提交前运行：
-
-```bash
-python3 "$SKILL_DIR/scripts/studio.py" preflight work/film01
-```
-
-旧项目和旧的30秒/农村题材示例仍可用原 `validate` 读取，不自动改写历史。要进入新一轮视频制作，先补齐镜头契约再预检。预检不发出API请求、不修改项目，也不验证画面或提示词是否被模型服从。代理必须将本镜相关契约落实到最终实际发送的 `video_prompt`，保留请求文本，并另行审看生成结果。
+最终三项实际审查记录格式见自动执行手册。交付MP4时同时给出实际完成和待检事项，沿用时间目录归档。共享系列素材先复制/导入项目并记录来源，保持当前项目的哈希链可核对。以宿主支持的本地媒体预览方式展示成片。

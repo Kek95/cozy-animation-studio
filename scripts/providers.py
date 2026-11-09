@@ -177,7 +177,7 @@ class ComfyUIProvider:
         assets = []
         if status.get('status_str') == 'success' and status.get('completed'):
             output = history.get('outputs', {}).get(str(output_node), {})
-            for kind in ['images', 'videos', 'gifs', 'audio']:
+            for kind in ['images', 'video', 'videos', 'gifs', 'audio']:
                 for asset in output.get(kind, []):
                     if not isinstance(asset, dict):
                         continue

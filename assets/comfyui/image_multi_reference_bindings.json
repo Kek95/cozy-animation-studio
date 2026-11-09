@@ -1,0 +1,57 @@
+{
+  "prompt": {
+    "node": "1",
+    "input": "prompt",
+    "class_type": "OpenAIGPTImageNodeV2"
+  },
+  "size": {
+    "node": "1",
+    "input": "model.size",
+    "class_type": "OpenAIGPTImageNodeV2",
+    "choices": [
+      "auto",
+      "1024x1024",
+      "1024x1536",
+      "1536x1024",
+      "2048x2048",
+      "2048x1152",
+      "1152x2048",
+      "3840x2160",
+      "2160x3840"
+    ]
+  },
+  "quality": {
+    "node": "1",
+    "input": "model.quality",
+    "class_type": "OpenAIGPTImageNodeV2",
+    "choices": [
+      "low",
+      "medium",
+      "high"
+    ]
+  },
+  "seed": {
+    "node": "1",
+    "input": "seed",
+    "class_type": "OpenAIGPTImageNodeV2"
+  },
+  "filename_prefix": {
+    "node": "2",
+    "input": "filename_prefix"
+  },
+  "image_1": {
+    "node": "3",
+    "input": "image",
+    "class_type": "LoadImage"
+  },
+  "image_2": {
+    "node": "4",
+    "input": "image",
+    "class_type": "LoadImage"
+  },
+  "image_3": {
+    "node": "5",
+    "input": "image",
+    "class_type": "LoadImage"
+  }
+}

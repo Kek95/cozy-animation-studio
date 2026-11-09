@@ -36,7 +36,7 @@ class PromptContractTests(unittest.TestCase):
         self.assertTrue(any('layout_version' in e for e in quality.preflight(d)))
 
     def test_rejects_window_reset_and_undeclared_prop_change(self):
-        d = plan()
+        d = json.loads((ROOT / 'assets/single-process-project.example.json').read_text())
         c = next(s['continuity'] for s in d['shots'][1:]
                  if not s['continuity'].get('time_ellipsis')
                  and s['continuity']['prop_states_in'].get('window') != 'closed')
@@ -70,6 +70,6 @@ class PromptContractTests(unittest.TestCase):
             d = studio.load(td)[1]
             self.assertEqual(d['duration'], 30)
             self.assertEqual(d['duration_range'], [30, 30])
-            self.assertIsNone(d['production_preferences']['shot_count_guidance'])
+            self.assertEqual(d['production_preferences']['shot_count_guidance'], [10, 12])
             self.assertEqual(d['shots'], [])
             self.assertIsNone(d['generation']['video'])

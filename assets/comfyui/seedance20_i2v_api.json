@@ -8,11 +8,11 @@
   "9": {
     "class_type": "ByteDance2FirstLastFrameNode",
     "inputs": {
-      "model": "Seedance 2.0",
+      "model": "Seedance 2.0 Mini",
       "model.prompt": "",
       "model.resolution": "720p",
       "model.ratio": "16:9",
-      "model.duration": 5,
+      "model.duration": 4,
       "model.generate_audio": true,
       "seed": 0,
       "watermark": false,

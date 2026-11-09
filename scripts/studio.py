@@ -10,6 +10,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from providers import MEDIA, download, load_provider, task_id_checked
 from quality import preflight
+from production import generation_errors, request_models
 
 def now():
     return datetime.now(timezone.utc).isoformat()
@@ -42,10 +43,10 @@ def validate(doc):
     if not isinstance(audio, dict):
         errors.append('audio must be an object.')
     else:
-        for flag in ['music_required', 'native_audio']:
+        for flag in ['music_required', 'ambience_required', 'native_audio']:
             if flag in audio and not isinstance(audio[flag], bool):
                 errors.append(f'audio.{flag} must be a boolean.')
-        for field in ['music', 'voiceover']:
+        for field in ['music', 'voiceover', 'ambience']:
             if audio.get(field) is not None and (not isinstance(audio[field], str) or not audio[field].strip()):
                 errors.append(f'audio.{field} must be a nonempty path or null.')
     if not finite_positive(doc.get('duration')):
@@ -89,26 +90,33 @@ def init(args):
     duration = 105 if args.duration is None else args.duration
     if not finite_positive(duration):
         raise ValueError('Duration must be positive.')
-    for name in ['references', 'images', 'clips', 'requests', 'review', 'audio', 'final']:
+    for name in ['planning', 'references', 'images', 'clips', 'requests', 'review', 'audio', 'edit', 'logs', 'final']:
         (root / name).mkdir(parents=True, exist_ok=True)
     doc = {'version': 2, 'title': args.title, 'idea': args.idea, 'duration': duration,
            'duration_range': [90, 120] if args.duration is None else [duration, duration],
            'aspect_ratio': args.ratio, 'style': '宫崎骏／吉卜力式二维手绘治愈动画',
            'creative_mode': 'cozy_relaxation',
+           'story_mode': getattr(args, 'story_mode', 'daily_montage'),
+           'story': {'premise': '', 'life_blocks': [], 'emotional_progression': [], 'ending': ''},
            'production_preferences': {
                'pacing_profile': 'varied_coverage_normal_speed',
-               'shot_count_guidance': [26, 36] if 90 <= duration <= 120 else None,
+               'shot_count_guidance': [26, 36] if 90 <= duration <= 120 else [10, 12] if duration == 30 else None,
                'typical_edit_seconds': [2, 4],
                'trim_idle_handles': True, 'world_profile': 'lived_in_neighborhood',
                'secondary_buildings_guidance': [2, 4],
                'supporting_characters_guidance': [1, 3]},
            'style_version': 1, 'style_anchor': None, 'style_review': None,
-           'themes': [], 'script': '', 'characters': [], 'scenes': [], 'shots': [],
+           'themes': [], 'script': '', 'characters': [], 'scenes': [], 'reference_assets': [], 'shots': [],
            'generation': {'image': None, 'video': None, 'speech': None, 'music': None},
+           'production_policy': {'enabled': True, 'require_reference_conditioning': True,
+                                 'require_pilot': True, 'pilot_shots': []},
            'limits': {'max_candidates_per_shot': 2, 'budget': None},
            'audio': {'voiceover': None, 'music': None, 'music_required': True,
-                     'music_brief': '', 'music_source': None, 'native_audio': True},
-           'quality_review': {'motion': 'pending', 'final_audio': 'pending'}, 'created_at': now()}
+                     'music_brief': '', 'music_source': None, 'native_audio': True,
+                     'ambience': None, 'ambience_required': False, 'music_offset': 0, 'ambience_offset': 0},
+           'delivery': {'width': 1280, 'height': 720, 'fps': 24, 'master_lufs': -18, 'master_true_peak': -2},
+           'quality_review': {'motion': 'pending', 'pilot': None,
+                              'final_visual': {'state': 'pending'}, 'final_audio': {'state': 'pending'}}, 'created_at': now()}
     save(root / 'project.json', doc)
     return {'project': str(root), 'state': 'ready_for_script_and_storyboard'}
 
@@ -185,10 +193,23 @@ def submit(args):
         raise ValueError('Candidate limit reached; review the existing attempts before changing the limit.')
     summary = {'provider': provider.name, 'shot': s['id'], 'candidate': c['id'],
                'request_sha256': hashlib.sha256(payload_bytes).hexdigest(), 'dry_run': not args.execute}
+    stage = getattr(args, 'stage', 'video')
+    model_pointer = getattr(args, 'model_pointer', None) or getattr(provider, 'config', {}).get('model_pointer')
+    errors = (validate(doc) + generation_errors(doc, root, args.shot, payload, model_pointer)) if stage == 'video' else []
+    summary['generation_checks'] = errors
     if not args.execute:
         return summary
+    if errors:
+        raise ValueError('Generation gate: ' + '; '.join(dict.fromkeys(errors)))
     provider.preflight(payload)  # Check local prerequisites before reserving a paid attempt.
-    c.update(state='submitting', request_file=str(Path(args.request).resolve()), request_sha256=summary['request_sha256'])
+    c.update(state='submitting', stage=stage, request_file=str(Path(args.request).resolve()), request_sha256=summary['request_sha256'])
+    if stage == 'video':
+        c['input_image_sha256'] = s.get('image_sha256')
+        c['input_image'] = s.get('image_file')
+        try:
+            c['models'] = request_models(payload, model_pointer)
+        except (ValueError, KeyError, IndexError, TypeError):
+            c['models'] = []
     s.setdefault('candidates', []).append(c)
     save(root / 'project.json', doc)  # Reserve before POST; a process crash must not invite a duplicate.
     try:
@@ -297,13 +318,13 @@ def status(args):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     sub = p.add_subparsers(dest='command', required=True)
-    a = sub.add_parser('init'); a.add_argument('project'); a.add_argument('--idea', required=True); a.add_argument('--title', default='治愈短片'); a.add_argument('--duration', type=float, default=None); a.add_argument('--ratio', default='16:9')
+    a = sub.add_parser('init'); a.add_argument('project'); a.add_argument('--idea', required=True); a.add_argument('--title', default='治愈短片'); a.add_argument('--duration', type=float, default=None); a.add_argument('--ratio', default='16:9'); a.add_argument('--story-mode', choices=['daily_montage', 'single_process'], default='daily_montage')
     a = sub.add_parser('validate'); a.add_argument('project')
     a = sub.add_parser('preflight'); a.add_argument('project')
     a = sub.add_parser('status'); a.add_argument('project')
     a = sub.add_parser('register'); a.add_argument('project'); a.add_argument('--shot', required=True); a.add_argument('--candidate', required=True); a.add_argument('--task-id', '--prompt-id', dest='task_id', required=True); a.add_argument('--output-node'); a.add_argument('--request', '--workflow', dest='request'); a.add_argument('--seconds', type=float); a.add_argument('--provider'); a.add_argument('--server'); a.add_argument('--recover', action='store_true')
     a = sub.add_parser('collect'); a.add_argument('project'); a.add_argument('--provider'); a.add_argument('--server')
-    a = sub.add_parser('submit'); a.add_argument('project'); a.add_argument('--shot', required=True); a.add_argument('--candidate', required=True); a.add_argument('--provider', required=True); a.add_argument('--request', required=True); a.add_argument('--seconds', type=float); a.add_argument('--execute', action='store_true')
+    a = sub.add_parser('submit'); a.add_argument('project'); a.add_argument('--shot', required=True); a.add_argument('--candidate', required=True); a.add_argument('--provider', required=True); a.add_argument('--request', required=True); a.add_argument('--seconds', type=float); a.add_argument('--execute', action='store_true'); a.add_argument('--stage', choices=['image', 'video', 'music', 'speech'], default='video'); a.add_argument('--model-pointer')
     a = sub.add_parser('import'); a.add_argument('project'); a.add_argument('--shot', required=True); a.add_argument('--candidate', required=True); a.add_argument('--file', required=True); a.add_argument('--source-label', default='external'); a.add_argument('--task-id'); a.add_argument('--seconds', type=float)
     a = sub.add_parser('review'); a.add_argument('project'); a.add_argument('--shot', required=True); a.add_argument('--candidate', required=True); a.add_argument('--verdict', choices=['accept', 'reject'], required=True); a.add_argument('--note', required=True); a.add_argument('--asset', type=int, default=0); a.add_argument('--trim-in', type=float, default=0)
     args = p.parse_args()

@@ -3,7 +3,7 @@
   "series_id": "quiet-moments",
   "title": "把日子放轻一点",
   "status": "planning_example_no_generated_assets",
-  "concept": "每集一个有完整过程的生活片刻，在连通的房屋、街巷和邻里日常里积累放松感。",
+  "concept": "每集以多种相连的日常活动推进同一人物与生活圈的情绪，从外出到安顿；不是把单一小任务拖长。",
   "creative_mode": "cozy_relaxation",
   "season": 1,
   "episode_duration_seconds": 105,
@@ -17,65 +17,50 @@
   "characters": [
     {
       "id": "C01",
-      "description": "原创成年女性约25岁、165cm、约7头身；栗棕短发、左侧红发夹、浅黄色卷袖衬衣、鼠尾草绿围裙裙与棕色平底鞋。",
-      "design_version": "C01-v1-planned",
+      "description": "成年女性27岁，约165cm、7头身；深棕单辫落在解剖右肩，奶油衬衣、牛仔蓝背带裙、棕色平底鞋。",
       "reference_file": null
     },
     {
       "id": "C02",
-      "description": "邻居约65岁、158cm、正常成人比例；灰发低髻、奶油衬衣、灰蓝开衫、深蓝长裙，住B屋。",
-      "design_version": "C02-v1-planned",
+      "description": "农人约60岁，正常成人比例，草帽、灰胡须、蓝马甲。",
       "reference_file": null
     },
     {
       "id": "C03",
-      "description": "约45岁路人、172cm；棕帽、砖红衬衣、米色长裤，推同一辆黑色自行车，车篮有一只纸袋。",
-      "design_version": "C03-v1-planned",
-      "reference_file": null
-    },
-    {
-      "id": "C04",
-      "description": "成年橘白猫，肩高约28cm，橘色背尾、白色胸腹和四爪；正常猫体型，在A屋门廊和室内活动。",
-      "design_version": "C04-v1-planned",
+      "description": "成年橘白猫，橘背尾、白胸腹和四爪；体型与花纹固定。",
       "reference_file": null
     }
   ],
   "locations": [
     {
       "id": "L01",
-      "description": "A屋室内：北窗朝巷子，可望见东北B屋和西北C屋；北窗下阅读桌和45cm高木椅，桌上水玻璃杯，西北入口内有伞钩和玄关台；门槛通向L02。",
+      "description": "田边小路与同一菜畦；主家A在东侧远处，B红屋顶、C灰屋顶位置稳定，路连通市集。",
       "layout_version": "L01-v1-planned",
-      "reference_file": null,
-      "scale_anchors": {
-        "adult_cm": 165,
-        "door_cm": 205,
-        "chair_seat_cm": 45,
-        "porch_step_cm": 17.5
-      }
+      "reference_file": null
     },
     {
       "id": "L02",
-      "description": "同一条东西向小巷和A门廊：A在巷南x=0、B在巷北偏东约8m、C在巷北偏西约10m，巷宽约3m。A北向门在同面北窗左侧，两级门廊台阶；B南向门廊，C蓝窗；路人向东推车，女主去B向东、回A向西。",
+      "description": "街角摊位，农人站后、女主站前；橘子筐在中间、篮在女主左臂。背后屋顶延续生活圈，无额外收银人物。",
       "layout_version": "L02-v1-planned",
-      "reference_file": null,
-      "scale_anchors": {
-        "adult_cm": 165,
-        "door_cm": 205,
-        "chair_seat_cm": 45,
-        "porch_step_cm": 17.5
-      }
+      "reference_file": null
     },
     {
       "id": "L03",
-      "description": "B屋向南门廊，属于L02总览的同一建筑：左侧浅木门和门内伞钩，右侧小桌与花盆，桌上浇水壶、小玻璃杯的两枝预先剪好的薄荷和一张包装纸。朝南看见巷对面A，不凭换机位重排建筑。",
+      "description": "家A奶油墙、苔绿屋顶；正立面看窗在门左，门前两级台阶，左侧归家通路畅通；B红顶和C灰顶位置固定。",
       "layout_version": "L03-v1-planned",
-      "reference_file": null,
-      "scale_anchors": {
-        "adult_cm": 165,
-        "door_cm": 205,
-        "chair_seat_cm": 45,
-        "porch_step_cm": 17.5
-      }
+      "reference_file": null
+    },
+    {
+      "id": "L04",
+      "description": "家A厨房，门在绿窗左，水槽在窗下，灶左冰箱右；前右是可用餐桌。门205cm、台高85cm、椅面45cm，侧机位投影按实际布局。",
+      "layout_version": "L04-v1-planned",
+      "reference_file": null
+    },
+    {
+      "id": "L05",
+      "description": "家A起居室，正面基准窗左沙发右、书架靠后墙；窗外是B/C屋顶。沙发和窗不随镜头互换。",
+      "layout_version": "L05-v1-planned",
+      "reference_file": null
     }
   ],
   "visual_direction": {
@@ -125,13 +110,17 @@
   "episodes": [
     {
       "id": "S01E01",
-      "title": "把伞送回晴天里",
+      "title": "把日子过得轻一点",
       "duration": 105,
-      "core_process": "擦干借伞、穿过小巷、归还、带回两枝薄荷、插入窗下水杯",
-      "change_or_interaction": "让路给推车路人，邻居用两枝薄荷回应归还",
-      "visible_result": "伞留在邻家，薄荷和猫陪着主角安顿",
-      "sound_motif": "伞布、车轮、水流、脚步与微风",
-      "story_review": "pending",
+      "life_blocks": [
+        "田边劳动",
+        "采购",
+        "归家",
+        "点心饮料",
+        "阅读陪伴",
+        "暮色亮灯"
+      ],
+      "sound_motif": "草叶、竹篮、玻璃、纸页",
       "status": "story_card_draft",
       "project_dir": null,
       "final_file": null,
@@ -139,31 +128,37 @@
     },
     {
       "id": "S01E02",
-      "title": "雨停后的书店门口",
+      "title": "雨把下午留了下来",
       "duration": 105,
-      "core_process": "路过有住户的小街、还书、借一本书、回窗边翻开",
-      "change_or_interaction": "店主收好门口书架，为主角留出挑书的位置",
-      "visible_result": "屋外生活继续，屋内有一页想读的书",
-      "sound_motif": "刷毛、抹布、纸页与雨滴",
-      "story_review": "pending",
+      "life_blocks": [
+        "街边避雨",
+        "买一束花",
+        "回家擦干衣物",
+        "整理花瓶",
+        "音乐与手作",
+        "窗边看雨"
+      ],
+      "sound_motif": "雨棚滴水、衣料、花茎、剪刀",
       "status": "story_card_draft",
       "project_dir": null,
-      "final_file": null,
-      "project_plan_file": null
+      "final_file": null
     },
     {
       "id": "S01E03",
-      "title": "阳台上的一小片绿",
+      "title": "海风吹过的小镇",
       "duration": 105,
-      "core_process": "松土、移栽一株植物、压实、浇水、清理台面",
-      "change_or_interaction": "邻居从相连阳台递来两段已剪枝条，楼下有人路过",
-      "visible_result": "新枝栽稳，窗外仍见同一排有人生活的房屋",
-      "sound_motif": "土粒、陶盆与浇水",
-      "story_review": "pending",
+      "life_blocks": [
+        "晨间码头",
+        "小店问候",
+        "骑行归家",
+        "阳台晾晒",
+        "画画与饮水",
+        "远处晚船"
+      ],
+      "sound_motif": "浪声、车轮、晒衣夹、画笔",
       "status": "story_card_draft",
       "project_dir": null,
-      "final_file": null,
-      "project_plan_file": null
+      "final_file": null
     }
   ],
   "continuity_log": [],
@@ -171,5 +166,6 @@
   "episode_duration_range_seconds": [
     90,
     120
-  ]
+  ],
+  "story_mode": "daily_montage"
 }

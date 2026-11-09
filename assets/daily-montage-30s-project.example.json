@@ -1,0 +1,1387 @@
+{
+  "version": 2,
+  "title": "平常的一天 · 30秒日常蒙太奇",
+  "idea": "在田边和街角走一走，带回新鲜果实，享用点心饮料，在有其他房屋的生活圈里度过平常而惬意的一天。",
+  "status": "planning_example_no_generated_assets",
+  "creative_mode": "cozy_relaxation",
+  "story_mode": "daily_montage",
+  "duration": 30,
+  "duration_range": [
+    30,
+    30
+  ],
+  "aspect_ratio": "16:9",
+  "style": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。",
+  "style_version": 1,
+  "style_anchor": null,
+  "style_review": null,
+  "themes": [
+    "日常生活本身就值得享受",
+    "出行、劳作、享用和休息的不同触感",
+    "同一生活圈由早到晚"
+  ],
+  "script": "从农人的田边劳动进入一天，女孩采购后沿路回到家。普通的水果、点心与饮料带来满足；她随后休息，与猫相伴，最后窗灯把家留在暮色里。生活段落互相连接，以时间和情绪推进，不用单一物件的反复特写拖长。",
+  "story": {
+    "premise": "平常的一天也足够幸福",
+    "life_blocks": [
+      "田间劳作",
+      "街角采购",
+      "沿路归家",
+      "点心饮料",
+      "享用",
+      "休息陪伴",
+      "暮色生活圈"
+    ],
+    "emotional_progression": [
+      "清新苏醒",
+      "轻快忙碌",
+      "回家放松",
+      "感官满足",
+      "安静安顿"
+    ],
+    "ending": "同一座房屋亮起灯，周边仍有人生活。",
+    "narration": false
+  },
+  "visual_bible": {
+    "status": "planned_requires_actual_images",
+    "world_layout": {
+      "version": "WORLD-v1-planned",
+      "buildings": {
+        "A": "奶油墙苔绿顶，女主家",
+        "B": "红屋顶，A西北远处",
+        "C": "灰屋顶，B右侧更远"
+      },
+      "path": "同一可步行小路连接田边、市集与A门廊；归家通路不穿关闭栅栏。",
+      "lighting_progression": [
+        "田边晨光",
+        "采购日光",
+        "回家午后",
+        "休息斜阳",
+        "外景薄暮"
+      ]
+    },
+    "scale_review": "pending"
+  },
+  "characters": [
+    {
+      "id": "C01",
+      "description": "成年女性27岁，约165cm、7头身；深棕单辫落在解剖右肩，奶油衬衣、牛仔蓝背带裙、棕色平底鞋。",
+      "reference_file": null
+    },
+    {
+      "id": "C02",
+      "description": "农人约60岁，正常成人比例，草帽、灰胡须、蓝马甲。",
+      "reference_file": null
+    },
+    {
+      "id": "C03",
+      "description": "成年橘白猫，橘背尾、白胸腹和四爪；体型与花纹固定。",
+      "reference_file": null
+    }
+  ],
+  "scenes": [
+    {
+      "id": "L01",
+      "description": "田边小路与同一菜畦；主家A在东侧远处，B红屋顶、C灰屋顶位置稳定，路连通市集。",
+      "layout_version": "L01-v1-planned",
+      "reference_file": null
+    },
+    {
+      "id": "L02",
+      "description": "街角摊位，农人站后、女主站前；橘子筐在中间、篮在女主左臂。背后屋顶延续生活圈，无额外收银人物。",
+      "layout_version": "L02-v1-planned",
+      "reference_file": null
+    },
+    {
+      "id": "L03",
+      "description": "家A奶油墙、苔绿屋顶；正立面看窗在门左，门前两级台阶，左侧归家通路畅通；B红顶和C灰顶位置固定。",
+      "layout_version": "L03-v1-planned",
+      "reference_file": null
+    },
+    {
+      "id": "L04",
+      "description": "家A厨房，门在绿窗左，水槽在窗下，灶左冰箱右；前右是可用餐桌。门205cm、台高85cm、椅面45cm，侧机位投影按实际布局。",
+      "layout_version": "L04-v1-planned",
+      "reference_file": null
+    },
+    {
+      "id": "L05",
+      "description": "家A起居室，正面基准窗左沙发右、书架靠后墙；窗外是B/C屋顶。沙发和窗不随镜头互换。",
+      "layout_version": "L05-v1-planned",
+      "reference_file": null
+    }
+  ],
+  "reference_assets": [
+    {
+      "id": "STYLE",
+      "role": "统一风格",
+      "file": null,
+      "sha256": null,
+      "review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      }
+    },
+    {
+      "id": "WORLD",
+      "role": "生活圈总览",
+      "file": null,
+      "sha256": null,
+      "review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      }
+    },
+    {
+      "id": "C01",
+      "role": "角色",
+      "file": null,
+      "sha256": null,
+      "review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      }
+    },
+    {
+      "id": "C02",
+      "role": "角色",
+      "file": null,
+      "sha256": null,
+      "review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      }
+    },
+    {
+      "id": "C03",
+      "role": "角色",
+      "file": null,
+      "sha256": null,
+      "review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      }
+    },
+    {
+      "id": "L01",
+      "role": "场景",
+      "file": null,
+      "sha256": null,
+      "review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      }
+    },
+    {
+      "id": "L02",
+      "role": "场景",
+      "file": null,
+      "sha256": null,
+      "review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      }
+    },
+    {
+      "id": "L03",
+      "role": "场景",
+      "file": null,
+      "sha256": null,
+      "review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      }
+    },
+    {
+      "id": "L04",
+      "role": "场景",
+      "file": null,
+      "sha256": null,
+      "review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      }
+    },
+    {
+      "id": "L05",
+      "role": "场景",
+      "file": null,
+      "sha256": null,
+      "review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      }
+    }
+  ],
+  "generation": {
+    "image": null,
+    "video": {
+      "provider": null,
+      "preset": "tested_seedance20_mini_fast",
+      "allowed_models": [
+        "Seedance 2.0 Mini",
+        "Seedance 2.0 Fast"
+      ],
+      "capability_check": "pending_current_provider"
+    },
+    "music": null,
+    "speech": null
+  },
+  "production_policy": {
+    "enabled": true,
+    "require_reference_conditioning": true,
+    "require_pilot": true,
+    "pilot_shots": [
+      "S08",
+      "S10"
+    ]
+  },
+  "limits": {
+    "max_candidates_per_shot": 2,
+    "budget": null
+  },
+  "audio": {
+    "music_required": true,
+    "music": null,
+    "music_source": null,
+    "music_offset": 0,
+    "ambience_required": true,
+    "ambience": null,
+    "ambience_offset": 0,
+    "native_audio": true,
+    "voiceover": null,
+    "music_brief": "38秒以上原创无歌词轻器乐，轻盈木吉他、柔软钢琴与稀疏木管，轻快自然的脉动，避免拖慢动作；保留环境与器物声音，末段旋律收束。",
+    "ambience_brief": "随空间衔接田边风鸟、市集远声、室内微风、傍晚环境，避免每切镜环境完全断掉；不把市场喧闹铺满室内。"
+  },
+  "delivery": {
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "master_lufs": -18,
+    "master_true_peak": -2
+  },
+  "quality_review": {
+    "pilot": null,
+    "final_cuts": {
+      "state": "pending"
+    },
+    "final_visual": {
+      "state": "pending"
+    },
+    "final_audio": {
+      "state": "pending"
+    }
+  },
+  "production_preferences": {
+    "shot_count_guidance": [
+      10,
+      12
+    ],
+    "typical_edit_seconds": [
+      2,
+      4
+    ],
+    "trim_idle_handles": true,
+    "world_profile": "lived_in_neighborhood"
+  },
+  "generation_authorized_for_this_plan": false,
+  "project_dir": null,
+  "final_file": null,
+  "shots": [
+    {
+      "id": "S01",
+      "duration": 2.5,
+      "generation_duration": 4,
+      "edit_start": 0,
+      "edit_end": 2.5,
+      "life_block": "田野全景",
+      "story_function": "田野全景，农人抬直身体，远处三栋房屋与小路；推进一天的活动或情绪，不重复上一镜。",
+      "action": "田野全景，农人抬直身体，远处三栋房屋与小路",
+      "character_ids": [
+        "C02"
+      ],
+      "scene_id": "L01",
+      "required_reference_ids": [
+        "STYLE",
+        "L01",
+        "C02",
+        "WORLD"
+      ],
+      "reference_files": [],
+      "image_conditioning": [],
+      "image_file": null,
+      "image_sha256": null,
+      "image_review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      },
+      "video_conditioning": null,
+      "image_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单张16:9完整构图，田野全景，农人抬直身体，远处三栋房屋与小路。只画动作起点和本镜可见人物：C02。按真实已通过参考保持：田边小路与同一菜畦；主家A在东侧远处，B红屋顶、C灰屋顶位置稳定，路连通市集。。实际看图核对可用手、抓握、承重、落点和移动净空，动作尚未完成，不画分镜板。",
+      "video_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单个连续4秒镜头，从实际输入首帧立即开始，正常生活速度，不均匀拖慢。站在菜畦，双脚落地，腰部自然伸直后呼气。相机采用与首帧一致的一个固定或轻微跟随机位，不自动切镜；只约束可见主体。衣料、呼吸和环境有自然跟随，不冻结。只生成同步环境和拟音：农人呼气与风吹草叶，无片段配乐、歌词或旁白；后期择有效动作区间使用约2.5秒。",
+      "motion_plan": {
+        "start_state": "根据实际首帧核对：田野全景，农人抬直身体，远处三栋房屋与小路",
+        "beats": [
+          "站在菜畦，双脚落地，腰部自然伸直后呼气"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "当前可见衣摆、叶片、呼吸或液面随主动作自然变化",
+        "camera": "本镜独立构图，固定机位或一次轻微跟随；以实际首帧确定",
+        "cut_cue": "动作结果或反应可读后切，按实际源片登记trim_in，不自动用完整4秒"
+      },
+      "interaction": {
+        "preconditions": [
+          "真实首帧可完成本镜动作；确认相关支撑、抓握和运动通路",
+          "田边小路与同一菜畦；主家A在东侧远处，B红屋顶、C灰屋顶位置稳定，路连通市集。"
+        ],
+        "ordered_steps": [
+          "站在菜畦，双脚落地，腰部自然伸直后呼气"
+        ],
+        "contact_rules": [
+          "原接触点连续；得到新支撑后才释放，液体从壶嘴进入杯口内，刚性物体不穿透；不涉及接触的空镜只做自然环境运动"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L01-v1-planned",
+        "scene_locks": [
+          "田边小路与同一菜畦；主家A在东侧远处，B红屋顶、C灰屋顶位置稳定，路连通市集。",
+          "人物同一身份/服装，解剖左右不随镜头镜像；只画本镜可见角色。"
+        ],
+        "prop_states_in": {
+          "location": "L01",
+          "time": "morning",
+          "main_action": "一天开始",
+          "basket": "未采购",
+          "glass": "尚未使用"
+        },
+        "prop_states_out": {
+          "location": "L01",
+          "time": "morning",
+          "main_action": "田野全景，农人抬直身体，远处三栋房屋与小路",
+          "basket": "未采购",
+          "glass": "尚未使用"
+        },
+        "allowed_state_changes": [
+          "main_action"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "农人呼气与风吹草叶",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null,
+      "planned_model": "Seedance 2.0 Mini"
+    },
+    {
+      "id": "S02",
+      "duration": 2,
+      "generation_duration": 4,
+      "edit_start": 2.5,
+      "edit_end": 4.5,
+      "life_block": "篮子局部",
+      "story_function": "篮子局部，一枚成熟番茄放到篮内；推进一天的活动或情绪，不重复上一镜。",
+      "action": "篮子局部，一枚成熟番茄放到篮内",
+      "character_ids": [
+        "C02"
+      ],
+      "scene_id": "L01",
+      "required_reference_ids": [
+        "STYLE",
+        "L01",
+        "C02",
+        "WORLD"
+      ],
+      "reference_files": [],
+      "image_conditioning": [],
+      "image_file": null,
+      "image_sha256": null,
+      "image_review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      },
+      "video_conditioning": null,
+      "image_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单张16:9完整构图，篮子局部，一枚成熟番茄放到篮内。只画动作起点和本镜可见人物：C02。按真实已通过参考保持：田边小路与同一菜畦；主家A在东侧远处，B红屋顶、C灰屋顶位置稳定，路连通市集。。实际看图核对可用手、抓握、承重、落点和移动净空，动作尚未完成，不画分镜板。",
+      "video_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单个连续4秒镜头，从实际输入首帧立即开始，正常生活速度，不均匀拖慢。右手握住番茄，移到篮内空处，降低至已有番茄支持，松指后抬手。相机采用与首帧一致的一个固定或轻微跟随机位，不自动切镜；只约束可见主体。衣料、呼吸和环境有自然跟随，不冻结。只生成同步环境和拟音：果实轻碰竹篮，无片段配乐、歌词或旁白；后期择有效动作区间使用约2秒。",
+      "motion_plan": {
+        "start_state": "根据实际首帧核对：篮子局部，一枚成熟番茄放到篮内",
+        "beats": [
+          "右手握住番茄，移到篮内空处，降低至已有番茄支持，松指后抬手"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2,
+        "secondary_motion": "当前可见衣摆、叶片、呼吸或液面随主动作自然变化",
+        "camera": "本镜独立构图，固定机位或一次轻微跟随；以实际首帧确定",
+        "cut_cue": "动作结果或反应可读后切，按实际源片登记trim_in，不自动用完整4秒"
+      },
+      "interaction": {
+        "preconditions": [
+          "真实首帧可完成本镜动作；确认相关支撑、抓握和运动通路",
+          "田边小路与同一菜畦；主家A在东侧远处，B红屋顶、C灰屋顶位置稳定，路连通市集。"
+        ],
+        "ordered_steps": [
+          "右手握住番茄，移到篮内空处，降低至已有番茄支持，松指后抬手"
+        ],
+        "contact_rules": [
+          "原接触点连续；得到新支撑后才释放，液体从壶嘴进入杯口内，刚性物体不穿透；不涉及接触的空镜只做自然环境运动"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L01-v1-planned",
+        "scene_locks": [
+          "田边小路与同一菜畦；主家A在东侧远处，B红屋顶、C灰屋顶位置稳定，路连通市集。",
+          "人物同一身份/服装，解剖左右不随镜头镜像；只画本镜可见角色。"
+        ],
+        "prop_states_in": {
+          "location": "L01",
+          "time": "morning",
+          "main_action": "田野全景，农人抬直身体，远处三栋房屋与小路",
+          "basket": "未采购",
+          "glass": "尚未使用"
+        },
+        "prop_states_out": {
+          "location": "L01",
+          "time": "morning",
+          "main_action": "篮子局部，一枚成熟番茄放到篮内",
+          "basket": "未采购",
+          "glass": "尚未使用"
+        },
+        "allowed_state_changes": [
+          "main_action"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "果实轻碰竹篮",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null,
+      "planned_model": "Seedance 2.0 Mini"
+    },
+    {
+      "id": "S03",
+      "duration": 2.5,
+      "generation_duration": 4,
+      "edit_start": 4.5,
+      "edit_end": 7.0,
+      "life_block": "采购中景",
+      "story_function": "采购中景，女孩看向摊主并笑着点头；推进一天的活动或情绪，不重复上一镜。",
+      "action": "采购中景，女孩看向摊主并笑着点头",
+      "character_ids": [
+        "C01",
+        "C02"
+      ],
+      "scene_id": "L02",
+      "required_reference_ids": [
+        "STYLE",
+        "L02",
+        "C01",
+        "C02",
+        "WORLD"
+      ],
+      "reference_files": [],
+      "image_conditioning": [],
+      "image_file": null,
+      "image_sha256": null,
+      "image_review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      },
+      "video_conditioning": null,
+      "image_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单张16:9完整构图，采购中景，女孩看向摊主并笑着点头。只画动作起点和本镜可见人物：C01、C02。按真实已通过参考保持：街角摊位，农人站后、女主站前；橘子筐在中间、篮在女主左臂。背后屋顶延续生活圈，无额外收银人物。。实际看图核对可用手、抓握、承重、落点和移动净空，动作尚未完成，不画分镜板。",
+      "video_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单个连续4秒镜头，从实际输入首帧立即开始，正常生活速度，不均匀拖慢。左臂承篮、右手扶篮沿，保持承重；看橘子再抬眼点头，不另长出取果的手。相机采用与首帧一致的一个固定或轻微跟随机位，不自动切镜；只约束可见主体。衣料、呼吸和环境有自然跟随，不冻结。只生成同步环境和拟音：市集底声与衣料，无片段配乐、歌词或旁白；后期择有效动作区间使用约2.5秒。",
+      "motion_plan": {
+        "start_state": "根据实际首帧核对：采购中景，女孩看向摊主并笑着点头",
+        "beats": [
+          "左臂承篮、右手扶篮沿，保持承重；看橘子再抬眼点头，不另长出取果的手"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "当前可见衣摆、叶片、呼吸或液面随主动作自然变化",
+        "camera": "本镜独立构图，固定机位或一次轻微跟随；以实际首帧确定",
+        "cut_cue": "动作结果或反应可读后切，按实际源片登记trim_in，不自动用完整4秒"
+      },
+      "interaction": {
+        "preconditions": [
+          "真实首帧可完成本镜动作；确认相关支撑、抓握和运动通路",
+          "街角摊位，农人站后、女主站前；橘子筐在中间、篮在女主左臂。背后屋顶延续生活圈，无额外收银人物。"
+        ],
+        "ordered_steps": [
+          "左臂承篮、右手扶篮沿，保持承重；看橘子再抬眼点头，不另长出取果的手"
+        ],
+        "contact_rules": [
+          "原接触点连续；得到新支撑后才释放，液体从壶嘴进入杯口内，刚性物体不穿透；不涉及接触的空镜只做自然环境运动"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L02-v1-planned",
+        "scene_locks": [
+          "街角摊位，农人站后、女主站前；橘子筐在中间、篮在女主左臂。背后屋顶延续生活圈，无额外收银人物。",
+          "人物同一身份/服装，解剖左右不随镜头镜像；只画本镜可见角色。"
+        ],
+        "prop_states_in": {
+          "location": "L02",
+          "time": "late_morning",
+          "main_action": "篮子局部，一枚成熟番茄放到篮内",
+          "basket": "未采购",
+          "glass": "尚未使用"
+        },
+        "prop_states_out": {
+          "location": "L02",
+          "time": "late_morning",
+          "main_action": "采购中景，女孩看向摊主并笑着点头",
+          "basket": "未采购",
+          "glass": "尚未使用"
+        },
+        "allowed_state_changes": [
+          "main_action"
+        ],
+        "time_ellipsis": true,
+        "transition_reason": "新的生活段落或明确的工序/路程/时间省略；实际首帧须检查并记录篮中物品、空余手、液位和人物位置，不假称未拍过程已连续展示。"
+      },
+      "sound": "市集底声与衣料",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null,
+      "planned_model": "Seedance 2.0 Mini"
+    },
+    {
+      "id": "S04",
+      "duration": 2,
+      "generation_duration": 4,
+      "edit_start": 7.0,
+      "edit_end": 9.0,
+      "life_block": "橘子篮的细节",
+      "story_function": "橘子篮的细节，右手放入一枚橘子；推进一天的活动或情绪，不重复上一镜。",
+      "action": "橘子篮的细节，右手放入一枚橘子",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L02",
+      "required_reference_ids": [
+        "STYLE",
+        "L02",
+        "C01",
+        "WORLD"
+      ],
+      "reference_files": [],
+      "image_conditioning": [],
+      "image_file": null,
+      "image_sha256": null,
+      "image_review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      },
+      "video_conditioning": null,
+      "image_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单张16:9完整构图，橘子篮的细节，右手放入一枚橘子。只画动作起点和本镜可见人物：C01。按真实已通过参考保持：街角摊位，农人站后、女主站前；橘子筐在中间、篮在女主左臂。背后屋顶延续生活圈，无额外收银人物。。实际看图核对可用手、抓握、承重、落点和移动净空，动作尚未完成，不画分镜板。",
+      "video_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单个连续4秒镜头，从实际输入首帧立即开始，正常生活速度，不均匀拖慢。左臂稳定篮柄，右手把橘子降到篮中空位，果实得到支撑后松开指尖；可在落座接触后切返程，省略撤手。相机采用与首帧一致的一个固定或轻微跟随机位，不自动切镜；只约束可见主体。衣料、呼吸和环境有自然跟随，不冻结。只生成同步环境和拟音：橘皮与竹篮轻响，无片段配乐、歌词或旁白；后期择有效动作区间使用约2秒。",
+      "motion_plan": {
+        "start_state": "根据实际首帧核对：橘子篮的细节，右手放入一枚橘子",
+        "beats": [
+          "左臂稳定篮柄，右手把橘子降到篮中空位，果实得到支撑后松开指尖；可在落座接触后切返程，省略撤手"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2,
+        "secondary_motion": "当前可见衣摆、叶片、呼吸或液面随主动作自然变化",
+        "camera": "本镜独立构图，固定机位或一次轻微跟随；以实际首帧确定",
+        "cut_cue": "动作结果或反应可读后切，按实际源片登记trim_in，不自动用完整4秒"
+      },
+      "interaction": {
+        "preconditions": [
+          "真实首帧可完成本镜动作；确认相关支撑、抓握和运动通路",
+          "街角摊位，农人站后、女主站前；橘子筐在中间、篮在女主左臂。背后屋顶延续生活圈，无额外收银人物。"
+        ],
+        "ordered_steps": [
+          "左臂稳定篮柄，右手把橘子降到篮中空位，果实得到支撑后松开指尖；可在落座接触后切返程，省略撤手"
+        ],
+        "contact_rules": [
+          "原接触点连续；得到新支撑后才释放，液体从壶嘴进入杯口内，刚性物体不穿透；不涉及接触的空镜只做自然环境运动"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L02-v1-planned",
+        "scene_locks": [
+          "街角摊位，农人站后、女主站前；橘子筐在中间、篮在女主左臂。背后屋顶延续生活圈，无额外收银人物。",
+          "人物同一身份/服装，解剖左右不随镜头镜像；只画本镜可见角色。"
+        ],
+        "prop_states_in": {
+          "location": "L02",
+          "time": "late_morning",
+          "main_action": "采购中景，女孩看向摊主并笑着点头",
+          "basket": "未采购",
+          "glass": "尚未使用"
+        },
+        "prop_states_out": {
+          "location": "L02",
+          "time": "late_morning",
+          "main_action": "橘子篮的细节，右手放入一枚橘子",
+          "basket": "采购后含橘子，其他购买允许在下一返程前省略",
+          "glass": "尚未使用"
+        },
+        "allowed_state_changes": [
+          "basket",
+          "main_action"
+        ],
+        "time_ellipsis": true,
+        "transition_reason": "新的生活段落或明确的工序/路程/时间省略；实际首帧须检查并记录篮中物品、空余手、液位和人物位置，不假称未拍过程已连续展示。"
+      },
+      "sound": "橘皮与竹篮轻响",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null,
+      "planned_model": "Seedance 2.0 Mini"
+    },
+    {
+      "id": "S05",
+      "duration": 2.5,
+      "generation_duration": 4,
+      "edit_start": 9.0,
+      "edit_end": 11.5,
+      "life_block": "背面归家",
+      "story_function": "背面归家，女孩沿空着的左侧小路走向门廊；推进一天的活动或情绪，不重复上一镜。",
+      "action": "背面归家，女孩沿空着的左侧小路走向门廊",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L03",
+      "required_reference_ids": [
+        "STYLE",
+        "L03",
+        "C01",
+        "WORLD"
+      ],
+      "reference_files": [],
+      "image_conditioning": [],
+      "image_file": null,
+      "image_sha256": null,
+      "image_review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      },
+      "video_conditioning": null,
+      "image_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单张16:9完整构图，背面归家，女孩沿空着的左侧小路走向门廊。只画动作起点和本镜可见人物：C01。按真实已通过参考保持：家A奶油墙、苔绿屋顶；正立面看窗在门左，门前两级台阶，左侧归家通路畅通；B红顶和C灰顶位置固定。。实际看图核对可用手、抓握、承重、落点和移动净空，动作尚未完成，不画分镜板。",
+      "video_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单个连续4秒镜头，从实际输入首帧立即开始，正常生活速度，不均匀拖慢。篮在左臂，正常两步向前；双脚轮换接触承重，不穿过右侧关闭的栅栏。相机采用与首帧一致的一个固定或轻微跟随机位，不自动切镜；只约束可见主体。衣料、呼吸和环境有自然跟随，不冻结。只生成同步环境和拟音：脚步与树叶，无片段配乐、歌词或旁白；后期择有效动作区间使用约2.5秒。",
+      "motion_plan": {
+        "start_state": "根据实际首帧核对：背面归家，女孩沿空着的左侧小路走向门廊",
+        "beats": [
+          "篮在左臂，正常两步向前；双脚轮换接触承重，不穿过右侧关闭的栅栏"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "当前可见衣摆、叶片、呼吸或液面随主动作自然变化",
+        "camera": "本镜独立构图，固定机位或一次轻微跟随；以实际首帧确定",
+        "cut_cue": "动作结果或反应可读后切，按实际源片登记trim_in，不自动用完整4秒"
+      },
+      "interaction": {
+        "preconditions": [
+          "真实首帧可完成本镜动作；确认相关支撑、抓握和运动通路",
+          "家A奶油墙、苔绿屋顶；正立面看窗在门左，门前两级台阶，左侧归家通路畅通；B红顶和C灰顶位置固定。"
+        ],
+        "ordered_steps": [
+          "篮在左臂，正常两步向前；双脚轮换接触承重，不穿过右侧关闭的栅栏"
+        ],
+        "contact_rules": [
+          "原接触点连续；得到新支撑后才释放，液体从壶嘴进入杯口内，刚性物体不穿透；不涉及接触的空镜只做自然环境运动"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L03-v1-planned",
+        "scene_locks": [
+          "家A奶油墙、苔绿屋顶；正立面看窗在门左，门前两级台阶，左侧归家通路畅通；B红顶和C灰顶位置固定。",
+          "人物同一身份/服装，解剖左右不随镜头镜像；只画本镜可见角色。"
+        ],
+        "prop_states_in": {
+          "location": "L03",
+          "time": "afternoon",
+          "main_action": "橘子篮的细节，右手放入一枚橘子",
+          "basket": "采购后含橘子，其他购买允许在下一返程前省略",
+          "glass": "尚未使用"
+        },
+        "prop_states_out": {
+          "location": "L03",
+          "time": "afternoon",
+          "main_action": "背面归家，女孩沿空着的左侧小路走向门廊",
+          "basket": "采购后含橘子，其他购买允许在下一返程前省略",
+          "glass": "尚未使用"
+        },
+        "allowed_state_changes": [
+          "main_action"
+        ],
+        "time_ellipsis": true,
+        "transition_reason": "新的生活段落或明确的工序/路程/时间省略；实际首帧须检查并记录篮中物品、空余手、液位和人物位置，不假称未拍过程已连续展示。"
+      },
+      "sound": "脚步与树叶",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null,
+      "planned_model": "Seedance 2.0 Mini"
+    },
+    {
+      "id": "S06",
+      "duration": 2,
+      "generation_duration": 4,
+      "edit_start": 11.5,
+      "edit_end": 13.5,
+      "life_block": "餐桌中景",
+      "story_function": "餐桌中景，篮子放上清空桌面；推进一天的活动或情绪，不重复上一镜。",
+      "action": "餐桌中景，篮子放上清空桌面",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L04",
+      "required_reference_ids": [
+        "STYLE",
+        "L04",
+        "C01"
+      ],
+      "reference_files": [],
+      "image_conditioning": [],
+      "image_file": null,
+      "image_sha256": null,
+      "image_review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      },
+      "video_conditioning": null,
+      "image_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单张16:9完整构图，餐桌中景，篮子放上清空桌面。只画动作起点和本镜可见人物：C01。按真实已通过参考保持：家A厨房，门在绿窗左，水槽在窗下，灶左冰箱右；前右是可用餐桌。门205cm、台高85cm、椅面45cm，侧机位投影按实际布局。。实际看图核对可用手、抓握、承重、落点和移动净空，动作尚未完成，不画分镜板。",
+      "video_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单个连续4秒镜头，从实际输入首帧立即开始，正常生活速度，不均匀拖慢。省略部分卸货后，双手将篮底降至净空足够的餐桌，桌面承重后松手；不挤向水槽和冰箱之间的窄台。相机采用与首帧一致的一个固定或轻微跟随机位，不自动切镜；只约束可见主体。衣料、呼吸和环境有自然跟随，不冻结。只生成同步环境和拟音：竹篮落桌，无片段配乐、歌词或旁白；后期择有效动作区间使用约2秒。",
+      "motion_plan": {
+        "start_state": "根据实际首帧核对：餐桌中景，篮子放上清空桌面",
+        "beats": [
+          "省略部分卸货后，双手将篮底降至净空足够的餐桌，桌面承重后松手；不挤向水槽和冰箱之间的窄台"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2,
+        "secondary_motion": "当前可见衣摆、叶片、呼吸或液面随主动作自然变化",
+        "camera": "本镜独立构图，固定机位或一次轻微跟随；以实际首帧确定",
+        "cut_cue": "动作结果或反应可读后切，按实际源片登记trim_in，不自动用完整4秒"
+      },
+      "interaction": {
+        "preconditions": [
+          "真实首帧可完成本镜动作；确认相关支撑、抓握和运动通路",
+          "家A厨房，门在绿窗左，水槽在窗下，灶左冰箱右；前右是可用餐桌。门205cm、台高85cm、椅面45cm，侧机位投影按实际布局。"
+        ],
+        "ordered_steps": [
+          "省略部分卸货后，双手将篮底降至净空足够的餐桌，桌面承重后松手；不挤向水槽和冰箱之间的窄台"
+        ],
+        "contact_rules": [
+          "原接触点连续；得到新支撑后才释放，液体从壶嘴进入杯口内，刚性物体不穿透；不涉及接触的空镜只做自然环境运动"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L04-v1-planned",
+        "scene_locks": [
+          "家A厨房，门在绿窗左，水槽在窗下，灶左冰箱右；前右是可用餐桌。门205cm、台高85cm、椅面45cm，侧机位投影按实际布局。",
+          "人物同一身份/服装，解剖左右不随镜头镜像；只画本镜可见角色。"
+        ],
+        "prop_states_in": {
+          "location": "L04",
+          "time": "afternoon",
+          "main_action": "背面归家，女孩沿空着的左侧小路走向门廊",
+          "basket": "采购后含橘子，其他购买允许在下一返程前省略",
+          "glass": "尚未使用"
+        },
+        "prop_states_out": {
+          "location": "L04",
+          "time": "afternoon",
+          "main_action": "餐桌中景，篮子放上清空桌面",
+          "basket": "采购后含橘子，其他购买允许在下一返程前省略",
+          "glass": "尚未使用"
+        },
+        "allowed_state_changes": [
+          "main_action"
+        ],
+        "time_ellipsis": true,
+        "transition_reason": "新的生活段落或明确的工序/路程/时间省略；实际首帧须检查并记录篮中物品、空余手、液位和人物位置，不假称未拍过程已连续展示。"
+      },
+      "sound": "竹篮落桌",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null,
+      "planned_model": "Seedance 2.0 Mini"
+    },
+    {
+      "id": "S07",
+      "duration": 2.5,
+      "generation_duration": 4,
+      "edit_start": 13.5,
+      "edit_end": 16.0,
+      "life_block": "点心近景",
+      "story_function": "点心近景，盘中水果与烤点心；推进一天的活动或情绪，不重复上一镜。",
+      "action": "点心近景，盘中水果与烤点心",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L04",
+      "required_reference_ids": [
+        "STYLE",
+        "L04",
+        "C01"
+      ],
+      "reference_files": [],
+      "image_conditioning": [],
+      "image_file": null,
+      "image_sha256": null,
+      "image_review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      },
+      "video_conditioning": null,
+      "image_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单张16:9完整构图，点心近景，盘中水果与烤点心。只画动作起点和本镜可见人物：C01。按真实已通过参考保持：家A厨房，门在绿窗左，水槽在窗下，灶左冰箱右；前右是可用餐桌。门205cm、台高85cm、椅面45cm，侧机位投影按实际布局。。实际看图核对可用手、抓握、承重、落点和移动净空，动作尚未完成，不画分镜板。",
+      "video_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单个连续4秒镜头，从实际输入首帧立即开始，正常生活速度，不均匀拖慢。省略洗切和烘烤，左手扶盘、右手把最后一块点心放入空位，盘和桌持续支撑。相机采用与首帧一致的一个固定或轻微跟随机位，不自动切镜；只约束可见主体。衣料、呼吸和环境有自然跟随，不冻结。只生成同步环境和拟音：瓷盘与点心，无片段配乐、歌词或旁白；后期择有效动作区间使用约2.5秒。",
+      "motion_plan": {
+        "start_state": "根据实际首帧核对：点心近景，盘中水果与烤点心",
+        "beats": [
+          "省略洗切和烘烤，左手扶盘、右手把最后一块点心放入空位，盘和桌持续支撑"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "当前可见衣摆、叶片、呼吸或液面随主动作自然变化",
+        "camera": "本镜独立构图，固定机位或一次轻微跟随；以实际首帧确定",
+        "cut_cue": "动作结果或反应可读后切，按实际源片登记trim_in，不自动用完整4秒"
+      },
+      "interaction": {
+        "preconditions": [
+          "真实首帧可完成本镜动作；确认相关支撑、抓握和运动通路",
+          "家A厨房，门在绿窗左，水槽在窗下，灶左冰箱右；前右是可用餐桌。门205cm、台高85cm、椅面45cm，侧机位投影按实际布局。"
+        ],
+        "ordered_steps": [
+          "省略洗切和烘烤，左手扶盘、右手把最后一块点心放入空位，盘和桌持续支撑"
+        ],
+        "contact_rules": [
+          "原接触点连续；得到新支撑后才释放，液体从壶嘴进入杯口内，刚性物体不穿透；不涉及接触的空镜只做自然环境运动"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L04-v1-planned",
+        "scene_locks": [
+          "家A厨房，门在绿窗左，水槽在窗下，灶左冰箱右；前右是可用餐桌。门205cm、台高85cm、椅面45cm，侧机位投影按实际布局。",
+          "人物同一身份/服装，解剖左右不随镜头镜像；只画本镜可见角色。"
+        ],
+        "prop_states_in": {
+          "location": "L04",
+          "time": "afternoon",
+          "main_action": "餐桌中景，篮子放上清空桌面",
+          "basket": "采购后含橘子，其他购买允许在下一返程前省略",
+          "glass": "尚未使用"
+        },
+        "prop_states_out": {
+          "location": "L04",
+          "time": "afternoon",
+          "main_action": "点心近景，盘中水果与烤点心",
+          "basket": "采购后含橘子，其他购买允许在下一返程前省略",
+          "glass": "尚未使用"
+        },
+        "allowed_state_changes": [
+          "main_action"
+        ],
+        "time_ellipsis": true,
+        "transition_reason": "新的生活段落或明确的工序/路程/时间省略；实际首帧须检查并记录篮中物品、空余手、液位和人物位置，不假称未拍过程已连续展示。"
+      },
+      "sound": "瓷盘与点心",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null,
+      "planned_model": "Seedance 2.0 Mini"
+    },
+    {
+      "id": "S08",
+      "duration": 3,
+      "generation_duration": 4,
+      "edit_start": 16.0,
+      "edit_end": 19.0,
+      "life_block": "壶嘴与玻璃杯的侧近景",
+      "story_function": "壶嘴与玻璃杯的侧近景，倒入饮料；推进一天的活动或情绪，不重复上一镜。",
+      "action": "壶嘴与玻璃杯的侧近景，倒入饮料",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L04",
+      "required_reference_ids": [
+        "STYLE",
+        "L04",
+        "C01"
+      ],
+      "reference_files": [],
+      "image_conditioning": [],
+      "image_file": null,
+      "image_sha256": null,
+      "image_review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      },
+      "video_conditioning": null,
+      "image_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单张16:9完整构图，壶嘴与玻璃杯的侧近景，倒入饮料。只画动作起点和本镜可见人物：C01。按真实已通过参考保持：家A厨房，门在绿窗左，水槽在窗下，灶左冰箱右；前右是可用餐桌。门205cm、台高85cm、椅面45cm，侧机位投影按实际布局。。实际看图核对可用手、抓握、承重、落点和移动净空，动作尚未完成，不画分镜板。",
+      "video_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单个连续4秒镜头，从实际输入首帧立即开始，正常生活速度，不均匀拖慢。右手握壶柄，壶起初在杯右；先向左上平移使壶嘴越过杯口中心，再缓倾；水流只从壶嘴落在杯内，水位上升未满前回正止流，壶不碰杯沿。相机采用与首帧一致的一个固定或轻微跟随机位，不自动切镜；只约束可见主体。衣料、呼吸和环境有自然跟随，不冻结。只生成同步环境和拟音：连续倒水和止流滴声，无片段配乐、歌词或旁白；后期择有效动作区间使用约3秒。",
+      "motion_plan": {
+        "start_state": "根据实际首帧核对：壶嘴与玻璃杯的侧近景，倒入饮料",
+        "beats": [
+          "右手握壶柄，壶起初在杯右；先向左上平移使壶嘴越过杯口中心，再缓倾；水流只从壶嘴落在杯内，水位上升未满前回正止流，壶不碰杯沿"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3,
+        "secondary_motion": "当前可见衣摆、叶片、呼吸或液面随主动作自然变化",
+        "camera": "本镜独立构图，固定机位或一次轻微跟随；以实际首帧确定",
+        "cut_cue": "动作结果或反应可读后切，按实际源片登记trim_in，不自动用完整4秒"
+      },
+      "interaction": {
+        "preconditions": [
+          "真实首帧可完成本镜动作；确认相关支撑、抓握和运动通路",
+          "家A厨房，门在绿窗左，水槽在窗下，灶左冰箱右；前右是可用餐桌。门205cm、台高85cm、椅面45cm，侧机位投影按实际布局。"
+        ],
+        "ordered_steps": [
+          "右手握壶柄，壶起初在杯右；先向左上平移使壶嘴越过杯口中心，再缓倾；水流只从壶嘴落在杯内，水位上升未满前回正止流，壶不碰杯沿"
+        ],
+        "contact_rules": [
+          "原接触点连续；得到新支撑后才释放，液体从壶嘴进入杯口内，刚性物体不穿透；不涉及接触的空镜只做自然环境运动"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L04-v1-planned",
+        "scene_locks": [
+          "家A厨房，门在绿窗左，水槽在窗下，灶左冰箱右；前右是可用餐桌。门205cm、台高85cm、椅面45cm，侧机位投影按实际布局。",
+          "人物同一身份/服装，解剖左右不随镜头镜像；只画本镜可见角色。"
+        ],
+        "prop_states_in": {
+          "location": "L04",
+          "time": "afternoon",
+          "main_action": "点心近景，盘中水果与烤点心",
+          "basket": "采购后含橘子，其他购买允许在下一返程前省略",
+          "glass": "尚未使用"
+        },
+        "prop_states_out": {
+          "location": "L04",
+          "time": "afternoon",
+          "main_action": "壶嘴与玻璃杯的侧近景，倒入饮料",
+          "basket": "采购后含橘子，其他购买允许在下一返程前省略",
+          "glass": "半杯饮料，壶已回正止流"
+        },
+        "allowed_state_changes": [
+          "glass",
+          "main_action"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "连续倒水和止流滴声",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null,
+      "planned_model": "Seedance 2.0 Fast"
+    },
+    {
+      "id": "S09",
+      "duration": 2.5,
+      "generation_duration": 4,
+      "edit_start": 19.0,
+      "edit_end": 21.5,
+      "life_block": "享用中景",
+      "story_function": "享用中景，女孩舒适地坐在桌旁；推进一天的活动或情绪，不重复上一镜。",
+      "action": "享用中景，女孩舒适地坐在桌旁",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L04",
+      "required_reference_ids": [
+        "STYLE",
+        "L04",
+        "C01"
+      ],
+      "reference_files": [],
+      "image_conditioning": [],
+      "image_file": null,
+      "image_sha256": null,
+      "image_review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      },
+      "video_conditioning": null,
+      "image_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单张16:9完整构图，享用中景，女孩舒适地坐在桌旁。只画动作起点和本镜可见人物：C01。按真实已通过参考保持：家A厨房，门在绿窗左，水槽在窗下，灶左冰箱右；前右是可用餐桌。门205cm、台高85cm、椅面45cm，侧机位投影按实际布局。。实际看图核对可用手、抓握、承重、落点和移动净空，动作尚未完成，不画分镜板。",
+      "video_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单个连续4秒镜头，从实际输入首帧立即开始，正常生活速度，不均匀拖慢。从已就座开始，肩背放松，目光由窗外落到盘中；右手叉子自然抬起，不提前咬食。相机采用与首帧一致的一个固定或轻微跟随机位，不自动切镜；只约束可见主体。衣料、呼吸和环境有自然跟随，不冻结。只生成同步环境和拟音：安静室内与衣料，无片段配乐、歌词或旁白；后期择有效动作区间使用约2.5秒。",
+      "motion_plan": {
+        "start_state": "根据实际首帧核对：享用中景，女孩舒适地坐在桌旁",
+        "beats": [
+          "从已就座开始，肩背放松，目光由窗外落到盘中；右手叉子自然抬起，不提前咬食"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "当前可见衣摆、叶片、呼吸或液面随主动作自然变化",
+        "camera": "本镜独立构图，固定机位或一次轻微跟随；以实际首帧确定",
+        "cut_cue": "动作结果或反应可读后切，按实际源片登记trim_in，不自动用完整4秒"
+      },
+      "interaction": {
+        "preconditions": [
+          "真实首帧可完成本镜动作；确认相关支撑、抓握和运动通路",
+          "家A厨房，门在绿窗左，水槽在窗下，灶左冰箱右；前右是可用餐桌。门205cm、台高85cm、椅面45cm，侧机位投影按实际布局。"
+        ],
+        "ordered_steps": [
+          "从已就座开始，肩背放松，目光由窗外落到盘中；右手叉子自然抬起，不提前咬食"
+        ],
+        "contact_rules": [
+          "原接触点连续；得到新支撑后才释放，液体从壶嘴进入杯口内，刚性物体不穿透；不涉及接触的空镜只做自然环境运动"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L04-v1-planned",
+        "scene_locks": [
+          "家A厨房，门在绿窗左，水槽在窗下，灶左冰箱右；前右是可用餐桌。门205cm、台高85cm、椅面45cm，侧机位投影按实际布局。",
+          "人物同一身份/服装，解剖左右不随镜头镜像；只画本镜可见角色。"
+        ],
+        "prop_states_in": {
+          "location": "L04",
+          "time": "afternoon",
+          "main_action": "壶嘴与玻璃杯的侧近景，倒入饮料",
+          "basket": "采购后含橘子，其他购买允许在下一返程前省略",
+          "glass": "半杯饮料，壶已回正止流"
+        },
+        "prop_states_out": {
+          "location": "L04",
+          "time": "afternoon",
+          "main_action": "享用中景，女孩舒适地坐在桌旁",
+          "basket": "采购后含橘子，其他购买允许在下一返程前省略",
+          "glass": "半杯饮料，壶已回正止流"
+        },
+        "allowed_state_changes": [
+          "main_action"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "安静室内与衣料",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null,
+      "planned_model": "Seedance 2.0 Mini"
+    },
+    {
+      "id": "S10",
+      "duration": 3,
+      "generation_duration": 4,
+      "edit_start": 21.5,
+      "edit_end": 24.5,
+      "life_block": "品尝半身",
+      "story_function": "品尝半身，叉子上的一口点心入口；推进一天的活动或情绪，不重复上一镜。",
+      "action": "品尝半身，叉子上的一口点心入口",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L04",
+      "required_reference_ids": [
+        "STYLE",
+        "L04",
+        "C01"
+      ],
+      "reference_files": [],
+      "image_conditioning": [],
+      "image_file": null,
+      "image_sha256": null,
+      "image_review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      },
+      "video_conditioning": null,
+      "image_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单张16:9完整构图，品尝半身，叉子上的一口点心入口。只画动作起点和本镜可见人物：C01。按真实已通过参考保持：家A厨房，门在绿窗左，水槽在窗下，灶左冰箱右；前右是可用餐桌。门205cm、台高85cm、椅面45cm，侧机位投影按实际布局。。实际看图核对可用手、抓握、承重、落点和移动净空，动作尚未完成，不画分镜板。",
+      "video_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单个连续4秒镜头，从实际输入首帧立即开始，正常生活速度，不均匀拖慢。右腕转向使叉尖与嘴一致，先送近再轻咬，嘴接到食物后叉子沿原路退出，吞咽与微笑自然；叉齿不穿脸，食物不复制。相机采用与首帧一致的一个固定或轻微跟随机位，不自动切镜；只约束可见主体。衣料、呼吸和环境有自然跟随，不冻结。只生成同步环境和拟音：轻微器具与自然呼吸，无片段配乐、歌词或旁白；后期择有效动作区间使用约3秒。",
+      "motion_plan": {
+        "start_state": "根据实际首帧核对：品尝半身，叉子上的一口点心入口",
+        "beats": [
+          "右腕转向使叉尖与嘴一致，先送近再轻咬，嘴接到食物后叉子沿原路退出，吞咽与微笑自然；叉齿不穿脸，食物不复制"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3,
+        "secondary_motion": "当前可见衣摆、叶片、呼吸或液面随主动作自然变化",
+        "camera": "本镜独立构图，固定机位或一次轻微跟随；以实际首帧确定",
+        "cut_cue": "动作结果或反应可读后切，按实际源片登记trim_in，不自动用完整4秒"
+      },
+      "interaction": {
+        "preconditions": [
+          "真实首帧可完成本镜动作；确认相关支撑、抓握和运动通路",
+          "家A厨房，门在绿窗左，水槽在窗下，灶左冰箱右；前右是可用餐桌。门205cm、台高85cm、椅面45cm，侧机位投影按实际布局。"
+        ],
+        "ordered_steps": [
+          "右腕转向使叉尖与嘴一致，先送近再轻咬，嘴接到食物后叉子沿原路退出，吞咽与微笑自然；叉齿不穿脸，食物不复制"
+        ],
+        "contact_rules": [
+          "原接触点连续；得到新支撑后才释放，液体从壶嘴进入杯口内，刚性物体不穿透；不涉及接触的空镜只做自然环境运动"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L04-v1-planned",
+        "scene_locks": [
+          "家A厨房，门在绿窗左，水槽在窗下，灶左冰箱右；前右是可用餐桌。门205cm、台高85cm、椅面45cm，侧机位投影按实际布局。",
+          "人物同一身份/服装，解剖左右不随镜头镜像；只画本镜可见角色。"
+        ],
+        "prop_states_in": {
+          "location": "L04",
+          "time": "afternoon",
+          "main_action": "享用中景，女孩舒适地坐在桌旁",
+          "basket": "采购后含橘子，其他购买允许在下一返程前省略",
+          "glass": "半杯饮料，壶已回正止流"
+        },
+        "prop_states_out": {
+          "location": "L04",
+          "time": "afternoon",
+          "main_action": "品尝半身，叉子上的一口点心入口",
+          "basket": "采购后含橘子，其他购买允许在下一返程前省略",
+          "glass": "半杯饮料，壶已回正止流"
+        },
+        "allowed_state_changes": [
+          "main_action"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "轻微器具与自然呼吸",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null,
+      "planned_model": "Seedance 2.0 Fast"
+    },
+    {
+      "id": "S11",
+      "duration": 3,
+      "generation_duration": 4,
+      "edit_start": 24.5,
+      "edit_end": 27.5,
+      "life_block": "起居室宽景",
+      "story_function": "起居室宽景，女孩休息、猫挨着沙发；推进一天的活动或情绪，不重复上一镜。",
+      "action": "起居室宽景，女孩休息、猫挨着沙发",
+      "character_ids": [
+        "C01",
+        "C03"
+      ],
+      "scene_id": "L05",
+      "required_reference_ids": [
+        "STYLE",
+        "L05",
+        "C01",
+        "C03"
+      ],
+      "reference_files": [],
+      "image_conditioning": [],
+      "image_file": null,
+      "image_sha256": null,
+      "image_review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      },
+      "video_conditioning": null,
+      "image_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单张16:9完整构图，起居室宽景，女孩休息、猫挨着沙发。只画动作起点和本镜可见人物：C01、C03。按真实已通过参考保持：家A起居室，正面基准窗左沙发右、书架靠后墙；窗外是B/C屋顶。沙发和窗不随镜头互换。。实际看图核对可用手、抓握、承重、落点和移动净空，动作尚未完成，不画分镜板。",
+      "video_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单个连续4秒镜头，从实际输入首帧立即开始，正常生活速度，不均匀拖慢。省略收拾后已在沙发坐稳，女孩右手轻抚猫背一遍，猫四爪受地面支撑，尾尖摆动。相机采用与首帧一致的一个固定或轻微跟随机位，不自动切镜；只约束可见主体。衣料、呼吸和环境有自然跟随，不冻结。只生成同步环境和拟音：抚毛与屋内底声，无片段配乐、歌词或旁白；后期择有效动作区间使用约3秒。",
+      "motion_plan": {
+        "start_state": "根据实际首帧核对：起居室宽景，女孩休息、猫挨着沙发",
+        "beats": [
+          "省略收拾后已在沙发坐稳，女孩右手轻抚猫背一遍，猫四爪受地面支撑，尾尖摆动"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3,
+        "secondary_motion": "当前可见衣摆、叶片、呼吸或液面随主动作自然变化",
+        "camera": "本镜独立构图，固定机位或一次轻微跟随；以实际首帧确定",
+        "cut_cue": "动作结果或反应可读后切，按实际源片登记trim_in，不自动用完整4秒"
+      },
+      "interaction": {
+        "preconditions": [
+          "真实首帧可完成本镜动作；确认相关支撑、抓握和运动通路",
+          "家A起居室，正面基准窗左沙发右、书架靠后墙；窗外是B/C屋顶。沙发和窗不随镜头互换。"
+        ],
+        "ordered_steps": [
+          "省略收拾后已在沙发坐稳，女孩右手轻抚猫背一遍，猫四爪受地面支撑，尾尖摆动"
+        ],
+        "contact_rules": [
+          "原接触点连续；得到新支撑后才释放，液体从壶嘴进入杯口内，刚性物体不穿透；不涉及接触的空镜只做自然环境运动"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L05-v1-planned",
+        "scene_locks": [
+          "家A起居室，正面基准窗左沙发右、书架靠后墙；窗外是B/C屋顶。沙发和窗不随镜头互换。",
+          "人物同一身份/服装，解剖左右不随镜头镜像；只画本镜可见角色。"
+        ],
+        "prop_states_in": {
+          "location": "L05",
+          "time": "late_afternoon",
+          "main_action": "品尝半身，叉子上的一口点心入口",
+          "basket": "采购后含橘子，其他购买允许在下一返程前省略",
+          "glass": "半杯饮料，壶已回正止流"
+        },
+        "prop_states_out": {
+          "location": "L05",
+          "time": "late_afternoon",
+          "main_action": "起居室宽景，女孩休息、猫挨着沙发",
+          "basket": "采购后含橘子，其他购买允许在下一返程前省略",
+          "glass": "半杯饮料，壶已回正止流"
+        },
+        "allowed_state_changes": [
+          "main_action"
+        ],
+        "time_ellipsis": true,
+        "transition_reason": "新的生活段落或明确的工序/路程/时间省略；实际首帧须检查并记录篮中物品、空余手、液位和人物位置，不假称未拍过程已连续展示。"
+      },
+      "sound": "抚毛与屋内底声",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null,
+      "planned_model": "Seedance 2.0 Mini"
+    },
+    {
+      "id": "S12",
+      "duration": 2.5,
+      "generation_duration": 4,
+      "edit_start": 27.5,
+      "edit_end": 30.0,
+      "life_block": "傍晚外景",
+      "story_function": "傍晚外景，A屋亮灯、远处其他屋顶；推进一天的活动或情绪，不重复上一镜。",
+      "action": "傍晚外景，A屋亮灯、远处其他屋顶",
+      "character_ids": [],
+      "scene_id": "L03",
+      "required_reference_ids": [
+        "STYLE",
+        "L03",
+        "WORLD"
+      ],
+      "reference_files": [],
+      "image_conditioning": [],
+      "image_file": null,
+      "image_sha256": null,
+      "image_review": {
+        "verdict": "pending",
+        "observations": null,
+        "evidence": []
+      },
+      "video_conditioning": null,
+      "image_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单张16:9完整构图，傍晚外景，A屋亮灯、远处其他屋顶。只画动作起点和本镜可见人物：无人。按真实已通过参考保持：家A奶油墙、苔绿屋顶；正立面看窗在门左，门前两级台阶，左侧归家通路畅通；B红顶和C灰顶位置固定。。实际看图核对可用手、抓握、承重、落点和移动净空，动作尚未完成，不画分镜板。",
+      "video_prompt": "宫崎骏／吉卜力启发的原创二维手绘动画电影，清楚细线、人物赛璐璐色块与柔和阴影、精细传统动画背景；通透分层草绿、奶油白与蜂蜜木色，暗部保留颜色。正常成人与家具比例，无文字、分格、3D或全局泛黄滤镜。 单个连续4秒镜头，从实际输入首帧立即开始，正常生活速度，不均匀拖慢。时间省略至薄暮，窗内暖灯已亮；叶片与窗帘随风轻动，房屋位置不变，不强加开灯人影。相机采用与首帧一致的一个固定或轻微跟随机位，不自动切镜；只约束可见主体。衣料、呼吸和环境有自然跟随，不冻结。只生成同步环境和拟音：晚风和远鸟，音乐自然收束，无片段配乐、歌词或旁白；后期择有效动作区间使用约2.5秒。",
+      "motion_plan": {
+        "start_state": "根据实际首帧核对：傍晚外景，A屋亮灯、远处其他屋顶",
+        "beats": [
+          "时间省略至薄暮，窗内暖灯已亮；叶片与窗帘随风轻动，房屋位置不变，不强加开灯人影"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "当前可见衣摆、叶片、呼吸或液面随主动作自然变化",
+        "camera": "本镜独立构图，固定机位或一次轻微跟随；以实际首帧确定",
+        "cut_cue": "动作结果或反应可读后切，按实际源片登记trim_in，不自动用完整4秒"
+      },
+      "interaction": {
+        "preconditions": [
+          "真实首帧可完成本镜动作；确认相关支撑、抓握和运动通路",
+          "家A奶油墙、苔绿屋顶；正立面看窗在门左，门前两级台阶，左侧归家通路畅通；B红顶和C灰顶位置固定。"
+        ],
+        "ordered_steps": [
+          "时间省略至薄暮，窗内暖灯已亮；叶片与窗帘随风轻动，房屋位置不变，不强加开灯人影"
+        ],
+        "contact_rules": [
+          "原接触点连续；得到新支撑后才释放，液体从壶嘴进入杯口内，刚性物体不穿透；不涉及接触的空镜只做自然环境运动"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L03-v1-planned",
+        "scene_locks": [
+          "家A奶油墙、苔绿屋顶；正立面看窗在门左，门前两级台阶，左侧归家通路畅通；B红顶和C灰顶位置固定。",
+          "人物同一身份/服装，解剖左右不随镜头镜像；只画本镜可见角色。"
+        ],
+        "prop_states_in": {
+          "location": "L03",
+          "time": "dusk",
+          "main_action": "起居室宽景，女孩休息、猫挨着沙发",
+          "basket": "采购后含橘子，其他购买允许在下一返程前省略",
+          "glass": "半杯饮料，壶已回正止流"
+        },
+        "prop_states_out": {
+          "location": "L03",
+          "time": "dusk",
+          "main_action": "傍晚外景，A屋亮灯、远处其他屋顶",
+          "basket": "采购后含橘子，其他购买允许在下一返程前省略",
+          "glass": "半杯饮料，壶已回正止流"
+        },
+        "allowed_state_changes": [
+          "main_action"
+        ],
+        "time_ellipsis": true,
+        "transition_reason": "新的生活段落或明确的工序/路程/时间省略；实际首帧须检查并记录篮中物品、空余手、液位和人物位置，不假称未拍过程已连续展示。"
+      },
+      "sound": "晚风和远鸟，音乐自然收束",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null,
+      "planned_model": "Seedance 2.0 Mini"
+    }
+  ],
+  "example_note": "公开原创规划，无用户参考视频、私有路径、任务ID或已生成素材。所有审核待真实执行；修改为用户实际想法和已授权服务，不复制示例状态为验收证据。",
+  "planning_summary": {
+    "independent_compositions": 12,
+    "edit_seconds": 30.0,
+    "planned_generated_seconds_before_retries": 48,
+    "provider_capability_check": "pending",
+    "music_seconds_requested": 38
+  }
+}

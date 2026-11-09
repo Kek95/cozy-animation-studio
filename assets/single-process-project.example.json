@@ -1,0 +1,3668 @@
+{
+  "version": 2,
+  "title": "把伞送回晴天里",
+  "idea": "雨后把借来的伞送还邻居，经过有人推车的小巷，带回两枝薄荷放在窗边。",
+  "status": "planning_example_no_generated_assets",
+  "creative_mode": "cozy_relaxation",
+  "duration": 105,
+  "aspect_ratio": "16:9",
+  "style": "宫崎骏／吉卜力式原创二维手绘动画，清楚有轻重的动画线条、人物赛璐璐阴影、细腻绘制背景；通透自然绿、暖木色、奶油白与有颜色的暗部。",
+  "style_version": 1,
+  "style_anchor": null,
+  "style_review": null,
+  "themes": [
+    "雨后邻里生活",
+    "物件归还与轻轻回应",
+    "把清香带回家"
+  ],
+  "script": "雨刚停，她推开窗，想起门口借来的伞。擦去水珠、扣好束带，沿同一条小巷去邻居家。推车路人经过，她让开一点；邻居放下水壶笑着迎她。伞回到门内的钩上，邻居顺手把两枝薄荷包给她。她带着清香走回A屋，猫听见脚步跟进门。薄荷放进窗下水杯，她坐好，从窗边望见邻居又在照看花草。窗帘扬起，猫在椅旁蜷下。",
+  "story": {
+    "want": "把借伞送回去，走一趟雨后的小巷",
+    "progression": [
+      "擦干并收好伞",
+      "经过其他房屋和推车路人",
+      "和邻居完成归还",
+      "带回两枝薄荷",
+      "在窗边安顿下来"
+    ],
+    "change_or_interaction": "归还得到两枝薄荷的小小回应",
+    "visible_result": "伞留在B屋，薄荷留在A窗下，人和猫回到安稳的位置",
+    "narration": false
+  },
+  "visual_bible": {
+    "style_version": 1,
+    "style_anchor_file": null,
+    "status": "planned_requires_reference_generation_and_visual_review",
+    "world_layout": {
+      "version": "WORLD-v1-planned",
+      "buildings": [
+        {
+          "id": "A",
+          "position": "巷南x=0，朝北",
+          "appearance": "奶油墙、灰瓦、绿框门窗",
+          "inhabitants": [
+            "C01",
+            "C04"
+          ]
+        },
+        {
+          "id": "B",
+          "position": "巷北x=8m，朝南",
+          "appearance": "浅赭墙、红瓦、橄榄窗框，南门廊花盆",
+          "inhabitants": [
+            "C02"
+          ]
+        },
+        {
+          "id": "C",
+          "position": "巷北x=-10m，朝南",
+          "appearance": "浅灰墙、暗红瓦、蓝窗，作为稳定背景屋"
+        }
+      ],
+      "street": "东西向宽约3m，A与B通过同一巷道连接；C03向东推车后离开",
+      "view_from_A_north_window": "东北B门廊、西北C屋顶",
+      "daylight": "雨后午间，东南向柔光，回家未跳到黄昏",
+      "reference_file": null
+    },
+    "scale_review": "pending_actual_images"
+  },
+  "characters": [
+    {
+      "id": "C01",
+      "description": "原创成年女性约25岁、165cm、约7头身；栗棕短发、左侧红发夹、浅黄色卷袖衬衣、鼠尾草绿围裙裙与棕色平底鞋。",
+      "design_version": "C01-v1-planned",
+      "reference_file": null
+    },
+    {
+      "id": "C02",
+      "description": "邻居约65岁、158cm、正常成人比例；灰发低髻、奶油衬衣、灰蓝开衫、深蓝长裙，住B屋。",
+      "design_version": "C02-v1-planned",
+      "reference_file": null
+    },
+    {
+      "id": "C03",
+      "description": "约45岁路人、172cm；棕帽、砖红衬衣、米色长裤，推同一辆黑色自行车，车篮有一只纸袋。",
+      "design_version": "C03-v1-planned",
+      "reference_file": null
+    },
+    {
+      "id": "C04",
+      "description": "成年橘白猫，肩高约28cm，橘色背尾、白色胸腹和四爪；正常猫体型，在A屋门廊和室内活动。",
+      "design_version": "C04-v1-planned",
+      "reference_file": null
+    }
+  ],
+  "scenes": [
+    {
+      "id": "L01",
+      "description": "A屋室内：北窗朝巷子，可望见东北B屋和西北C屋；北窗下阅读桌和45cm高木椅，桌上水玻璃杯，西北入口内有伞钩和玄关台；门槛通向L02。",
+      "layout_version": "L01-v1-planned",
+      "reference_file": null,
+      "scale_anchors": {
+        "adult_cm": 165,
+        "door_cm": 205,
+        "chair_seat_cm": 45,
+        "porch_step_cm": 17.5
+      }
+    },
+    {
+      "id": "L02",
+      "description": "同一条东西向小巷和A门廊：A在巷南x=0、B在巷北偏东约8m、C在巷北偏西约10m，巷宽约3m。A北向门在同面北窗左侧，两级门廊台阶；B南向门廊，C蓝窗；路人向东推车，女主去B向东、回A向西。",
+      "layout_version": "L02-v1-planned",
+      "reference_file": null,
+      "scale_anchors": {
+        "adult_cm": 165,
+        "door_cm": 205,
+        "chair_seat_cm": 45,
+        "porch_step_cm": 17.5
+      }
+    },
+    {
+      "id": "L03",
+      "description": "B屋向南门廊，属于L02总览的同一建筑：左侧浅木门和门内伞钩，右侧小桌与花盆，桌上浇水壶、小玻璃杯的两枝预先剪好的薄荷和一张包装纸。朝南看见巷对面A，不凭换机位重排建筑。",
+      "layout_version": "L03-v1-planned",
+      "reference_file": null,
+      "scale_anchors": {
+        "adult_cm": 165,
+        "door_cm": 205,
+        "chair_seat_cm": 45,
+        "porch_step_cm": 17.5
+      }
+    }
+  ],
+  "props": [
+    {
+      "id": "P01",
+      "description": "一把深蓝布面、棕木弯柄折伞，借自B屋；折好长约70cm，只有一条束带。",
+      "reference_file": null
+    },
+    {
+      "id": "P02",
+      "description": "A玄关的一块米白抹布。",
+      "reference_file": null
+    },
+    {
+      "id": "P03",
+      "description": "B桌小杯中两枝预剪薄荷；全程两枝，最终放入A桌水杯。",
+      "reference_file": null
+    },
+    {
+      "id": "P04",
+      "description": "A桌一只透明玻璃水杯，开始有水、无薄荷。",
+      "reference_file": null
+    },
+    {
+      "id": "P05",
+      "description": "B门廊一只灰绿浇水壶。",
+      "reference_file": null
+    },
+    {
+      "id": "P06",
+      "description": "C03推的同一辆黑色自行车，前篮一只纸袋。",
+      "reference_file": null
+    },
+    {
+      "id": "P07",
+      "description": "B桌一张浅牛皮包装纸，最后在A桌空着摊开。",
+      "reference_file": null
+    },
+    {
+      "id": "P08",
+      "description": "A窗下同一把座高45cm木椅，旁边地面有猫垫。",
+      "reference_file": null
+    }
+  ],
+  "shots": [
+    {
+      "id": "S01",
+      "duration": 3.5,
+      "generation_duration": 5,
+      "edit_start": 0,
+      "edit_end": 3.5,
+      "story_function": "雨停后的三栋房屋，服务借伞归还与带回清香的主线",
+      "action": "雨停后的三栋房屋",
+      "character_ids": [
+        "C02"
+      ],
+      "scene_id": "L02",
+      "prop_ids": [],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C02"
+        ],
+        "scene": "L02",
+        "world": "approved_connected_neighborhood_layout",
+        "props": []
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 巷子斜侧环境全景，单张16:9镜头首帧。可见人物：C02。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。A、B、C三栋原创房屋在同一雨后小巷里，B门廊远处只有邻居一人正浇花；主角在A屋画外。 只约束本镜可见局部状态：neighbor=B_porch。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续5秒镜头，巷子斜侧环境全景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：B门廊邻居正在浇花，路面雨后微亮，A北窗仍关闭；C屋和连接两家的巷子在远景可辨。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约3.5秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=closed；door_a=closed；umbrella=A_hook_folded_wet；mint=two_sprigs_in_B_glass；main=A_window；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "B门廊邻居正在浇花，路面雨后微亮，A北窗仍关闭；C屋和连接两家的巷子在远景可辨。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "巷子斜侧环境全景",
+        "end_state": "原状态延续，完成本镜有意义的运动或反应",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=closed；door_a=closed；umbrella=A_hook_folded_wet；mint=two_sprigs_in_B_glass；main=A_window；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "B门廊邻居正在浇花，路面雨后微亮，A北窗仍关闭；C屋和连接两家的巷子在远景可辨。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L02-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "closed",
+          "door_a": "closed",
+          "umbrella": "A_hook_folded_wet",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_west_lane",
+          "main": "A_window",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "closed",
+          "door_a": "closed",
+          "umbrella": "A_hook_folded_wet",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_west_lane",
+          "main": "A_window",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S02",
+      "duration": 2.5,
+      "generation_duration": 4,
+      "edit_start": 3.5,
+      "edit_end": 6.0,
+      "story_function": "窗边最后一滴雨，服务借伞归还与带回清香的主线",
+      "action": "窗边最后一滴雨",
+      "character_ids": [],
+      "scene_id": "L02",
+      "prop_ids": [],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [],
+        "scene": "L02",
+        "world": "approved_connected_neighborhood_layout",
+        "props": []
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 A窗外叶片与窗框近景，单张16:9镜头首帧。可见人物：无人物主体。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。A北窗外叶尖挂一滴未落的雨水，花盆在下方接水；远处B轮廓只作背景。 只约束本镜可见局部状态：。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续4秒镜头，A窗外叶片与窗框近景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：叶尖水滴落入窗下花盆，远处B屋有生活活动，房屋位置不变。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约2.5秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=closed；door_a=closed；umbrella=A_hook_folded_wet；mint=two_sprigs_in_B_glass；main=A_window；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "叶尖水滴落入窗下花盆，远处B屋有生活活动，房屋位置不变。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "A窗外叶片与窗框近景",
+        "end_state": "原状态延续，完成本镜有意义的运动或反应",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=closed；door_a=closed；umbrella=A_hook_folded_wet；mint=two_sprigs_in_B_glass；main=A_window；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "叶尖水滴落入窗下花盆，远处B屋有生活活动，房屋位置不变。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L02-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "closed",
+          "door_a": "closed",
+          "umbrella": "A_hook_folded_wet",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_west_lane",
+          "main": "A_window",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "closed",
+          "door_a": "closed",
+          "umbrella": "A_hook_folded_wet",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_west_lane",
+          "main": "A_window",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S03",
+      "duration": 3,
+      "generation_duration": 4,
+      "edit_start": 6.0,
+      "edit_end": 9.0,
+      "story_function": "推开窗看见晴天，服务借伞归还与带回清香的主线",
+      "action": "推开窗看见晴天",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L01",
+      "prop_ids": [],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01"
+        ],
+        "scene": "L01",
+        "world": "approved_connected_neighborhood_layout",
+        "props": []
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 室内侧面中景，单张16:9镜头首帧。可见人物：C01。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。女主在A窗侧，右手指已接近尚扣着的窗扣，窗扇还关闭；手与铰链路径可见。 只约束本镜可见局部状态：main=A_window。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续4秒镜头，室内侧面中景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：女主右手碰到已有窗扣后打开北窗，窗扇绕原铰链转动到固定角度，薄帘随风扬起。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约3秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=closed；door_a=closed；umbrella=A_hook_folded_wet；mint=two_sprigs_in_B_glass；main=A_window；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "女主右手碰到已有窗扣后打开北窗，窗扇绕原铰链转动到固定角度，薄帘随风扬起。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "室内侧面中景",
+        "end_state": "window=open_fixed",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=closed；door_a=closed；umbrella=A_hook_folded_wet；mint=two_sprigs_in_B_glass；main=A_window；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "女主右手碰到已有窗扣后打开北窗，窗扇绕原铰链转动到固定角度，薄帘随风扬起。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L01-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "closed",
+          "door_a": "closed",
+          "umbrella": "A_hook_folded_wet",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_west_lane",
+          "main": "A_window",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "closed",
+          "umbrella": "A_hook_folded_wet",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_west_lane",
+          "main": "A_window",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "window"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S04",
+      "duration": 3,
+      "generation_duration": 4,
+      "edit_start": 9.0,
+      "edit_end": 12.0,
+      "story_function": "想起借来的伞，服务借伞归还与带回清香的主线",
+      "action": "想起借来的伞",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L01",
+      "prop_ids": [
+        "P01"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01"
+        ],
+        "scene": "L01",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P01"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 玄关人物中景，单张16:9镜头首帧。可见人物：C01。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。同一A玄关伞钩上仍挂折伞，女主右手接近弯柄，尚未拿离。 只约束本镜可见局部状态：umbrella=A_hook_folded_wet；main=A_entry。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续4秒镜头，玄关人物中景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：右手先握住棕色伞柄，抬离原伞钩，再把同一把折伞收至身体右侧。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约3秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=closed；umbrella=A_hook_folded_wet；mint=two_sprigs_in_B_glass；main=A_entry；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "右手先握住棕色伞柄，抬离原伞钩，再把同一把折伞收至身体右侧。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "玄关人物中景",
+        "end_state": "umbrella=main_right_folded_wet",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=closed；umbrella=A_hook_folded_wet；mint=two_sprigs_in_B_glass；main=A_entry；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "右手先握住棕色伞柄，抬离原伞钩，再把同一把折伞收至身体右侧。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L01-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "closed",
+          "umbrella": "A_hook_folded_wet",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_west_lane",
+          "main": "A_entry",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "closed",
+          "umbrella": "main_right_folded_wet",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_west_lane",
+          "main": "A_entry",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "umbrella"
+        ],
+        "time_ellipsis": true,
+        "transition_reason": "省略从窗边走到同一玄关的几步，窗仍打开。"
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S05",
+      "duration": 2.5,
+      "generation_duration": 4,
+      "edit_start": 12.0,
+      "edit_end": 14.5,
+      "story_function": "擦去伞尖水珠，服务借伞归还与带回清香的主线",
+      "action": "擦去伞尖水珠",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L01",
+      "prop_ids": [
+        "P01",
+        "P02"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01"
+        ],
+        "scene": "L01",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P01",
+          "P02"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 手与折伞近景，单张16:9镜头首帧。可见人物：C01。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。右手握住同一湿折伞柄，左手米白抹布已贴近伞尖，尚未擦过；仅手和局部衣袖入镜。 只约束本镜可见局部状态：umbrella=main_right_folded_wet；cloth=main_left；main=A_entry。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续4秒镜头，手与折伞近景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：右手持续握柄承重，左手用原米白布沿折伞尖擦一次，水珠被布吸走，不展开伞。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约2.5秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=closed；umbrella=main_right_folded_wet；mint=two_sprigs_in_B_glass；main=A_entry；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "右手持续握柄承重，左手用原米白布沿折伞尖擦一次，水珠被布吸走，不展开伞。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "手与折伞近景",
+        "end_state": "umbrella=main_right_folded_wiped；cloth=main_left",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=closed；umbrella=main_right_folded_wet；mint=two_sprigs_in_B_glass；main=A_entry；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "右手持续握柄承重，左手用原米白布沿折伞尖擦一次，水珠被布吸走，不展开伞。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L01-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "closed",
+          "umbrella": "main_right_folded_wet",
+          "cloth": "main_left",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_west_lane",
+          "main": "A_entry",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "closed",
+          "umbrella": "main_right_folded_wiped",
+          "cloth": "main_left",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_west_lane",
+          "main": "A_entry",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "umbrella"
+        ],
+        "time_ellipsis": true,
+        "transition_reason": "省略从玄关台拿起原米白抹布，右手继续握伞；本镜从接触伞尖前开始。"
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S06",
+      "duration": 3.5,
+      "generation_duration": 5,
+      "edit_start": 14.5,
+      "edit_end": 18.0,
+      "story_function": "扣好束带，服务借伞归还与带回清香的主线",
+      "action": "扣好束带",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L01",
+      "prop_ids": [
+        "P01"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01"
+        ],
+        "scene": "L01",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P01"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 束带与两手特写，单张16:9镜头首帧。可见人物：C01。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。右手握折伞，左手捏住尚未扣好的单条束带，原抹布已放回玄关台画外。 只约束本镜可见局部状态：umbrella=main_right_folded_wiped；main=A_entry。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续5秒镜头，束带与两手特写，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：右手保持握柄，左手把原有一条束带绕过折伞并扣好，松开左手。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约3.5秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=closed；umbrella=main_right_folded_wiped；mint=two_sprigs_in_B_glass；main=A_entry；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "右手保持握柄，左手把原有一条束带绕过折伞并扣好，松开左手。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "束带与两手特写",
+        "end_state": "umbrella=main_right_strapped",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=closed；umbrella=main_right_folded_wiped；mint=two_sprigs_in_B_glass；main=A_entry；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "右手保持握柄，左手把原有一条束带绕过折伞并扣好，松开左手。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L01-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "closed",
+          "umbrella": "main_right_folded_wiped",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_west_lane",
+          "main": "A_entry",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "closed",
+          "umbrella": "main_right_strapped",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_west_lane",
+          "main": "A_entry",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "umbrella"
+        ],
+        "time_ellipsis": true,
+        "transition_reason": "省略把抹布放回玄关台，右手仍提同一折伞。"
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S07",
+      "duration": 3.5,
+      "generation_duration": 5,
+      "edit_start": 18.0,
+      "edit_end": 21.5,
+      "story_function": "带伞出门，服务借伞归还与带回清香的主线",
+      "action": "带伞出门",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L01",
+      "prop_ids": [
+        "P01"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01"
+        ],
+        "scene": "L01",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P01"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 门口侧面全身，单张16:9镜头首帧。可见人物：C01。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。女主站在关闭A门旁，右手提束好折伞，空左手接近已有门把，脚下路径清楚。 只约束本镜可见局部状态：umbrella=main_right_strapped；main=A_entry。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续5秒镜头，门口侧面全身，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：右手提同一折伞，左手拨门把并推开A门，脚跨过门槛；门保持敞开，不在此关闭。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约3.5秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=closed；umbrella=main_right_strapped；mint=two_sprigs_in_B_glass；main=A_entry；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "右手提同一折伞，左手拨门把并推开A门，脚跨过门槛；门保持敞开，不在此关闭。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "门口侧面全身",
+        "end_state": "door_a=open；main=A_threshold",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=closed；umbrella=main_right_strapped；mint=two_sprigs_in_B_glass；main=A_entry；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "右手提同一折伞，左手拨门把并推开A门，脚跨过门槛；门保持敞开，不在此关闭。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L01-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "closed",
+          "umbrella": "main_right_strapped",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_west_lane",
+          "main": "A_entry",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_right_strapped",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_west_lane",
+          "main": "A_threshold",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "door_a",
+          "main"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S08",
+      "duration": 4,
+      "generation_duration": 5,
+      "edit_start": 21.5,
+      "edit_end": 25.5,
+      "story_function": "门廊上的两步，服务借伞归还与带回清香的主线",
+      "action": "门廊上的两步",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L02",
+      "prop_ids": [
+        "P01"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01"
+        ],
+        "scene": "L02",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P01"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 门外脚步低机位，单张16:9镜头首帧。可见人物：C01。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。从门外看，女主在同一已敞开的A门槛处，准备踏下原两级台阶，伞在右侧。 只约束本镜可见局部状态：umbrella=main_right_strapped；main=A_threshold。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续5秒镜头，门外脚步低机位，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：沿原两级台阶走入巷子，先落脚再转移重心，伞在右侧自然随步摆，不换手。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约4秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=main_right_strapped；mint=two_sprigs_in_B_glass；main=A_threshold；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "沿原两级台阶走入巷子，先落脚再转移重心，伞在右侧自然随步摆，不换手。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "门外脚步低机位",
+        "end_state": "main=lane_by_A",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=main_right_strapped；mint=two_sprigs_in_B_glass；main=A_threshold；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "沿原两级台阶走入巷子，先落脚再转移重心，伞在右侧自然随步摆，不换手。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L02-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_right_strapped",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_west_lane",
+          "main": "A_threshold",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_right_strapped",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_west_lane",
+          "main": "lane_by_A",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "main"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S09",
+      "duration": 3.5,
+      "generation_duration": 5,
+      "edit_start": 25.5,
+      "edit_end": 29.0,
+      "story_function": "推车的人经过，服务借伞归还与带回清香的主线",
+      "action": "推车的人经过",
+      "character_ids": [
+        "C01",
+        "C03"
+      ],
+      "scene_id": "L02",
+      "prop_ids": [
+        "P01",
+        "P06"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01",
+          "C03"
+        ],
+        "scene": "L02",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P01",
+          "P06"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 巷子侧跟拍中景，单张16:9镜头首帧。可见人物：C01、C03。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。女主在巷南近侧向东行走，砖红衣路人在中景向东推黑车，二人有清楚侧向净空。 只约束本镜可见局部状态：umbrella=main_right_strapped；bicycle=passer_west_lane；main=lane_by_A。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续5秒镜头，巷子侧跟拍中景，单一平稳跟拍，不绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：女主向东走，稍让出净空；路人在中景向东推黑色车，车轮滚动、纸袋留在前篮，不与女主重叠。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约3.5秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=main_right_strapped；mint=two_sprigs_in_B_glass；main=lane_by_A；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "女主向东走，稍让出净空；路人在中景向东推黑色车，车轮滚动、纸袋留在前篮，不与女主重叠。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "巷子侧跟拍中景",
+        "end_state": "main=lane_to_B；bicycle=passer_east_lane",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=main_right_strapped；mint=two_sprigs_in_B_glass；main=lane_by_A；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "女主向东走，稍让出净空；路人在中景向东推黑色车，车轮滚动、纸袋留在前篮，不与女主重叠。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L02-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_right_strapped",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_west_lane",
+          "main": "lane_by_A",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_right_strapped",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_east_lane",
+          "main": "lane_to_B",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "bicycle",
+          "main"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S10",
+      "duration": 2.5,
+      "generation_duration": 4,
+      "edit_start": 29.0,
+      "edit_end": 31.5,
+      "story_function": "车轮绕过水洼，服务借伞归还与带回清香的主线",
+      "action": "车轮绕过水洼",
+      "character_ids": [
+        "C03"
+      ],
+      "scene_id": "L02",
+      "prop_ids": [
+        "P06"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C03"
+        ],
+        "scene": "L02",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P06"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 车轮与路面细节，单张16:9镜头首帧。可见人物：C03。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。同一黑车前轮与路人一小段裤脚入镜，轮胎正接近浅水洼边缘，无其他人全身。 只约束本镜可见局部状态：bicycle=passer_east_lane。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续4秒镜头，车轮与路面细节，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：同一车轮沿地面连续滚过一小片浅水边缘，留下少量水纹，不滑行或穿地。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约2.5秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=main_right_strapped；mint=two_sprigs_in_B_glass；main=lane_to_B；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "同一车轮沿地面连续滚过一小片浅水边缘，留下少量水纹，不滑行或穿地。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "车轮与路面细节",
+        "end_state": "同一车轮仍向东经过，未在本镜离开整条巷子。",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=main_right_strapped；mint=two_sprigs_in_B_glass；main=lane_to_B；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "同一车轮沿地面连续滚过一小片浅水边缘，留下少量水纹，不滑行或穿地。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L02-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_right_strapped",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_east_lane",
+          "main": "lane_to_B",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_right_strapped",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_east_lane",
+          "main": "lane_to_B",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S11",
+      "duration": 3,
+      "generation_duration": 4,
+      "edit_start": 31.5,
+      "edit_end": 34.5,
+      "story_function": "扶正车篮里的纸袋，使路人生活或礼物感受推动主线",
+      "action": "扶正车篮里的纸袋",
+      "character_ids": [
+        "C03"
+      ],
+      "scene_id": "L02",
+      "prop_ids": [
+        "P06"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C03"
+        ],
+        "scene": "L02",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P06"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "宫崎骏／吉卜力式原创二维手绘动画，清楚有轻重的动画线条、人物赛璐璐阴影、细腻绘制背景；通透自然绿、暖木色、奶油白与有颜色的暗部。，原创二维手绘，同一已通过世界与风格参考。路人上半身与车篮中近景，单张16:9。同一砖红衣路人向东推原黑色车，右手握车把，左手靠近前篮中微偏的一只纸袋；轮胎仍落地。只画指定可见局部，物件数量和接触关系不变，无文字或分格。",
+      "video_prompt": "宫崎骏／吉卜力式原创二维手绘动画，清楚有轻重的动画线条、人物赛璐璐阴影、细腻绘制背景；通透自然绿、暖木色、奶油白与有颜色的暗部。，原创二维手绘。单个连续4秒镜头，路人上半身与车篮中近景，固定机位，保持原观察轴线，正常生活速度。第0秒进入有意义动作：路人右手扶车把，左手把篮中同一纸袋扶正一次再松手，随后继续向东推车离开观察范围；不放开双手让车悬空 保持可见手与前臂连接，接触后才带动物件，不复制道具；角色完成后自然余波，实际只剪约3秒，不拖满生成档位、不自动切镜。仅同步脚步、衣料或物件拟音，无旁白、对白或片段配乐。",
+      "motion_plan": {
+        "start_state": "同一砖红衣路人向东推原黑色车，右手握车把，左手靠近前篮中微偏的一只纸袋；轮胎仍落地",
+        "beats": [
+          "路人右手扶车把，左手把篮中同一纸袋扶正一次再松手，随后继续向东推车离开观察范围；不放开双手让车悬空"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "路人上半身与车篮中近景",
+        "end_state": "bicycle=passer_exited_east",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "同一砖红衣路人向东推原黑色车，右手握车把，左手靠近前篮中微偏的一只纸袋；轮胎仍落地"
+        ],
+        "ordered_steps": [
+          "路人右手扶车把，左手把篮中同一纸袋扶正一次再松手，随后继续向东推车离开观察范围；不放开双手让车悬空"
+        ],
+        "contact_rules": [
+          "手先接触物件再使其移动；原持物支撑保持，手与前臂连接，器物不复制或穿透。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L02-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_right_strapped",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_east_lane",
+          "main": "lane_to_B",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_right_strapped",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_exited_east",
+          "main": "lane_to_B",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "bicycle"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S12",
+      "duration": 3.5,
+      "generation_duration": 5,
+      "edit_start": 34.5,
+      "edit_end": 38.0,
+      "story_function": "邻居把水壶放稳，服务借伞归还与带回清香的主线",
+      "action": "邻居把水壶放稳",
+      "character_ids": [
+        "C02"
+      ],
+      "scene_id": "L03",
+      "prop_ids": [
+        "P05"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C02"
+        ],
+        "scene": "L03",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P05"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 B门廊侧面中景，单张16:9镜头首帧。可见人物：C02。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。B门廊邻居已经在浇花，灰绿壶仍由手承重，原桌空位可见，准备回正放壶。 只约束本镜可见局部状态：watering_can=neighbor_holding_watering；neighbor=B_porch。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续5秒镜头，B门廊侧面中景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：邻居从已在浇水的状态回正壶，水流停止后把灰绿水壶放到原桌空位，接触桌面后松手。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约3.5秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=main_right_strapped；mint=two_sprigs_in_B_glass；main=lane_to_B；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "邻居从已在浇水的状态回正壶，水流停止后把灰绿水壶放到原桌空位，接触桌面后松手。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "B门廊侧面中景",
+        "end_state": "watering_can=B_table",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=main_right_strapped；mint=two_sprigs_in_B_glass；main=lane_to_B；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "邻居从已在浇水的状态回正壶，水流停止后把灰绿水壶放到原桌空位，接触桌面后松手。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L03-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_right_strapped",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_holding_watering",
+          "bicycle": "passer_exited_east",
+          "main": "lane_to_B",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_right_strapped",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "lane_to_B",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "watering_can"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S13",
+      "duration": 4,
+      "generation_duration": 5,
+      "edit_start": 38.0,
+      "edit_end": 42.0,
+      "story_function": "一声无声的招呼，服务借伞归还与带回清香的主线",
+      "action": "一声无声的招呼",
+      "character_ids": [
+        "C01",
+        "C02"
+      ],
+      "scene_id": "L03",
+      "prop_ids": [
+        "P01"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01",
+          "C02"
+        ],
+        "scene": "L03",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P01"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 门廊双人中景，单张16:9镜头首帧。可见人物：C01、C02。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。女主和邻居在B门廊相对站立，女主右手仍提伞、左手在胸侧准备招呼，邻居的壶已在桌上。 只约束本镜可见局部状态：umbrella=main_right_strapped；main=B_porch；neighbor=B_porch。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续5秒镜头，门廊双人中景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：女主右手仍提伞，左手短暂抬起招呼；邻居转头点头回应，再自然放下手。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约4秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=main_right_strapped；mint=two_sprigs_in_B_glass；main=B_porch；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "女主右手仍提伞，左手短暂抬起招呼；邻居转头点头回应，再自然放下手。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "门廊双人中景",
+        "end_state": "原状态延续，完成本镜有意义的运动或反应",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=main_right_strapped；mint=two_sprigs_in_B_glass；main=B_porch；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "女主右手仍提伞，左手短暂抬起招呼；邻居转头点头回应，再自然放下手。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L03-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_right_strapped",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_right_strapped",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [],
+        "time_ellipsis": true,
+        "transition_reason": "用邻居放水壶镜头交代女主从巷子走到B门廊。"
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S14",
+      "duration": 3,
+      "generation_duration": 4,
+      "edit_start": 42.0,
+      "edit_end": 45.0,
+      "story_function": "把伞柄转向对方，服务借伞归还与带回清香的主线",
+      "action": "把伞柄转向对方",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L03",
+      "prop_ids": [
+        "P01"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01"
+        ],
+        "scene": "L03",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P01"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 女主手和伞柄近景，单张16:9镜头首帧。可见人物：C01。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。近景只有女主右手、扣好束带的深蓝折伞和弯柄，柄尚朝自己，准备转向画外邻居。 只约束本镜可见局部状态：umbrella=main_right_strapped；main=B_porch。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续4秒镜头，女主手和伞柄近景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：女主将同一棕木弯柄转向邻居，右手继续承重，束带仍扣好，不凭空换伞。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约3秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=main_right_strapped；mint=two_sprigs_in_B_glass；main=B_porch；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "女主将同一棕木弯柄转向邻居，右手继续承重，束带仍扣好，不凭空换伞。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "女主手和伞柄近景",
+        "end_state": "umbrella=main_offered_handle",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=main_right_strapped；mint=two_sprigs_in_B_glass；main=B_porch；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "女主将同一棕木弯柄转向邻居，右手继续承重，束带仍扣好，不凭空换伞。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L03-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_right_strapped",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_offered_handle",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "umbrella"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S15",
+      "duration": 3,
+      "generation_duration": 4,
+      "edit_start": 45.0,
+      "edit_end": 48.0,
+      "story_function": "把伞送到手边，服务借伞归还与带回清香的主线",
+      "action": "把伞送到手边",
+      "character_ids": [
+        "C01",
+        "C02"
+      ],
+      "scene_id": "L03",
+      "prop_ids": [
+        "P01"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01",
+          "C02"
+        ],
+        "scene": "L03",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P01"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 双人侧面中景，单张16:9镜头首帧。可见人物：C01、C02。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。两人同侧中景，伞还由女主握持在自己一侧，邻居的手正靠近，尚未接住。 只约束本镜可见局部状态：umbrella=main_offered_handle；main=B_porch；neighbor=B_porch。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续4秒镜头，双人侧面中景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：女主把伞柄送到邻居自然手臂可及处；邻居伸手靠近，尚未松开女主支撑。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约3秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=main_offered_handle；mint=two_sprigs_in_B_glass；main=B_porch；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "女主把伞柄送到邻居自然手臂可及处；邻居伸手靠近，尚未松开女主支撑。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "双人侧面中景",
+        "end_state": "原状态延续，完成本镜有意义的运动或反应",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=main_offered_handle；mint=two_sprigs_in_B_glass；main=B_porch；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "女主把伞柄送到邻居自然手臂可及处；邻居伸手靠近，尚未松开女主支撑。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L03-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_offered_handle",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_offered_handle",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S16",
+      "duration": 1.5,
+      "generation_duration": 4,
+      "edit_start": 48.0,
+      "edit_end": 49.5,
+      "story_function": "先接住伞柄，服务借伞归还与带回清香的主线",
+      "action": "先接住伞柄",
+      "character_ids": [
+        "C01",
+        "C02"
+      ],
+      "scene_id": "L03",
+      "prop_ids": [
+        "P01"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01",
+          "C02"
+        ],
+        "scene": "L03",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P01"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 交接处手部特写，单张16:9镜头首帧。可见人物：C01、C02。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。手部特写，邻居手指在原弯柄旁尚未闭合，女主仍支撑同一把伞，只有本次接触的手。 只约束本镜可见局部状态：umbrella=main_offered_handle；main=B_porch；neighbor=B_porch。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续4秒镜头，交接处手部特写，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：邻居手指接触并握紧伞柄，女主仍在下方支撑；本镜结束两人共同握持，不提前悬空。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约1.5秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=main_offered_handle；mint=two_sprigs_in_B_glass；main=B_porch；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "邻居手指接触并握紧伞柄，女主仍在下方支撑；本镜结束两人共同握持，不提前悬空。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 1.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "交接处手部特写",
+        "end_state": "umbrella=both_grips_supported",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=main_offered_handle；mint=two_sprigs_in_B_glass；main=B_porch；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "邻居手指接触并握紧伞柄，女主仍在下方支撑；本镜结束两人共同握持，不提前悬空。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L03-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "main_offered_handle",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "both_grips_supported",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "umbrella"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S17",
+      "duration": 1.5,
+      "generation_duration": 4,
+      "edit_start": 49.5,
+      "edit_end": 51.0,
+      "story_function": "再松开原来的手，服务借伞归还与带回清香的主线",
+      "action": "再松开原来的手",
+      "character_ids": [
+        "C01",
+        "C02"
+      ],
+      "scene_id": "L03",
+      "prop_ids": [
+        "P01"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01",
+          "C02"
+        ],
+        "scene": "L03",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P01"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 同侧交接中近景，单张16:9镜头首帧。可见人物：C01、C02。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。同一交接中近景，邻居已闭合握稳弯柄，女主的手仍接触伞，准备释放。 只约束本镜可见局部状态：umbrella=both_grips_supported；main=B_porch；neighbor=B_porch。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续4秒镜头，同侧交接中近景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：邻居已经握稳后，女主才松开并收回右手；同一把伞由邻居单独承重。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约1.5秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=both_grips_supported；mint=two_sprigs_in_B_glass；main=B_porch；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "邻居已经握稳后，女主才松开并收回右手；同一把伞由邻居单独承重。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 1.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "同侧交接中近景",
+        "end_state": "umbrella=neighbor_holding",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=both_grips_supported；mint=two_sprigs_in_B_glass；main=B_porch；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "邻居已经握稳后，女主才松开并收回右手；同一把伞由邻居单独承重。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L03-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "both_grips_supported",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "neighbor_holding",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "umbrella"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S18",
+      "duration": 3,
+      "generation_duration": 4,
+      "edit_start": 51.0,
+      "edit_end": 54.0,
+      "story_function": "伞回到原处，服务借伞归还与带回清香的主线",
+      "action": "伞回到原处",
+      "character_ids": [
+        "C02"
+      ],
+      "scene_id": "L03",
+      "prop_ids": [
+        "P01"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C02"
+        ],
+        "scene": "L03",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P01"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 B门内伞钩与手近景，单张16:9镜头首帧。可见人物：C02。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。B门内伞钩与邻居手近景，折伞弯柄正位于钩上方一点，尚未挂住承重。 只约束本镜可见局部状态：umbrella=neighbor_holding；neighbor=B_porch。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续4秒镜头，B门内伞钩与手近景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：邻居将伞弯柄放到原B门内挂钩，挂钩承重后松手，伞仍折好且只有一把。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约3秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=neighbor_holding；mint=two_sprigs_in_B_glass；main=B_porch；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "邻居将伞弯柄放到原B门内挂钩，挂钩承重后松手，伞仍折好且只有一把。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "B门内伞钩与手近景",
+        "end_state": "umbrella=B_entry_hook",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=neighbor_holding；mint=two_sprigs_in_B_glass；main=B_porch；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "邻居将伞弯柄放到原B门内挂钩，挂钩承重后松手，伞仍折好且只有一把。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L03-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "neighbor_holding",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "umbrella"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S19",
+      "duration": 3,
+      "generation_duration": 4,
+      "edit_start": 54.0,
+      "edit_end": 57.0,
+      "story_function": "顺手拿两枝薄荷，服务借伞归还与带回清香的主线",
+      "action": "顺手拿两枝薄荷",
+      "character_ids": [
+        "C02"
+      ],
+      "scene_id": "L03",
+      "prop_ids": [
+        "P03"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C02"
+        ],
+        "scene": "L03",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P03"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 B桌与邻居上半身，单张16:9镜头首帧。可见人物：C02。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。B桌上的原小杯中只有两枝预剪薄荷，邻居的手接近茎，不含剪刀或剪断动作。 只约束本镜可见局部状态：mint=two_sprigs_in_B_glass；neighbor=B_porch。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续4秒镜头，B桌与邻居上半身，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：邻居从桌上已有小杯取出两枝预剪薄荷，根茎离杯、杯中不再复制出同样两枝；不在本镜剪植物。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约3秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=two_sprigs_in_B_glass；main=B_porch；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "邻居从桌上已有小杯取出两枝预剪薄荷，根茎离杯、杯中不再复制出同样两枝；不在本镜剪植物。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "B桌与邻居上半身",
+        "end_state": "mint=neighbor_holding_two_sprigs",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=two_sprigs_in_B_glass；main=B_porch；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "邻居从桌上已有小杯取出两枝预剪薄荷，根茎离杯、杯中不再复制出同样两枝；不在本镜剪植物。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L03-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_B_glass",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "neighbor_holding_two_sprigs",
+          "paper": "B_table_square",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "mint"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S20",
+      "duration": 3.5,
+      "generation_duration": 5,
+      "edit_start": 57.0,
+      "edit_end": 60.5,
+      "story_function": "包住湿润的茎，服务借伞归还与带回清香的主线",
+      "action": "包住湿润的茎",
+      "character_ids": [
+        "C02"
+      ],
+      "scene_id": "L03",
+      "prop_ids": [
+        "P03",
+        "P07"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C02"
+        ],
+        "scene": "L03",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P03",
+          "P07"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 纸与薄荷的手部近景，单张16:9镜头首帧。可见人物：C02。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。邻居左掌托原平展开包装纸和两枝薄荷，右手靠近下方纸边，纸尚未折好。 只约束本镜可见局部状态：mint=neighbor_holding_two_sprigs；paper=neighbor_left_opened；neighbor=B_porch。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续5秒镜头，纸与薄荷的手部近景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：左手支撑原包装纸与两枝薄荷，右手将纸下缘折到茎边，叶片留在外，不凭空增加枝数。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约3.5秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=neighbor_holding_two_sprigs；main=B_porch；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "左手支撑原包装纸与两枝薄荷，右手将纸下缘折到茎边，叶片留在外，不凭空增加枝数。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "纸与薄荷的手部近景",
+        "end_state": "mint=neighbor_holding_wrapped；paper=around_mint",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=neighbor_holding_two_sprigs；main=B_porch；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "左手支撑原包装纸与两枝薄荷，右手将纸下缘折到茎边，叶片留在外，不凭空增加枝数。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L03-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "neighbor_holding_two_sprigs",
+          "paper": "neighbor_left_opened",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "neighbor_holding_wrapped",
+          "paper": "around_mint",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "mint",
+          "paper"
+        ],
+        "time_ellipsis": true,
+        "transition_reason": "省略取B桌原包装纸置于掌心；两枝薄荷仍由同一邻居支撑。"
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S21",
+      "duration": 4,
+      "generation_duration": 5,
+      "edit_start": 60.5,
+      "edit_end": 64.5,
+      "story_function": "带一点清香回去，服务借伞归还与带回清香的主线",
+      "action": "带一点清香回去",
+      "character_ids": [
+        "C01",
+        "C02"
+      ],
+      "scene_id": "L03",
+      "prop_ids": [
+        "P03",
+        "P07"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01",
+          "C02"
+        ],
+        "scene": "L03",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P03",
+          "P07"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 两人半身与交接，单张16:9镜头首帧。可见人物：C01、C02。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。两人半身，邻居持包好的两枝薄荷，女主右手准备握接，左手准备托底，尚未完成交接。 只约束本镜可见局部状态：mint=neighbor_holding_wrapped；paper=around_mint；main=B_porch；neighbor=B_porch。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续5秒镜头，两人半身与交接，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：邻居把包好薄荷递到女主右手，女主握稳后邻居松手，女主左手轻托底部；不相互穿手。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约4秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=neighbor_holding_wrapped；main=B_porch；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "邻居把包好薄荷递到女主右手，女主握稳后邻居松手，女主左手轻托底部；不相互穿手。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "两人半身与交接",
+        "end_state": "mint=main_holding_wrapped",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=neighbor_holding_wrapped；main=B_porch；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "邻居把包好薄荷递到女主右手，女主握稳后邻居松手，女主左手轻托底部；不相互穿手。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L03-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "neighbor_holding_wrapped",
+          "paper": "around_mint",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "main_holding_wrapped",
+          "paper": "around_mint",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "mint"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S22",
+      "duration": 3,
+      "generation_duration": 4,
+      "edit_start": 64.5,
+      "edit_end": 67.5,
+      "story_function": "她们笑了一下，服务借伞归还与带回清香的主线",
+      "action": "她们笑了一下",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L03",
+      "prop_ids": [],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01"
+        ],
+        "scene": "L03",
+        "world": "approved_connected_neighborhood_layout",
+        "props": []
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 女主反应近景，单张16:9镜头首帧。可见人物：C01。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。只画女主面部和肩，视线朝邻居，表情正准备微笑；所持薄荷在画外，不新增物件。 只约束本镜可见局部状态：main=B_porch。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续4秒镜头，女主反应近景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：女主看向邻居并轻轻点头笑，双手仍在画外托薄荷，不把已有物件重新召进脸部特写。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约3秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=main_holding_wrapped；main=B_porch；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "女主看向邻居并轻轻点头笑，双手仍在画外托薄荷，不把已有物件重新召进脸部特写。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "女主反应近景",
+        "end_state": "原状态延续，完成本镜有意义的运动或反应",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=main_holding_wrapped；main=B_porch；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "女主看向邻居并轻轻点头笑，双手仍在画外托薄荷，不把已有物件重新召进脸部特写。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L03-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "main_holding_wrapped",
+          "paper": "around_mint",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "main_holding_wrapped",
+          "paper": "around_mint",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S23",
+      "duration": 2.5,
+      "generation_duration": 4,
+      "edit_start": 67.5,
+      "edit_end": 70.0,
+      "story_function": "门廊的生活继续，服务借伞归还与带回清香的主线",
+      "action": "门廊的生活继续",
+      "character_ids": [
+        "C02"
+      ],
+      "scene_id": "L03",
+      "prop_ids": [
+        "P05"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C02"
+        ],
+        "scene": "L03",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P05"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 花盆、水壶与邻居中近景，单张16:9镜头首帧。可见人物：C02。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。B门廊花盆、水壶和邻居中近景，灰绿壶已在原桌上，手正接近壶把；折伞保持B门内挂钩上。 只约束本镜可见局部状态：watering_can=B_table；neighbor=B_porch。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续4秒镜头，花盆、水壶与邻居中近景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：邻居拿回原水壶，壶嘴先朝花盆再倾斜，少量水落到盆内；B门内折伞保持原挂钩上。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约2.5秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=main_holding_wrapped；main=B_porch；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "邻居拿回原水壶，壶嘴先朝花盆再倾斜，少量水落到盆内；B门内折伞保持原挂钩上。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "花盆、水壶与邻居中近景",
+        "end_state": "watering_can=neighbor_watering",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=main_holding_wrapped；main=B_porch；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "邻居拿回原水壶，壶嘴先朝花盆再倾斜，少量水落到盆内；B门内折伞保持原挂钩上。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L03-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "main_holding_wrapped",
+          "paper": "around_mint",
+          "glass": "A_window_table_water_only",
+          "watering_can": "B_table",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "main_holding_wrapped",
+          "paper": "around_mint",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "watering_can"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S24",
+      "duration": 4,
+      "generation_duration": 5,
+      "edit_start": 70.0,
+      "edit_end": 74.0,
+      "story_function": "沿同一条巷子回家，服务借伞归还与带回清香的主线",
+      "action": "沿同一条巷子回家",
+      "character_ids": [
+        "C01",
+        "C02"
+      ],
+      "scene_id": "L02",
+      "prop_ids": [
+        "P03",
+        "P07"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01",
+          "C02"
+        ],
+        "scene": "L02",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P03",
+          "P07"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 由B望向A的行走中景，单张16:9镜头首帧。可见人物：C01、C02。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。从B望A的同一路线，女主已持包好薄荷走到B门廊出口，准备向西回家，邻居仍在B。 只约束本镜可见局部状态：mint=main_holding_wrapped；paper=around_mint；main=B_porch；neighbor=B_porch。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续5秒镜头，由B望向A的行走中景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：女主朝西回A，手中只有两枝包好薄荷；邻居在B门廊背景自然招手，其他房屋与来路一致。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约4秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=main_holding_wrapped；main=B_porch；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "女主朝西回A，手中只有两枝包好薄荷；邻居在B门廊背景自然招手，其他房屋与来路一致。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "由B望向A的行走中景",
+        "end_state": "main=lane_returning_to_A",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=main_holding_wrapped；main=B_porch；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "女主朝西回A，手中只有两枝包好薄荷；邻居在B门廊背景自然招手，其他房屋与来路一致。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L02-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "main_holding_wrapped",
+          "paper": "around_mint",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "B_porch",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "main_holding_wrapped",
+          "paper": "around_mint",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "lane_returning_to_A",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "main"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S25",
+      "duration": 3.5,
+      "generation_duration": 5,
+      "edit_start": 74.0,
+      "edit_end": 77.5,
+      "story_function": "闻到一点雨后的清香，使路人生活或礼物感受推动主线",
+      "action": "闻到一点雨后的清香",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L02",
+      "prop_ids": [
+        "P03",
+        "P07"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01"
+        ],
+        "scene": "L02",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P03",
+          "P07"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "宫崎骏／吉卜力式原创二维手绘动画，清楚有轻重的动画线条、人物赛璐璐阴影、细腻绘制背景；通透自然绿、暖木色、奶油白与有颜色的暗部。，原创二维手绘，同一已通过世界与风格参考。女主与薄荷的半身近景，单张16:9。女主在返A屋的同一路上，右手托着仍包好的两枝薄荷在胸前，准备短暂停步闻一下，左手自然在旁。只画指定可见局部，物件数量和接触关系不变，无文字或分格。",
+      "video_prompt": "宫崎骏／吉卜力式原创二维手绘动画，清楚有轻重的动画线条、人物赛璐璐阴影、细腻绘制背景；通透自然绿、暖木色、奶油白与有颜色的暗部。，原创二维手绘。单个连续5秒镜头，女主与薄荷的半身近景，固定机位，保持原观察轴线，正常生活速度。第0秒进入有意义动作：女主把两枝包好的薄荷移近鼻边嗅一下，轻笑，再将手放回胸前准备继续走；不拆纸、不增加枝数，背景仍是同一小巷 保持可见手与前臂连接，接触后才带动物件，不复制道具；角色完成后自然余波，实际只剪约3.5秒，不拖满生成档位、不自动切镜。仅同步脚步、衣料或物件拟音，无旁白、对白或片段配乐。",
+      "motion_plan": {
+        "start_state": "女主在返A屋的同一路上，右手托着仍包好的两枝薄荷在胸前，准备短暂停步闻一下，左手自然在旁",
+        "beats": [
+          "女主把两枝包好的薄荷移近鼻边嗅一下，轻笑，再将手放回胸前准备继续走；不拆纸、不增加枝数，背景仍是同一小巷"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "女主与薄荷的半身近景",
+        "end_state": "主动作完成后保持原持物关系，继续返家",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "女主在返A屋的同一路上，右手托着仍包好的两枝薄荷在胸前，准备短暂停步闻一下，左手自然在旁"
+        ],
+        "ordered_steps": [
+          "女主把两枝包好的薄荷移近鼻边嗅一下，轻笑，再将手放回胸前准备继续走；不拆纸、不增加枝数，背景仍是同一小巷"
+        ],
+        "contact_rules": [
+          "手先接触物件再使其移动；原持物支撑保持，手与前臂连接，器物不复制或穿透。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L02-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "main_holding_wrapped",
+          "paper": "around_mint",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "lane_returning_to_A",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "main_holding_wrapped",
+          "paper": "around_mint",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "lane_returning_to_A",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S26",
+      "duration": 3,
+      "generation_duration": 4,
+      "edit_start": 77.5,
+      "edit_end": 80.5,
+      "story_function": "猫听见脚步，服务借伞归还与带回清香的主线",
+      "action": "猫听见脚步",
+      "character_ids": [
+        "C04"
+      ],
+      "scene_id": "L02",
+      "prop_ids": [],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C04"
+        ],
+        "scene": "L02",
+        "world": "approved_connected_neighborhood_layout",
+        "props": []
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 A门廊猫脸低机位，单张16:9镜头首帧。可见人物：C04。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。只有A原门廊垫边的同一橘白猫，尚卧着，耳朝巷子脚步方向；不画全身主角。 只约束本镜可见局部状态：cat=A_porch_mat。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续4秒镜头，A门廊猫脸低机位，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：橘白猫从原门廊垫边抬头，耳尖朝巷子脚步方向转动，然后起身准备靠近。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约3秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=main_holding_wrapped；main=lane_returning_to_A；neighbor=B_porch；cat=A_porch_mat",
+        "beats": [
+          "橘白猫从原门廊垫边抬头，耳尖朝巷子脚步方向转动，然后起身准备靠近。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 2.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "A门廊猫脸低机位",
+        "end_state": "cat=A_porch_alert",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=main_holding_wrapped；main=lane_returning_to_A；neighbor=B_porch；cat=A_porch_mat"
+        ],
+        "ordered_steps": [
+          "橘白猫从原门廊垫边抬头，耳尖朝巷子脚步方向转动，然后起身准备靠近。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L02-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "main_holding_wrapped",
+          "paper": "around_mint",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "lane_returning_to_A",
+          "neighbor": "B_porch",
+          "cat": "A_porch_mat",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "main_holding_wrapped",
+          "paper": "around_mint",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "lane_returning_to_A",
+          "neighbor": "B_porch",
+          "cat": "A_porch_alert",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "cat"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S27",
+      "duration": 4,
+      "generation_duration": 5,
+      "edit_start": 80.5,
+      "edit_end": 84.5,
+      "story_function": "薄荷和猫一起进门，服务借伞归还与带回清香的主线",
+      "action": "薄荷和猫一起进门",
+      "character_ids": [
+        "C01",
+        "C04"
+      ],
+      "scene_id": "L02",
+      "prop_ids": [
+        "P03",
+        "P07"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01",
+          "C04"
+        ],
+        "scene": "L02",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P03",
+          "P07"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 A门廊侧跟拍，单张16:9镜头首帧。可见人物：C01、C04。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。女主在A原台阶前，手中只有包好两枝薄荷，猫已在A门廊垫边起身，准备随她进敞开的门。 只约束本镜可见局部状态：mint=main_holding_wrapped；paper=around_mint；main=lane_returning_to_A；cat=A_porch_alert。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续5秒镜头，A门廊侧跟拍，单一平稳跟拍，不绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：女主沿原台阶上行进敞开的A门，猫从侧后方正常步速跟随；脚爪先接触台阶再承重。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约4秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=main_holding_wrapped；main=lane_returning_to_A；neighbor=B_porch；cat=A_porch_alert",
+        "beats": [
+          "女主沿原台阶上行进敞开的A门，猫从侧后方正常步速跟随；脚爪先接触台阶再承重。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "A门廊侧跟拍",
+        "end_state": "main=A_entry；cat=A_entry",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=main_holding_wrapped；main=lane_returning_to_A；neighbor=B_porch；cat=A_porch_alert"
+        ],
+        "ordered_steps": [
+          "女主沿原台阶上行进敞开的A门，猫从侧后方正常步速跟随；脚爪先接触台阶再承重。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L02-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "main_holding_wrapped",
+          "paper": "around_mint",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "lane_returning_to_A",
+          "neighbor": "B_porch",
+          "cat": "A_porch_alert",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "main_holding_wrapped",
+          "paper": "around_mint",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "A_entry",
+          "neighbor": "B_porch",
+          "cat": "A_entry",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "main",
+          "cat"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S28",
+      "duration": 4.5,
+      "generation_duration": 6,
+      "edit_start": 84.5,
+      "edit_end": 89.0,
+      "story_function": "给清香一个位置，服务借伞归还与带回清香的主线",
+      "action": "给清香一个位置",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L01",
+      "prop_ids": [
+        "P03",
+        "P04",
+        "P07"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01"
+        ],
+        "scene": "L01",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P03",
+          "P04",
+          "P07"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 A窗下桌面手部中近景，单张16:9镜头首帧。可见人物：C01。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。A桌面特写，右手持两根裸露茎的薄荷在原水玻璃杯开口上方，左手持已展开的空纸，未把茎放入水。 只约束本镜可见局部状态：mint=main_right_two_bare_stems；paper=main_left_opened；glass=A_window_table_water_only；main=A_window_table。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续6秒镜头，A窗下桌面手部中近景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：右手将两枝薄荷茎从玻璃杯开口放入原有水中，杯底始终受桌面支撑，松手后茎由杯口扶稳；左手把空纸放在杯外台面。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约4.5秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=main_right_two_bare_stems；main=A_window_table；neighbor=B_porch；cat=A_entry",
+        "beats": [
+          "右手将两枝薄荷茎从玻璃杯开口放入原有水中，杯底始终受桌面支撑，松手后茎由杯口扶稳；左手把空纸放在杯外台面。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "A窗下桌面手部中近景",
+        "end_state": "mint=two_sprigs_in_A_glass；paper=A_table_unwrapped；glass=A_window_table_water_two_stems",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=main_right_two_bare_stems；main=A_window_table；neighbor=B_porch；cat=A_entry"
+        ],
+        "ordered_steps": [
+          "右手将两枝薄荷茎从玻璃杯开口放入原有水中，杯底始终受桌面支撑，松手后茎由杯口扶稳；左手把空纸放在杯外台面。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L01-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "main_right_two_bare_stems",
+          "paper": "main_left_opened",
+          "glass": "A_window_table_water_only",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "A_window_table",
+          "neighbor": "B_porch",
+          "cat": "A_entry",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_A_glass",
+          "paper": "A_table_unwrapped",
+          "glass": "A_window_table_water_two_stems",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "A_window_table",
+          "neighbor": "B_porch",
+          "cat": "A_entry",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [
+          "mint",
+          "paper",
+          "glass"
+        ],
+        "time_ellipsis": true,
+        "transition_reason": "省略走到A窗下桌边和打开包装纸；两枝薄荷、空纸与原水杯均保留。"
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S29",
+      "duration": 3.5,
+      "generation_duration": 5,
+      "edit_start": 89.0,
+      "edit_end": 92.5,
+      "story_function": "叶片映着窗光，服务借伞归还与带回清香的主线",
+      "action": "叶片映着窗光",
+      "character_ids": [],
+      "scene_id": "L01",
+      "prop_ids": [
+        "P03",
+        "P04"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [],
+        "scene": "L01",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P03",
+          "P04"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 杯口与叶片近景，单张16:9镜头首帧。可见人物：无人物主体。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。同一水杯在A窗下桌面，只有两枝薄荷已插好，水面仍有轻纹；无手或全脸。 只约束本镜可见局部状态：mint=two_sprigs_in_A_glass；glass=A_window_table_water_two_stems。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续5秒镜头，杯口与叶片近景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：两枝薄荷叶随风轻动，水纹渐息；杯形和水位不突变，不新增第三枝。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约3.5秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=two_sprigs_in_A_glass；main=A_window_table；neighbor=B_porch；cat=A_entry",
+        "beats": [
+          "两枝薄荷叶随风轻动，水纹渐息；杯形和水位不突变，不新增第三枝。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "杯口与叶片近景",
+        "end_state": "原状态延续，完成本镜有意义的运动或反应",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=two_sprigs_in_A_glass；main=A_window_table；neighbor=B_porch；cat=A_entry"
+        ],
+        "ordered_steps": [
+          "两枝薄荷叶随风轻动，水纹渐息；杯形和水位不突变，不新增第三枝。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L01-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_A_glass",
+          "paper": "A_table_unwrapped",
+          "glass": "A_window_table_water_two_stems",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "A_window_table",
+          "neighbor": "B_porch",
+          "cat": "A_entry",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_A_glass",
+          "paper": "A_table_unwrapped",
+          "glass": "A_window_table_water_two_stems",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "A_window_table",
+          "neighbor": "B_porch",
+          "cat": "A_entry",
+          "chair": "A_window_table"
+        },
+        "allowed_state_changes": [],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S30",
+      "duration": 4,
+      "generation_duration": 5,
+      "edit_start": 92.5,
+      "edit_end": 96.5,
+      "story_function": "把椅子拉开坐好，服务借伞归还与带回清香的主线",
+      "action": "把椅子拉开坐好",
+      "character_ids": [
+        "C01"
+      ],
+      "scene_id": "L01",
+      "prop_ids": [
+        "P08"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01"
+        ],
+        "scene": "L01",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P08"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 窗下侧面全身中景，单张16:9镜头首帧。可见人物：C01。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。女主站在同一A木椅旁，手已靠近椅背，尚未拉开或坐下，脚下和椅后有净空，猫在玄关画外。 只约束本镜可见局部状态：main=A_window_table；chair=A_window_table。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续5秒镜头，窗下侧面全身中景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：女主把同一椅子沿净空拉出一点，再转身屈膝坐稳；椅脚不穿地，猫留在进门处画外，不进入椅子路径。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约4秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=two_sprigs_in_A_glass；main=A_window_table；neighbor=B_porch；cat=A_entry",
+        "beats": [
+          "女主把同一椅子沿净空拉出一点，再转身屈膝坐稳；椅脚不穿地，猫留在进门处画外，不进入椅子路径。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "窗下侧面全身中景",
+        "end_state": "main=A_chair_seated；chair=A_window_slightly_pulled_out",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=two_sprigs_in_A_glass；main=A_window_table；neighbor=B_porch；cat=A_entry"
+        ],
+        "ordered_steps": [
+          "女主把同一椅子沿净空拉出一点，再转身屈膝坐稳；椅脚不穿地，猫留在进门处画外，不进入椅子路径。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L01-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_A_glass",
+          "paper": "A_table_unwrapped",
+          "glass": "A_window_table_water_two_stems",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "A_window_table",
+          "neighbor": "B_porch",
+          "cat": "A_entry",
+          "chair": "A_window_table"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_A_glass",
+          "paper": "A_table_unwrapped",
+          "glass": "A_window_table_water_two_stems",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "A_chair_seated",
+          "neighbor": "B_porch",
+          "cat": "A_entry",
+          "chair": "A_window_slightly_pulled_out"
+        },
+        "allowed_state_changes": [
+          "main",
+          "chair"
+        ],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S31",
+      "duration": 3.5,
+      "generation_duration": 5,
+      "edit_start": 96.5,
+      "edit_end": 100.0,
+      "story_function": "窗外还有别人的午后，服务借伞归还与带回清香的主线",
+      "action": "窗外还有别人的午后",
+      "character_ids": [
+        "C02"
+      ],
+      "scene_id": "L01",
+      "prop_ids": [
+        "P01",
+        "P05"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C02"
+        ],
+        "scene": "L01",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P01",
+          "P05"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 从A窗向外的视线镜头，单张16:9镜头首帧。可见人物：C02。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。从A北窗看向固定方位的B南门廊和远处C屋顶，邻居在原花盆旁；不把室内主角全身召入。 只约束本镜可见局部状态：umbrella=B_entry_hook；watering_can=neighbor_watering；neighbor=B_porch。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续5秒镜头，从A窗向外的视线镜头，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：透过同一北窗看B门廊：邻居继续照看花盆，伞还在B钩上；C屋顶在固定远景，窗外轴线和日光一致。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约3.5秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=two_sprigs_in_A_glass；main=A_chair_seated；neighbor=B_porch；cat=A_entry",
+        "beats": [
+          "透过同一北窗看B门廊：邻居继续照看花盆，伞还在B钩上；C屋顶在固定远景，窗外轴线和日光一致。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "从A窗向外的视线镜头",
+        "end_state": "原状态延续，完成本镜有意义的运动或反应",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=two_sprigs_in_A_glass；main=A_chair_seated；neighbor=B_porch；cat=A_entry"
+        ],
+        "ordered_steps": [
+          "透过同一北窗看B门廊：邻居继续照看花盆，伞还在B钩上；C屋顶在固定远景，窗外轴线和日光一致。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L01-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_A_glass",
+          "paper": "A_table_unwrapped",
+          "glass": "A_window_table_water_two_stems",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "A_chair_seated",
+          "neighbor": "B_porch",
+          "cat": "A_entry",
+          "chair": "A_window_slightly_pulled_out"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_A_glass",
+          "paper": "A_table_unwrapped",
+          "glass": "A_window_table_water_two_stems",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "A_chair_seated",
+          "neighbor": "B_porch",
+          "cat": "A_entry",
+          "chair": "A_window_slightly_pulled_out"
+        },
+        "allowed_state_changes": [],
+        "time_ellipsis": false,
+        "transition_reason": null
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    },
+    {
+      "id": "S32",
+      "duration": 5,
+      "generation_duration": 6,
+      "edit_start": 100.0,
+      "edit_end": 105.0,
+      "story_function": "晴天留在窗边，服务借伞归还与带回清香的主线",
+      "action": "晴天留在窗边",
+      "character_ids": [
+        "C01",
+        "C04"
+      ],
+      "scene_id": "L01",
+      "prop_ids": [
+        "P03",
+        "P04",
+        "P08"
+      ],
+      "reference_files": [],
+      "reference_requirements": {
+        "style": "approved_style_anchor",
+        "characters": [
+          "C01",
+          "C04"
+        ],
+        "scene": "L01",
+        "world": "approved_connected_neighborhood_layout",
+        "props": [
+          "P03",
+          "P04",
+          "P08"
+        ]
+      },
+      "image_file": null,
+      "image_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 A室内收尾全景，单张16:9镜头首帧。可见人物：C01、C04。首帧只表现本镜执行起点，持续动作从当前阶段继续，不提前画成结束状态。A室内全景，女主已坐稳窗下椅，薄荷杯在原桌上，猫已走到椅旁地面软垫边，尚未蜷下。 只约束本镜可见局部状态：mint=two_sprigs_in_A_glass；glass=A_window_table_water_two_stems；main=A_chair_seated；cat=A_floor_cushion_approach；chair=A_window_slightly_pulled_out。只用本镜相关的已通过角色、道具、场景与风格参考；未生成的参考需先制作。无分格、文字。",
+      "video_prompt": "原创二维手绘生活动画：清楚有轻重的细线、人物赛璐璐色块阴影、精细绘制背景；通透自然绿、奶油白和蜂蜜木色，暗部有颜色，保持正常成人和家具尺度。 单个连续6秒镜头，A室内收尾全景，固定机位，不推拉绕轴。第0秒即进入可见主动作或必要蓄力，不先静止展示，正常生活速度。主要动作：女主已坐稳，转头看薄荷杯；猫走到椅旁地面软垫蜷下，窗帘有风，杯和屋外建筑留在原位。 原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。 完成后只有有关的自然余波，按实际动作区间剪辑到约5秒；不刻意拖满生成时长，不自动切镜，不用运镜代替主体动作。只生成同步的本镜衣料、脚步、器物或环境拟音，无旁白、对白、歌声或片段配乐，整片后期连续配乐。",
+      "motion_plan": {
+        "start_state": "window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=two_sprigs_in_A_glass；main=A_chair_seated；neighbor=B_porch；cat=A_floor_cushion_approach",
+        "beats": [
+          "女主已坐稳，转头看薄荷杯；猫走到椅旁地面软垫蜷下，窗帘有风，杯和屋外建筑留在原位。"
+        ],
+        "speed_mode": "normal",
+        "active_seconds": 3.5,
+        "secondary_motion": "按本镜实际可见物体增加衣摆/叶片/布面与接触余波，不全片慢动作",
+        "camera": "A室内收尾全景",
+        "end_state": "cat=A_floor_cushion_by_chair",
+        "cut_cue": "保留接触/释放结果后及时切镜，裁去无效起手等待与尾停"
+      },
+      "interaction": {
+        "preconditions": [
+          "按通过首帧核对可见角色、持物、操作净空与开始状态：window=open_fixed；door_a=open；umbrella=B_entry_hook；mint=two_sprigs_in_A_glass；main=A_chair_seated；neighbor=B_porch；cat=A_floor_cushion_approach"
+        ],
+        "ordered_steps": [
+          "女主已坐稳，转头看薄荷杯；猫走到椅旁地面软垫蜷下，窗帘有风，杯和屋外建筑留在原位。"
+        ],
+        "contact_rules": [
+          "原有手/脚先接触再承重，物体得到新支撑后再松手；建筑安装点和刚性道具保持形状；柔性衣布、叶片与重心可自然变化。"
+        ]
+      },
+      "continuity": {
+        "layout_version": "L01-v1-planned",
+        "scene_locks": [
+          "同一生活圈总览与当前场景版本，换机位只改变投影；本镜实际可见的门窗、建筑、家具、光向和尺度不变。",
+          "只绘本镜列出的可见主体与道具；画外人物和器物不召入，远景人物按深度缩小，不复制。"
+        ],
+        "prop_states_in": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_A_glass",
+          "paper": "A_table_unwrapped",
+          "glass": "A_window_table_water_two_stems",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "A_chair_seated",
+          "neighbor": "B_porch",
+          "cat": "A_floor_cushion_approach",
+          "chair": "A_window_slightly_pulled_out"
+        },
+        "prop_states_out": {
+          "window": "open_fixed",
+          "door_a": "open",
+          "umbrella": "B_entry_hook",
+          "cloth": "A_entry_table",
+          "mint": "two_sprigs_in_A_glass",
+          "paper": "A_table_unwrapped",
+          "glass": "A_window_table_water_two_stems",
+          "watering_can": "neighbor_watering",
+          "bicycle": "passer_exited_east",
+          "main": "A_chair_seated",
+          "neighbor": "B_porch",
+          "cat": "A_floor_cushion_by_chair",
+          "chair": "A_window_slightly_pulled_out"
+        },
+        "allowed_state_changes": [
+          "cat"
+        ],
+        "time_ellipsis": true,
+        "transition_reason": "窗外视线镜头期间，猫从玄关走到椅旁地面软垫；本镜只完成蜷下。"
+      },
+      "sound": "与可见动作同步的局部拟音和本场环境声，配乐跨镜连续",
+      "trim_in": 0,
+      "edit_review": {
+        "state": "pending_source_generation",
+        "source_duration": null,
+        "observed_action_start": null,
+        "observed_action_end": null,
+        "trim_reason": null
+      },
+      "candidates": [],
+      "selected_candidate": null
+    }
+  ],
+  "generation": {
+    "image": null,
+    "video": null,
+    "speech": null,
+    "music": null
+  },
+  "limits": {
+    "max_candidates_per_shot": 2,
+    "budget": null
+  },
+  "audio": {
+    "voiceover": null,
+    "music": null,
+    "music_required": true,
+    "music_brief": "105秒原创无歌词轻器乐，中等轻盈脉动、温暖通透；招呼与交接让出动作音，返程旋律有舒展，末段完整收束。环境为雨后巷子、车轮、布料、流水与室内微风；音乐跨镜连续。",
+    "music_source": null,
+    "native_audio": true
+  },
+  "quality_review": {
+    "story": "draft_pending_review",
+    "motion": "pending",
+    "pacing": "pending_source_cuts",
+    "world_continuity": "pending_actual_images",
+    "final_audio": "pending"
+  },
+  "generation_authorized_for_this_plan": false,
+  "project_dir": null,
+  "final_file": null,
+  "example_note": "未生成素材的105秒32镜邻里生活原创规划；所有reference_file/image_file/final_file与项目路径为空。镜长、生成档位和比例须按真实服务及参考重新核实，初始trim_in=0不表示源视频无需审片。数量建议可被用户独处/室内等要求覆盖。",
+  "duration_range": [
+    90,
+    120
+  ],
+  "production_preferences": {
+    "pacing_profile": "varied_coverage_normal_speed",
+    "shot_count_guidance": [
+      26,
+      36
+    ],
+    "typical_edit_seconds": [
+      2,
+      4
+    ],
+    "trim_idle_handles": true,
+    "world_profile": "lived_in_neighborhood",
+    "secondary_buildings_guidance": [
+      2,
+      4
+    ],
+    "supporting_characters_guidance": [
+      1,
+      3
+    ]
+  },
+  "planning_summary": {
+    "independent_compositions": 32,
+    "planned_generated_seconds_before_retries": 147,
+    "edit_seconds": 105,
+    "provider_capability_check": "pending",
+    "story_and_world_review": "manual; not guaranteed by schema preflight"
+  },
+  "story_mode": "single_process"
+}

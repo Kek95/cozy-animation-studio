@@ -27,6 +27,8 @@ def check(root):
     for field in ('display_name', 'short_description', 'default_prompt'):
         if not interface.get(field):
             raise ValueError(f'Missing interface field: {field}')
+    if not 25 <= len(interface['short_description']) <= 64:
+        raise ValueError('UI short_description must contain25–64 characters.')
     if '$cozy-animation-studio' not in interface['default_prompt']:
         raise ValueError('Default prompt must invoke the skill.')
     count = 0
@@ -51,12 +53,12 @@ def check(root):
         values = {name: graph[str(b['node'])]['inputs'][b['input']] for name, b in bindings.items()}
         patch(graph, bindings, values)
     for example in [root / 'assets/project-example.json', *sorted((root / 'assets').glob('*-project.example.json'))]:
-        errors = validate(json.loads(example.read_text(encoding='utf-8')))
+        plan = json.loads(example.read_text(encoding='utf-8'))
+        errors = validate(plan)
+        if any('interaction' in s for s in plan.get('shots', [])):
+            errors += preflight(plan)
         if errors:
             raise ValueError(example.name + ': ' + '; '.join(errors))
-    plan = json.loads((root / 'assets/cozy-episode-project.example.json').read_text())
-    errors = preflight(plan)
-    if errors: raise ValueError('cozy preflight: ' + '; '.join(errors))
     scripts = sorted((root / 'scripts').glob('*.py'))
     for file in scripts:
         ast.parse(file.read_text(encoding='utf-8'), filename=file.name, feature_version=(3, 10))

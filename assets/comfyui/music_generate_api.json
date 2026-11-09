@@ -1,0 +1,20 @@
+{
+  "1": {
+    "class_type": "SoniloTextToMusic",
+    "inputs": {
+      "prompt": "",
+      "duration": 38,
+      "seed": 0
+    }
+  },
+  "2": {
+    "class_type": "SaveAudio",
+    "inputs": {
+      "audio": [
+        "1",
+        0
+      ],
+      "filename_prefix": "cozy_animation/music"
+    }
+  }
+}

@@ -10,14 +10,14 @@ Skill 的输入是画面想法和制作约束，输出是项目记录与成片�
 {
   "generation": {
     "image": {"provider_config": "config/images.json", "model": "实际图片模型"},
-    "video": {"provider_config": "config/video.json", "model": "实际视频模型"},
+    "video": {"provider_config": "config/video.json", "model": "实际视频模型", "allowed_models": ["供应商真实模型ID"]},
     "speech": null,
     "music": null
   }
 }
 ```
 
-这些字段供 Codex 路由与追溯；CLI 使用显式 `--provider`，不会自动从阶段名称猜测服务。`null` 表示尚未选择或不需要该阶段。
+新项目视频阶段还检查实际引用和试片证据，见 [自动执行手册](autonomous-production.md)。这些字段供 Codex 路由与追溯；CLI 使用显式 `--provider`，不会自动从阶段名称猜测服务。`null` 表示尚未选择或不需要该阶段。
 
 接入前核对：模型标识、图生视频/多参考能力、图片上传方法、时长/比例、原生音频、鉴权、任务 ID、查询状态、下载产物及费用依据。用户明确使用第三方 Seedance 网关时，以该网关文档为准，不用官方服务或其他平台的接口代替。
 
@@ -28,6 +28,7 @@ Skill 的输入是画面想法和制作约束，输出是项目记录与成片�
 从 `assets/providers/json-http.example.json` 复制并修改：
 
 - `name`：同一服务/账户使用稳定且唯一的名字，例如 `video-main`。项目候选通过 name、kind 和 endpoint 匹配，防止不同平台相同任务 ID 串号。
+- `model_pointer`（可选）：实际请求里模型的JSON Pointer；嵌套请求要明确给出，不自动猜字段。
 - `base_url`：文档中的 API 根地址，不带密钥、query 或 fragment。
 - `headers_from_env`：请求头名称映射到环境变量名和可选前缀。支持 Bearer 或平台自定义 API-key header；只在内存中读取值。
 - `submit.path`、`submit.task_id_pointer`：提交路径与响应 task ID 的 JSON Pointer，如 `/data/task_id`。

@@ -2,23 +2,42 @@
   "prompt": {
     "node": "1",
     "input": "prompt",
-    "class_type": "OpenAIGPTImage1"
+    "class_type": "OpenAIGPTImageNodeV2"
+  },
+  "size": {
+    "node": "1",
+    "input": "model.size",
+    "class_type": "OpenAIGPTImageNodeV2",
+    "choices": [
+      "auto",
+      "1024x1024",
+      "1024x1536",
+      "1536x1024",
+      "2048x2048",
+      "2048x1152",
+      "1152x2048",
+      "3840x2160",
+      "2160x3840"
+    ]
+  },
+  "quality": {
+    "node": "1",
+    "input": "model.quality",
+    "class_type": "OpenAIGPTImageNodeV2",
+    "choices": [
+      "low",
+      "medium",
+      "high"
+    ]
+  },
+  "seed": {
+    "node": "1",
+    "input": "seed",
+    "class_type": "OpenAIGPTImageNodeV2"
   },
   "filename_prefix": {
     "node": "2",
     "input": "filename_prefix"
-  },
-  "seed": {
-    "node": "1",
-    "input": "seed"
-  },
-  "size": {
-    "node": "1",
-    "input": "size"
-  },
-  "quality": {
-    "node": "1",
-    "input": "quality"
   },
   "image": {
     "node": "3",

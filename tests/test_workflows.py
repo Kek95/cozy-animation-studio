@@ -35,6 +35,21 @@ class WorkflowTests(unittest.TestCase):
         self.assertEqual(self.graph, original)
         self.assertEqual(result['9']['inputs']['model.duration'], 6)
 
+    def test_seedance_preset_forbids_25_and_unsupported_fast_resolution(self):
+        self.assertEqual(self.graph['9']['inputs']['model'], 'Seedance 2.0 Mini')
+        for values in [{'model': 'Seedance 2.5'}, {'resolution': '4k'}]:
+            with self.assertRaises(ValueError): workflow.patch(self.graph, self.bindings, values)
+        result = workflow.patch(self.graph, self.bindings, {'model': 'Seedance 2.0 Fast'})
+        self.assertEqual(result['9']['inputs']['model'], 'Seedance 2.0 Fast')
+
+    def test_multi_reference_uses_separate_unchanged_image_links(self):
+        graph = workflow.read(ROOT / 'assets/comfyui/image_multi_reference_api.json')
+        bindings = workflow.read(ROOT / 'assets/comfyui/image_multi_reference_bindings.json')
+        result = workflow.patch(graph, bindings, {'image_1': 'style.png', 'image_2': 'cast.png', 'image_3': 'room.png'})
+        self.assertEqual(result['1']['class_type'], 'OpenAIGPTImageNodeV2')
+        self.assertEqual([result['1']['inputs'][f'model.images.image_{i}'] for i in range(1,4)], [['3',0],['4',0],['5',0]])
+        self.assertNotIn('image', result['1']['inputs'])
+
     def test_reject_link_replacement_and_link_injection(self):
         graph = {'1': {'class_type': 'Source', 'inputs': {'text': 'hello'}},
                  '2': {'class_type': 'Sink', 'inputs': {'image': ['1', 0]}}}
@@ -143,6 +158,16 @@ class ProjectTests(unittest.TestCase):
         with mock_patch.object(providers, 'request_json', return_value={}) as request:
             self.assertEqual(studio.collect(Namespace(project=self.root, server='http://127.0.0.1:8188'))[0]['state'], 'success_cached')
         self.assertEqual(request.call_count, 0)
+
+    def test_collect_current_singular_video_field(self):
+        self.register()
+        history = {'test-task-01': {'status': {'status_str': 'success', 'completed': True},
+                   'outputs': {'2': {'video': [{'filename': 'current.mp4', 'type': 'output'}]}}}}
+        with mock_patch.object(providers, 'request_json', return_value=history), \
+             mock_patch.object(studio, 'download', side_effect=lambda url, dest: dest.write_bytes(b'fixture')):
+            result = studio.collect(Namespace(project=self.root, server='http://127.0.0.1:8188'))
+        self.assertEqual(result[0]['state'], 'success')
+        self.assertTrue(result[0]['files'][0].endswith('.mp4'))
 
     def test_review_requires_collected_asset_and_reject_clears_selection(self):
         self.register()

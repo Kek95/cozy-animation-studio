@@ -10,9 +10,7 @@
     "class_type": "ByteDance2FirstLastFrameNode",
     "choices": [
       "480p",
-      "720p",
-      "1080p",
-      "4k"
+      "720p"
     ]
   },
   "ratio": {
@@ -53,5 +51,14 @@
   "filename_prefix": {
     "node": "2",
     "input": "filename_prefix"
+  },
+  "model": {
+    "node": "9",
+    "input": "model",
+    "class_type": "ByteDance2FirstLastFrameNode",
+    "choices": [
+      "Seedance 2.0 Mini",
+      "Seedance 2.0 Fast"
+    ]
   }
 }

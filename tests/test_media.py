@@ -133,6 +133,39 @@ class MediaTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'visually accepted'):
             edit.compose(self.args)
 
+    def test_normalized_multitrack_render_actual_cut_frames_and_technical_check(self):
+        self.doc['audio'] = {'music_required': True, 'music': 'long-voice.wav', 'music_offset': .5,
+                             'ambience_required': True, 'ambience': 'long-voice.wav', 'voiceover': 'voice.wav'}
+        studio.save(self.root / 'project.json', self.doc)
+        self.args.normalize_audio = True; self.args.music_db = 0; self.args.duck_music = True
+        result = edit.compose(self.args)
+        self.assertTrue(result['audio_mix']['normalized_per_source'])
+        self.assertEqual([a['kind'] for a in result['audio_mix']['sources']], ['voice', 'music', 'ambience'])
+        self.assertEqual(result['audio_mix']['sources'][1]['source_start'], .5)
+        self.assertTrue(all(s['speed'] == 1 for s in result['sources']))
+        cuts = edit.cuts(Namespace(project=self.root, file=None, out=str(self.root / 'exact-cuts'), handles=3))
+        self.assertEqual(cuts['cuts'][0]['outgoing_frames'], [21,22,23])
+        self.assertEqual(cuts['cuts'][0]['incoming_frames'], [24,25,26])
+        self.assertTrue((self.root / 'exact-cuts' / cuts['pages'][0]['file']).is_file())
+        self.assertEqual(cuts['visual_review'], 'pending; extraction is not acceptance')
+        report = edit.check_final(Namespace(project=self.root, file=None, out=str(self.root / 'technical.json')))
+        self.assertTrue(report['valid'], report['errors'])
+        self.assertEqual(report['decoded_frames'], 48)
+        self.assertEqual(report['subjective_listening'], 'pending')
+        self.assertAlmostEqual(float(report['loudness']['input_i']), -18, delta=1)
+        # Replaced sidecar must not validate a different encoded film.
+        Path(self.args.out).write_bytes(b'changed-version')
+        with self.assertRaisesRegex(ValueError, 'another encoded file'):
+            edit.cuts(Namespace(project=self.root, file=None, out=str(self.root / 'stale-cuts'), handles=3))
+
+    def test_short_environment_track_and_nonframe_edit_are_rejected(self):
+        self.args.ambience = str(self.root / 'music.wav')
+        with self.assertRaisesRegex(ValueError, 'Ambience is short'): edit.compose(self.args)
+        self.args.ambience = None
+        self.doc['shots'][0]['duration'] = 1.01; self.doc['shots'][1]['duration'] = .99
+        studio.save(self.root / 'project.json', self.doc)
+        with self.assertRaisesRegex(ValueError, 'whole output frames'): edit.compose(self.args)
+
     def test_review_frames_have_actual_timestamps(self):
         args = Namespace(file=str(self.root / 'clip0.mp4'), out=str(self.root / 'frames'), count=3)
         result = edit.frames(args)
